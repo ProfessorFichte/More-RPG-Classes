@@ -1,0 +1,48 @@
+{
+  "school": "PHYSICAL_MELEE",
+  "range": 0,
+  "learn": {
+    "tier": 2
+  },
+  "cast": {
+    "duration": 0
+  },
+  "release": {
+    "target": {
+      "type": "SELF"
+    },
+    "animation": "more_rpg_classes:stonehand_cast",
+    "sound": {
+      "id": "block.stone.hit"
+    },
+    "particles": [
+      {
+        "particle_id": "wax_on",
+        "shape": "PIPE",
+        "origin": "CENTER",
+        "count": 10.0,
+        "min_speed": 0.02,
+        "max_speed": 0.5
+      }
+    ]
+  },
+  "impact": [
+    {
+      "action": {
+        "type": "STATUS_EFFECT",
+        "status_effect": {
+          "effect_id": "more_rpg_classes:stone_hand",
+          "duration": 20,
+          "apply_mode": "SET",
+          "amplifier": 0,
+          "show_particles": false
+        }
+      }
+    }
+  ],
+  "cost": {
+    "exhaust": 1.5,
+    "durability": 1,
+    "cooldown_duration": 35
+  }
+}

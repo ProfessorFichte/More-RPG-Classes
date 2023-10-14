@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "W  ",
+    "RR ",
+    "RR "
+  ],
+  "key": {
+    "W": {
+      "tag": "minecraft:planks"
+    },
+    "R": {
+      "item": "minecraft:cobblestone"
+    }
+  },
+  "result": {
+    "item": "more_rpg_classes:stone_knuckle",
+    "count": 1
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "WW ",
+    "WR ",
+    "WR "
+  ],
+  "key": {
+    "W": {
+      "item": "minecraft:cobblestone"
+    },
+    "R": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "more_rpg_classes:stone_berserker_axe",
+    "count": 1
+  }
+}

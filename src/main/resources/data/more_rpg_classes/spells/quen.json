@@ -1,0 +1,63 @@
+{
+  "school": "HEALING",
+  "range": 0,
+  "learn": {
+    "tier": 3
+  },
+  "cast": {
+    "duration": 0
+  },
+  "release": {
+    "target": {
+      "type": "SELF"
+    },
+    "animation": "more_rpg_classes:sign_cast_short",
+    "sound": {
+      "id": "block.enchantment_table.use"
+    },
+    "particles": [
+      {
+        "particle_id": "glow_squid_ink",
+        "shape": "CIRCLE",
+        "origin": "CENTER",
+        "count": 5.0,
+        "min_speed": 0.1,
+        "max_speed": 0.5
+      },
+      {
+        "particle_id": "more_rpg_classes:quen_sign_cast",
+        "shape": "SPHERE",
+        "origin": "CENTER",
+        "count": 10.0,
+        "min_speed": 0.1,
+        "max_speed": 1.0
+      },
+      {
+        "particle_id": "more_rpg_classes:quen_sign_cast",
+        "shape": "SPHERE",
+        "origin": "LAUNCH_POINT",
+        "count": 1.0,
+        "min_speed": 0.01,
+        "max_speed": 0.2
+      }
+    ]
+  },
+  "impact": [
+    {
+      "action": {
+        "type": "STATUS_EFFECT",
+        "status_effect": {
+          "effect_id": "absorption",
+          "duration": 15,
+          "apply_mode": "SET",
+          "amplifier": 2,
+          "show_particles": false
+        }
+      }
+    }
+  ],
+  "cost": {
+    "exhaust": 1.5,
+    "cooldown_duration": 35
+  }
+}

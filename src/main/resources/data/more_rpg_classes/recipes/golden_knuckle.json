@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "R  ",
+    "RW ",
+    "RR "
+  ],
+  "key": {
+    "W": {
+      "item": "minecraft:emerald"
+    },
+    "R": {
+      "item": "minecraft:gold_ingot"
+    }
+  },
+  "result": {
+    "item": "more_rpg_classes:golden_knuckle",
+    "count": 1
+  }
+}

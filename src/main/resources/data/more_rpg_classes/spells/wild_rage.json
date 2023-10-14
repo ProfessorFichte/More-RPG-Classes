@@ -1,0 +1,47 @@
+{
+  "school": "PHYSICAL_MELEE",
+  "range": 0,
+  "learn": {
+    "tier": 1
+  },
+  "cast": {
+    "duration": 0
+  },
+  "release": {
+    "target": {
+      "type": "SELF"
+    },
+    "animation": "more_rpg_classes:two_handed_roar",
+    "sound": {
+      "id": "minecraft:entity.warden.roar"
+    },
+    "particles": [
+      {
+        "particle_id": "minecraft:angry_villager",
+        "shape": "PIPE",
+        "origin": "CENTER",
+        "count": 2.0,
+        "min_speed": 0.02,
+        "max_speed": 0.15
+      }
+    ]
+  },
+  "impact": [
+    {
+      "action": {
+        "type": "STATUS_EFFECT",
+        "status_effect": {
+          "effect_id": "more_rpg_classes:rage",
+          "duration": 18,
+          "apply_mode": "SET",
+          "amplifier": 0,
+          "show_particles": false
+        }
+      }
+    }
+  ],
+  "cost": {
+    "exhaust": 1.5,
+    "cooldown_duration": 30
+  }
+}

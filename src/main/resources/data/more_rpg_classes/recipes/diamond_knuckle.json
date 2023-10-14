@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "R  ",
+    "RR ",
+    "RR "
+  ],
+  "key": {
+    "R": {
+      "item": "minecraft:diamond"
+    }
+  },
+  "result": {
+    "item": "more_rpg_classes:diamond_knuckle",
+    "count": 1
+  }
+}

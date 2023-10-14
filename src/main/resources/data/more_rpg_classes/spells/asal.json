@@ -1,0 +1,76 @@
+{
+  "school": "PHYSICAL_MELEE",
+  "range": 5.0,
+  "learn": {
+    "tier": 3
+  },
+  "cast": {
+    "duration": 2.0,
+    "animation": "more_rpg_classes:asal_cast",
+    "sound": {
+      "id": "spell_engine:generic_arcane_casting"
+    },
+    "particles": [
+      {
+        "particle_id": "enchanted_hit",
+        "shape": "PIPE",
+        "origin": "CENTER",
+        "count": 1,
+        "min_speed": 0.01,
+        "max_speed": 0.1
+      }
+    ]
+  },
+  "release": {
+    "animation": "more_rpg_classes:asal_release",
+    "particles": [
+      {
+        "particle_id": "instant_effect",
+        "angle": 360,
+        "shape": "SPHERE",
+        "rotation": "TRUE",
+        "origin": "CENTER",
+        "count": 10.0,
+        "min_speed": 1.0,
+        "max_speed": 15.0
+      }
+    ],
+    "target": {
+      "type": "CURSOR"
+    },
+
+    "sound": {
+      "id": "entity.ender_pearl.throw"
+    }
+  },
+  "impact": [
+    {
+      "action": {
+        "type": "DAMAGE",
+        "damage": {
+          "spell_power_coefficient": 2.2,
+          "knockback": 2.0
+        }
+      },
+      "particles": [
+        {
+          "particle_id": "explosion",
+          "shape": "SPHERE",
+          "origin": "CENTER",
+          "count": 1.0,
+          "min_speed": 0.2,
+          "max_speed": 1.0
+        }
+      ],
+      "sound": {
+        "id": "entity.dragon_fireball.explode"
+      }
+    }
+  ],
+  "cost": {
+    "exhaust": 50.0,
+    "durability": 30,
+    "cooldown_haste_affected": "false",
+    "cooldown_duration": 50
+  }
+}

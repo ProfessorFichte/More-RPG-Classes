@@ -1,0 +1,116 @@
+{
+  "school": "FROST",
+  "range": 4.5,
+  "learn": {
+    "tier": 1
+  },
+  "cast": {
+    "duration": 2.0,
+    "animation": "more_rpg_classes:sign_cast_long",
+    "sound": {
+      "id": "entity.warden.sonic_charge",
+      "randomness": 1
+    },
+    "particles": [
+      {
+        "particle_id": "more_rpg_classes:aard_sign_cast",
+        "shape": "PIPE",
+        "origin": "LAUNCH_POINT",
+        "count": 0.3,
+        "min_speed": 0.01,
+        "max_speed": 0.1
+      }
+    ],
+    "start_sound": {
+      "id": "entity.warden.sonic_boom"
+    }
+  },
+  "release": {
+    "animation": "more_rpg_classes:sign_cast_ground",
+    "particles": [
+      {
+        "particle_id": "sonic_boom",
+        "angle": 360,
+        "shape": "SPHERE",
+        "rotation": "TRUE",
+        "origin": "FEET",
+        "count": 3.0,
+        "min_speed": 5.0,
+        "max_speed": 15.0
+      },
+      {
+        "particle_id": "spell_engine:frost_shard",
+        "angle": 360,
+        "shape": "SPHERE",
+        "rotation": "TRUE",
+        "origin": "FEET",
+        "count": 10.0,
+        "min_speed": 1.0,
+        "max_speed": 2.0
+      }
+    ],
+    "target": {
+      "type": "AREA",
+      "area": {
+        "distance_dropoff": "SQUARED",
+        "angle_degrees": 360
+      }
+    },
+    "sound": {
+      "id": "item.axe.strip"
+    }
+  },
+  "impact": [
+    {
+      "action": {
+        "type": "DAMAGE",
+        "damage": {
+          "spell_power_coefficient": 1.2,
+          "knockback": 4.5
+        }
+      },
+      "particles": [
+        {
+          "particle_id": "spell_engine:frost_shard",
+          "shape": "SPHERE",
+          "origin": "CENTER",
+          "count": 30.0,
+          "min_speed": 0.2,
+          "max_speed": 1.0
+        },
+        {
+          "particle_id": "sonic_boom",
+          "angle": 360,
+          "shape": "CONE",
+          "rotation": "TRUE",
+          "origin": "FEET",
+          "count": 15.0,
+          "min_speed": 5.0,
+          "max_speed": 10.0
+        }
+      ],
+      "sound": {
+        "id": "block.snow.break"
+      }
+    },
+    {
+      "action": {
+        "type": "STATUS_EFFECT",
+        "status_effect": {
+          "effect_id": "more_rpg_classes:frozen_solid",
+          "duration": 5.0,
+          "apply_mode": "SET",
+          "amplifier": 0,
+          "show_particles": true
+        }
+      },
+      "sound": {
+        "id": "block.glass.break"
+      }
+    }
+  ],
+  "cost": {
+    "exhaust": 4.5,
+    "cooldown_duration": 40
+  }
+}

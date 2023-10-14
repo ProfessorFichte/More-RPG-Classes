@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " W ",
+    " W ",
+    "WRW"
+  ],
+  "key": {
+    "W": {
+      "item": "minecraft:diamond"
+    },
+    "R": {
+      "item": "minecraft:leather"
+    }
+  },
+  "result": {
+    "item": "more_rpg_classes:diamond_witcher_sword",
+    "count": 1
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "school": "LIGHTNING",
+  "range": 4,
+  "learn": {
+    "tier": 1
+  },
+  "cast": {
+    "duration": 0
+  },
+  "release": {
+    "target": {
+      "type": "AREA",
+      "area": {
+        "distance_dropoff": "SQUARED",
+        "angle_degrees": 180
+      }
+    },
+    "animation": "more_rpg_classes:sign_cast_short",
+    "sound": {
+      "id": "entity.warden.sonic_boom"
+    },
+    "particles": [
+      {
+        "particle_id": "more_rpg_classes:aard_sign_cast",
+        "shape": "SPHERE",
+        "origin": "CENTER",
+        "count": 10.0,
+        "min_speed": 0.1,
+        "max_speed": 1.0
+      },
+      {
+        "particle_id": "sonic_boom",
+        "shape": "SPHERE",
+        "origin": "FEET",
+        "count": 1.0,
+        "min_speed": 0.01,
+        "max_speed": 0.2
+      }
+    ]
+  },
+  "impact": [
+    {
+      "action": {
+        "type": "DAMAGE",
+        "damage": {
+          "spell_power_coefficient": 0.3,
+          "knockback": 5.5
+        }
+      },
+      "particles": [
+        {
+          "particle_id": "enchanted_hit",
+          "shape": "CIRCLE",
+          "origin": "CENTER",
+          "count": 10.0,
+          "min_speed": 0.5,
+          "max_speed": 3.0
+        },
+        {
+          "particle_id": "sonic_boom",
+          "shape": "CIRCLE",
+          "origin": "CENTER",
+          "count": 1.0,
+          "min_speed": 0.5,
+          "max_speed": 3.0
+        }
+      ]
+    }
+  ],
+  "cost": {
+    "exhaust": 1.2,
+    "cooldown_duration": 18
+  }
+}

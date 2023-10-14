@@ -1,0 +1,71 @@
+{
+  "school": "PHYSICAL_MELEE",
+  "range": 2.5,
+  "learn": {
+    "tier": 3
+  },
+  "cast": {
+    "duration": 6,
+    "animation": "more_rpg_classes:whirl",
+    "sound": {
+      "id": "entity.player.breath",
+      "randomness": 0
+    },
+    "start_sound": {
+      "id": "entity.villager.work_weaponsmith"
+    },
+    "particles": [
+      {
+        "particle_id": "sweep_attack",
+        "angle": 360,
+        "shape": "PIPE",
+        "rotation": "TRUE",
+        "origin": "CENTER",
+        "count": 1.0,
+        "min_speed": 0.3,
+        "max_speed": 3.0
+      }
+    ],
+    "channel_ticks": 4
+  },
+  "release": {
+    "target": {
+      "type": "AREA",
+      "area": {
+        "distance_dropoff": "SQUARED",
+        "angle_degrees": 360
+      }
+    }
+  },
+  "impact": [
+    {
+      "action": {
+        "type": "DAMAGE",
+        "damage": {
+          "spell_power_coefficient": 0.9,
+          "knockback": 1.0
+        }
+      },
+      "particles": [
+        {
+          "particle_id": "crit",
+          "shape": "PIPE",
+          "origin": "LAUNCH_POINT",
+          "count": 3.0,
+          "min_speed": 0.5,
+          "max_speed": 3.0
+        }
+      ],
+      "sound": {
+        "id": "item.axe.strip",
+        "randomness": 2
+      }
+    }
+  ],
+  "cost": {
+    "exhaust" : 3.5,
+    "cooldown_duration": 25,
+    "durability": 5,
+    "cooldown_proportional": true
+  }
+}

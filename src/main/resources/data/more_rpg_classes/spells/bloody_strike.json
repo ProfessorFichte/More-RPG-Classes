@@ -1,0 +1,74 @@
+{
+  "range": 2.0,
+  "school": "PHYSICAL_MELEE",
+  "learn": {
+    "tier": 2
+  },
+  "cast": {
+    "duration": 0
+  },
+  "release": {
+    "target": {
+      "type": "CURSOR"
+    },
+    "animation": "more_rpg_classes:bloody_strike",
+    "sound": {
+      "id": "minecraft:entity.player.attack.strong"
+    },
+    "particles": [
+      {
+        "particle_id": "crit",
+        "shape": "PIPE",
+        "origin": "CENTER",
+        "count": 15.0,
+        "min_speed": 0.2,
+        "max_speed": 0.6
+      }
+    ]
+  },
+  "impact": [
+    {
+      "action": {
+        "type": "DAMAGE",
+        "damage": {
+          "spell_power_coefficient": 0.65,
+          "knockback": 1.2
+        }
+      },
+      "particles": [
+        {
+          "particle_id": "landing_lava",
+          "shape": "PIPE",
+          "origin": "CENTER",
+          "count": 20.0,
+          "min_speed": 0.1,
+          "max_speed": 3.0
+        }
+      ],
+      "sound": {
+        "id": "item.axe.strip"
+      }
+    },
+    {
+      "action": {
+        "type": "STATUS_EFFECT",
+        "status_effect": {
+          "effect_id": "minecraft:regeneration",
+          "duration": 20,
+          "apply_mode": "ADD",
+          "amplifier": 0,
+          "show_particles": false
+        },
+        "apply_to_caster": true
+      },
+      "sound": {
+        "id": "item.honey_bottle.drink"
+      }
+    }
+  ],
+  "cost": {
+    "exhaust": 1.5,
+    "durability": 1,
+    "cooldown_duration": 18
+  }
+}

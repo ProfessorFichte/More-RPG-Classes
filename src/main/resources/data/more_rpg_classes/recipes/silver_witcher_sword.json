@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " W ",
+    " W ",
+    "WRW"
+  ],
+  "key": {
+    "W": {
+      "item": "more_rpg_classes:silver_ingot"
+    },
+    "R": {
+      "item": "minecraft:leather"
+    }
+  },
+  "result": {
+    "item": "more_rpg_classes:silver_witcher_sword",
+    "count": 1
+  }
+}

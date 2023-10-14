@@ -1,0 +1,43 @@
+{
+	"schemaVersion": 1,
+	"id": "more-rpg-classes",
+	"version": "${version}",
+	"name": "More RPG Classes",
+	"description": "Explore the world with new weapons and spells!",
+	"authors": [
+		"Fichte"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+          "net.fichte.more_rpg_classes.MRPGCMod"
+		],
+		"client": [
+          "net.fichte.more_rpg_classes.client.MoreRPGClassesClient"
+		],
+		"fabric-datagen": [
+			"net.fichte.more_rpg_classes.MRPGCClassesGenerator"
+		]
+	},
+	"mixins": [
+		"more-rpg-classes.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.14.22",
+		"fabric-api": "*",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"azurelibarmor": "*",
+		"spell_engine": "*",
+		"spell_power": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
