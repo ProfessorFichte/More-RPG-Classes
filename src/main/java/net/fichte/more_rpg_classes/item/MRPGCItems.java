@@ -12,14 +12,14 @@ import java.util.UUID;
 
 
 public class MRPGCItems {
-    protected static final UUID INCOMING_DAMAGE_MODIFIER_ID = UUID.fromString("f8e5213e-fa22-413a-99ea-f7be068795b2");
-    protected static final UUID ARMOR_MODIFIER_ID = UUID.fromString("c0e6f0a8-ba89-4a77-bfd5-7c930a3d81ef");
+    //protected static final UUID INCOMING_DAMAGE_MODIFIER_ID = UUID.fromString("f8e5213e-fa22-413a-99ea-f7be068795b2");
+    //protected static final UUID ARMOR_MODIFIER_ID = UUID.fromString("c0e6f0a8-ba89-4a77-bfd5-7c930a3d81ef");
     protected static final UUID SPELL_HASTE_MODIFIER_ID = UUID.fromString("d48115ce-e4b9-422c-a418-e6ebfd2ff550");
     protected static final UUID SPELL_POWER_FROST_MODIFIER_ID = UUID.fromString("441b2252-db4b-45cd-856a-81ecd1e717bf");
     protected static final UUID SPELL_POWER_LIGHTNING_MODIFIER_ID = UUID.fromString("695091c9-cef4-4bb9-b4cf-044ed111e674");
     protected static final UUID SPELL_POWER_FIRE_MODIFIER_ID = UUID.fromString("6a0b3f36-e231-42f8-9b6e-b6489171f808");
-    protected static final UUID SPELL_POWER_ARCANE_MODIFIER_ID = UUID.fromString("66f5e13a-bb5e-49d7-94e8-9a56c5394b55");
-    protected static final UUID SPELL_POWER_HEALING_MODIFIER_ID = UUID.fromString("e0016e47-8423-473c-879d-044262748882");
+    //protected static final UUID SPELL_POWER_ARCANE_MODIFIER_ID = UUID.fromString("66f5e13a-bb5e-49d7-94e8-9a56c5394b55");
+    //protected static final UUID SPELL_POWER_HEALING_MODIFIER_ID = UUID.fromString("e0016e47-8423-473c-879d-044262748882");
     protected static final UUID SPELL_CRIT_DAMAGE_MODIFIER_ID = UUID.fromString("0510491d-1ea4-4055-8666-383b95b23dd1");
     protected static final UUID SPELL_CRIT_CHANCE_MODIFIER_ID = UUID.fromString("042b3a30-d2ad-406c-9483-b6444daa61d5");
 
