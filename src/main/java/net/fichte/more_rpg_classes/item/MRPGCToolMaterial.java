@@ -7,7 +7,7 @@ import net.minecraft.recipe.Ingredient;
 import java.util.function.Supplier;
 
 public enum MRPGCToolMaterial implements ToolMaterial {
-    BERSERKER(2,300,6.0f,2.0f,14,() -> Ingredient.ofItems(Items.IRON_INGOT));
+    //BERSERKER(2,300,6.0f,2.0f,14,() -> Ingredient.ofItems(Items.IRON_INGOT));
 
     //WILDING(1,150,4.0f,1.5f,5,() -> Ingredient.ofItems(Items.COBBLESTONE));
 
