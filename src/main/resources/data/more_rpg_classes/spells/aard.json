@@ -17,7 +17,7 @@
     },
     "animation": "more_rpg_classes:sign_cast_short",
     "sound": {
-      "id": "entity.warden.sonic_boom"
+      "id": "more_rpg_classes:aard_sign"
     },
     "particles": [
       {

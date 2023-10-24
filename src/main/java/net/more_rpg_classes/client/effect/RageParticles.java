@@ -10,9 +10,9 @@ public class RageParticles implements CustomParticleStatusEffect.Spawner{
 
     public RageParticles(int particleCount) {
         this.particles = new ParticleBatch(
-                "minecraft:angry_villager",
+                "more_rpg_classes:rage_particle",
                 ParticleBatch.Shape.PIPE, ParticleBatch.Origin.LAUNCH_POINT,
-                null, particleCount, 0.00001F, 0.00002F, 0);
+                null, particleCount, 0.0001F, 0.0002F, 0);
     }
 
     @Override

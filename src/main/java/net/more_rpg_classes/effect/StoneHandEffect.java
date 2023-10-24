@@ -8,5 +8,4 @@ public class StoneHandEffect extends StatusEffect {
         super(statusEffectCategory, color);
     }
 
-
 }

@@ -8,6 +8,7 @@
     "duration": 0
   },
   "release": {
+    "custom_impact": false,
     "target": {
       "type": "AREA",
       "area": {
@@ -17,7 +18,7 @@
     },
     "animation": "more_rpg_classes:sign_cast_short",
     "sound": {
-      "id": "block.fire.extinguish",
+      "id": "more_rpg_classes:igni_sign",
       "randomness": 1.0
     },
     "start_sound": {

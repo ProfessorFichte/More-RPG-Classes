@@ -13,7 +13,7 @@
     },
     "animation": "more_rpg_classes:stonehand_cast",
     "sound": {
-      "id": "block.stone.hit"
+      "id": "more_rpg_classes:stonehand_cast"
     },
     "particles": [
       {

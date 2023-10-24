@@ -8,11 +8,11 @@
     "duration": 6,
     "animation": "more_rpg_classes:whirl",
     "sound": {
-      "id": "entity.player.breath",
+      "id": "spell_engine:generic_frost_impact",
       "randomness": 0
     },
     "start_sound": {
-      "id": "entity.villager.work_weaponsmith"
+      "id": "entity.player.breath"
     },
     "particles": [
       {
@@ -24,11 +24,22 @@
         "count": 1.0,
         "min_speed": 0.3,
         "max_speed": 3.0
+      },
+      {
+        "particle_id": "spell_engine:frost_shard",
+        "angle": 360,
+        "shape": "SPHERE",
+        "rotation": "TRUE",
+        "origin": "CENTER",
+        "count": 1.0,
+        "min_speed": 0.3,
+        "max_speed": 3.0
       }
     ],
-    "channel_ticks": 4
+    "channel_ticks": 10
   },
   "release": {
+    "custom_impact": true,
     "target": {
       "type": "AREA",
       "area": {
@@ -51,7 +62,15 @@
           "particle_id": "crit",
           "shape": "PIPE",
           "origin": "LAUNCH_POINT",
-          "count": 3.0,
+          "count": 1.0,
+          "min_speed": 0.5,
+          "max_speed": 3.0
+        },
+        {
+          "particle_id": "spell_engine:frost_hit",
+          "shape": "SPHERE",
+          "origin": "LAUNCH_POINT",
+          "count": 1.0,
           "min_speed": 0.5,
           "max_speed": 3.0
         }
@@ -64,6 +83,7 @@
   ],
   "cost": {
     "exhaust" : 3.5,
+    "effect_id": "more_rpg_classes:rage",
     "cooldown_duration": 25,
     "durability": 5,
     "cooldown_proportional": true

@@ -23,6 +23,14 @@
         "count": 2.0,
         "min_speed": 0.02,
         "max_speed": 0.15
+      },
+      {
+        "particle_id": "more_rpg_classes:rage_particle",
+        "shape": "SPHERE",
+        "origin": "CENTER",
+        "count": 4.0,
+        "min_speed": 0.02,
+        "max_speed": 0.15
       }
     ]
   },
@@ -32,7 +40,7 @@
         "type": "STATUS_EFFECT",
         "status_effect": {
           "effect_id": "more_rpg_classes:rage",
-          "duration": 18,
+          "duration": 20,
           "apply_mode": "SET",
           "amplifier": 0,
           "show_particles": false

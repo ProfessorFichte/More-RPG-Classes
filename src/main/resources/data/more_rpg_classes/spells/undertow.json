@@ -1,0 +1,62 @@
+{
+  "range": 7.5,
+  "school": "PHYSICAL_MELEE",
+  "learn": {
+    "tier": 1
+  },
+  "cast": {
+    "duration": 0
+  },
+  "release": {
+    "custom_impact": false,
+    "target": {
+      "type": "AREA",
+      "area": {
+        "distance_dropoff": "SQUARED",
+        "angle_degrees": 20
+      }
+    },
+    "animation": "more_rpg_classes:axe_throw",
+    "particles": [
+      {
+        "particle_id": "crit",
+        "shape": "PIPE",
+        "origin": "CENTER",
+        "count": 15.0,
+        "min_speed": 0.2,
+        "max_speed": 0.6
+      }
+    ],
+    "channel_ticks": 20.0
+  },
+  "impact": [
+    {
+      "action": {
+        "type": "DAMAGE",
+        "damage": {
+          "spell_power_coefficient": 0.75,
+          "knockback": 1.5
+        }
+      },
+      "particles": [
+        {
+          "particle_id": "crit",
+          "shape": "SPHERE",
+          "origin": "CENTER",
+          "count": 5.0,
+          "min_speed": 0.1,
+          "max_speed": 1.0
+        }
+      ],
+      "sound": {
+        "id": "more_rpg_classes:knuckle_attack"
+      }
+    }
+  ],
+  "channel_ticks": 20.0,
+  "cost": {
+    "exhaust": 2.0,
+    "durability": 1,
+    "cooldown_duration": 1
+  }
+}

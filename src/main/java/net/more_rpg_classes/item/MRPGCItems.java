@@ -18,7 +18,7 @@ public class MRPGCItems {
     protected static final UUID SPELL_POWER_FROST_MODIFIER_ID = UUID.fromString("441b2252-db4b-45cd-856a-81ecd1e717bf");
     protected static final UUID SPELL_POWER_LIGHTNING_MODIFIER_ID = UUID.fromString("695091c9-cef4-4bb9-b4cf-044ed111e674");
     protected static final UUID SPELL_POWER_FIRE_MODIFIER_ID = UUID.fromString("6a0b3f36-e231-42f8-9b6e-b6489171f808");
-    //protected static final UUID SPELL_POWER_ARCANE_MODIFIER_ID = UUID.fromString("66f5e13a-bb5e-49d7-94e8-9a56c5394b55");
+    protected static final UUID SPELL_POWER_ARCANE_MODIFIER_ID = UUID.fromString("66f5e13a-bb5e-49d7-94e8-9a56c5394b55");
     //protected static final UUID SPELL_POWER_HEALING_MODIFIER_ID = UUID.fromString("e0016e47-8423-473c-879d-044262748882");
     protected static final UUID SPELL_CRIT_DAMAGE_MODIFIER_ID = UUID.fromString("0510491d-1ea4-4055-8666-383b95b23dd1");
     protected static final UUID SPELL_CRIT_CHANCE_MODIFIER_ID = UUID.fromString("042b3a30-d2ad-406c-9483-b6444daa61d5");
@@ -29,8 +29,8 @@ public class MRPGCItems {
     public static float witcher_sword_attackDamage = 0.6f;
     public static float witcher_sword_attackSpeed = -2.0f;
 
-    public static float knuckle_attackDamage = 0.5f;
-    public static float knuckle_atackSpeed = -1.6f;
+    public static float knuckle_attackDamage = 0.2f;
+    public static float knuckle_atackSpeed = -1.4f;
 
 
     ///Mod Weapons
@@ -44,7 +44,7 @@ public class MRPGCItems {
     public static final Item DIAMOND_BERSERKER_AXE =registerItem("diamond_berserker_axe", new BerserkerAxeItem(ToolMaterials.DIAMOND,
             berserker_axe_attackDamage, berserker_axe_attackSpeed ,new FabricItemSettings()));
     public static final Item NETHERITE_BERSERKER_AXE =registerItem("netherite_berserker_axe", new BerserkerAxeItem(ToolMaterials.NETHERITE,
-            berserker_axe_attackDamage, berserker_axe_attackSpeed ,new FabricItemSettings()));
+            berserker_axe_attackDamage, berserker_axe_attackSpeed ,new FabricItemSettings().fireproof()));
 
     //WITCHER SWORDS
     public static final Item IRON_WITCHER_SWORD =registerItem("iron_witcher_sword", new WitcherSwordItem(ToolMaterials.IRON,
@@ -66,17 +66,17 @@ public class MRPGCItems {
 
     //KNUCKLES
     public static final Item WOODEN_KNUCKLE =registerItem("wooden_knuckle", new KnuckleItem(ToolMaterials.WOOD,
-            knuckle_attackDamage,knuckle_atackSpeed,0.0f, new FabricItemSettings()));
+            knuckle_attackDamage,knuckle_atackSpeed,0.0f, 0.5f, new FabricItemSettings()));
     public static final Item STONE_KNUCKLE =registerItem("stone_knuckle", new KnuckleItem(ToolMaterials.STONE,
-            knuckle_attackDamage, knuckle_atackSpeed, 0.02f, new FabricItemSettings()));
+            knuckle_attackDamage, knuckle_atackSpeed, 0.02f,1, new FabricItemSettings()));
     public static final Item GOLD_KNUCKLE =registerItem("golden_knuckle", new KnuckleItem(ToolMaterials.GOLD,
-            knuckle_attackDamage, knuckle_atackSpeed, 0.04f, new FabricItemSettings()));
+            knuckle_attackDamage, knuckle_atackSpeed, 0.04f,2, new FabricItemSettings()));
     public static final Item IRON_KNUCKLE =registerItem("iron_knuckle", new KnuckleItem(ToolMaterials.IRON,
-            knuckle_attackDamage, knuckle_atackSpeed, 0.04f, new FabricItemSettings()));
+            knuckle_attackDamage, knuckle_atackSpeed, 0.04f,2, new FabricItemSettings()));
     public static final Item DIAMOND_KNUCKLE =registerItem("diamond_knuckle", new KnuckleItem(ToolMaterials.DIAMOND,
-            knuckle_attackDamage, knuckle_atackSpeed, 0.06f, new FabricItemSettings()));
+            knuckle_attackDamage, knuckle_atackSpeed, 0.06f,2.5f, new FabricItemSettings()));
     public static final Item NETHERITE_KNUCKLE =registerItem("netherite_knuckle", new KnuckleItem(ToolMaterials.NETHERITE,
-            knuckle_attackDamage, knuckle_atackSpeed, 0.08f, new FabricItemSettings()));
+            knuckle_attackDamage, knuckle_atackSpeed, 0.08f,3, new FabricItemSettings()));
 
 
 

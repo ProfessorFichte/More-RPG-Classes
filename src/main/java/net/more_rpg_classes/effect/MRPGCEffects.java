@@ -1,7 +1,5 @@
 package net.more_rpg_classes.effect;
 
-import net.more_rpg_classes.MRPGCMod;
-import net.more_rpg_classes.entity.attribute.MRPGCEntityAttributes;
 import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.effect.StatusEffect;
@@ -9,10 +7,14 @@ import net.minecraft.entity.effect.StatusEffectCategory;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
+import net.more_rpg_classes.MRPGCMod;
+import net.more_rpg_classes.entity.attribute.MRPGCEntityAttributes;
 import net.spell_engine.api.effect.ActionImpairing;
 import net.spell_engine.api.effect.EntityActionsAllowed;
 import net.spell_engine.api.effect.RemoveOnHit;
 import net.spell_engine.api.effect.Synchronized;
+import net.spell_power.api.MagicSchool;
+import net.spell_power.api.SpellPower;
 
 public class MRPGCEffects {
     public static float rage_damage_increase = +0.5f;
@@ -44,10 +46,9 @@ public class MRPGCEffects {
             .addAttributeModifier(EntityAttributes.GENERIC_ARMOR_TOUGHNESS, "0371dbb7-136a-471e-a7a8-512afa10389c",
             molten_toughness_reduce_factor, EntityAttributeModifier.Operation.ADDITION);
 
-    //QUEN_EXPLODE
-    public static StatusEffect QUEN_EXPLODE = new QuenExplodeEffect(StatusEffectCategory.BENEFICIAL, 0xdd4e00)
-            .addAttributeModifier(MRPGCEntityAttributes.INCOMING_DAMAGE_MODIFIER, "4040a638-4ec1-44af-baf6-f4685d1c3ae8",
-                    1.0f, EntityAttributeModifier.Operation.ADDITION);
+    //BARQ_ESNA
+    public static StatusEffect BARQ_ESNA = new BarqEsnaEffect(StatusEffectCategory.HARMFUL, 0x8db4fe)
+        .setVulnerability(MagicSchool.ARCANE, new SpellPower.Vulnerability(0.2F, 0.1F, 0F));
 
     //MOONLIGHT
     public static StatusEffect MOONLIGHT = new MoonLightEffect(StatusEffectCategory.HARMFUL, 0xbce5fe);
@@ -69,11 +70,13 @@ public class MRPGCEffects {
     public static StatusEffect AERONDIGHT_CHARGE= new AerondightChargeEffect(StatusEffectCategory.BENEFICIAL, 0x6afecf)
             .addAttributeModifier(EntityAttributes.GENERIC_ATTACK_DAMAGE, "d1843e0f-8a63-4c96-a854-9c9444981042",
                     aerondight_attack, EntityAttributeModifier.Operation.ADDITION);
+    //QUEN SHIELD
+    public static StatusEffect QUEN_SHIELD= new QuenEffect(StatusEffectCategory.BENEFICIAL, 0x3beeff);
 
     public static void register(){
         Synchronized.configure(RAGE,true);
         Synchronized.configure(MOLTEN_ARMOR,true);
-        Synchronized.configure(QUEN_EXPLODE,true);
+        Synchronized.configure(BARQ_ESNA,true);
         Synchronized.configure(MOONLIGHT,true);
         Synchronized.configure(STONE_HAND,true);
         Synchronized.configure(STUNNED,true);
@@ -82,15 +85,17 @@ public class MRPGCEffects {
         RemoveOnHit.configure(FROZEN_SOLID, true);
         Synchronized.configure(FROZEN_SOLID,true);
         Synchronized.configure(AERONDIGHT_CHARGE,true);
+        Synchronized.configure(QUEN_SHIELD,true);
 
         int mrpgc_spellid = 900;
         Registry.register(Registries.STATUS_EFFECT, mrpgc_spellid++, new Identifier(MRPGCMod.MOD_ID, "rage").toString(), RAGE);
         Registry.register(Registries.STATUS_EFFECT, mrpgc_spellid++, new Identifier(MRPGCMod.MOD_ID, "molten_armor").toString(), MOLTEN_ARMOR);
-        Registry.register(Registries.STATUS_EFFECT, mrpgc_spellid++, new Identifier(MRPGCMod.MOD_ID, "quen_explode").toString(), QUEN_EXPLODE);
+        Registry.register(Registries.STATUS_EFFECT, mrpgc_spellid++, new Identifier(MRPGCMod.MOD_ID, "barq_esna").toString(), BARQ_ESNA);
         Registry.register(Registries.STATUS_EFFECT, mrpgc_spellid++, new Identifier(MRPGCMod.MOD_ID, "moonlight").toString(), MOONLIGHT);
         Registry.register(Registries.STATUS_EFFECT, mrpgc_spellid++, new Identifier(MRPGCMod.MOD_ID, "stone_hand").toString(), STONE_HAND);
         Registry.register(Registries.STATUS_EFFECT, mrpgc_spellid++, new Identifier(MRPGCMod.MOD_ID, "stun").toString(), STUNNED);
         Registry.register(Registries.STATUS_EFFECT, mrpgc_spellid++, new Identifier(MRPGCMod.MOD_ID, "frozen_solid").toString(), FROZEN_SOLID);
         Registry.register(Registries.STATUS_EFFECT, mrpgc_spellid++, new Identifier(MRPGCMod.MOD_ID, "aerondight_charge").toString(), AERONDIGHT_CHARGE);
+        Registry.register(Registries.STATUS_EFFECT, mrpgc_spellid++, new Identifier(MRPGCMod.MOD_ID, "quen_shield").toString(), QUEN_SHIELD);
     }
 }

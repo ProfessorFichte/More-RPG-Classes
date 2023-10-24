@@ -16,7 +16,7 @@
                 "easing": "EASEINOUTQUAD",
                 "turn": 0,
                 "rightArm":{
-                    "yaw":0.01115014310926199
+                    "yaw":0.09393735975027084
                 }
             },
             {
@@ -32,7 +32,7 @@
                 "easing": "EASEINOUTQUAD",
                 "turn": 0,
                 "rightArm":{
-                    "roll":0.08844981342554092
+                    "roll":0.026047328487038612
                 }
             },
             {
@@ -96,7 +96,7 @@
                 "easing": "EASEINOUTQUAD",
                 "turn": 0,
                 "rightArm":{
-                    "pitch":-0.020964447408914566
+                    "pitch":-0.8726646304130554
                 }
             },
             {
@@ -104,7 +104,7 @@
                 "easing": "EASEINOUTQUAD",
                 "turn": 0,
                 "rightArm":{
-                    "pitch":-0.02094399929046631
+                    "pitch":-1.3089969158172607
                 }
             },
             {
@@ -116,11 +116,11 @@
                 }
             },
             {
-                "tick":10,
+                "tick":5,
                 "easing": "EASEINOUTQUAD",
                 "turn": 0,
                 "leftArm":{
-                    "roll":-0.012468169443309307
+                    "roll":-0.20938244462013245
                 }
             },
             {
@@ -132,11 +132,11 @@
                 }
             },
             {
-                "tick":10,
+                "tick":5,
                 "easing": "EASEINOUTQUAD",
                 "turn": 0,
                 "leftArm":{
-                    "yaw":-0.0
+                    "yaw":-0.07006895542144775
                 }
             },
             {
@@ -148,11 +148,11 @@
                 }
             },
             {
-                "tick":10,
+                "tick":5,
                 "easing": "EASEINOUTQUAD",
                 "turn": 0,
                 "leftArm":{
-                    "pitch":0.0
+                    "pitch":-0.31827065348625183
                 }
             },
             {
@@ -164,7 +164,7 @@
                 }
             },
             {
-                "tick":10,
+                "tick":5,
                 "easing": "EASEINOUTQUAD",
                 "turn": 0,
                 "leftArm":{
@@ -180,7 +180,7 @@
                 }
             },
             {
-                "tick":10,
+                "tick":5,
                 "easing": "EASEINOUTQUAD",
                 "turn": 0,
                 "leftArm":{
@@ -196,7 +196,7 @@
                 }
             },
             {
-                "tick":10,
+                "tick":5,
                 "easing": "EASEINOUTQUAD",
                 "turn": 0,
                 "leftArm":{

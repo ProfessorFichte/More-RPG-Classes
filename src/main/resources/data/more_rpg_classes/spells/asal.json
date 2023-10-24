@@ -1,27 +1,28 @@
 {
-  "school": "PHYSICAL_MELEE",
+  "school": "ARCANE",
   "range": 5.0,
   "learn": {
     "tier": 3
   },
   "cast": {
-    "duration": 2.0,
+    "duration": 1.5,
     "animation": "more_rpg_classes:asal_cast",
     "sound": {
       "id": "spell_engine:generic_arcane_casting"
     },
     "particles": [
       {
-        "particle_id": "enchanted_hit",
-        "shape": "PIPE",
+        "particle_id": "spell_engine:arcane_spell",
+        "shape": "CONE",
         "origin": "CENTER",
-        "count": 1,
+        "count": 1.0,
         "min_speed": 0.01,
         "max_speed": 0.1
       }
     ]
   },
   "release": {
+    "custom_impact": true,
     "animation": "more_rpg_classes:asal_release",
     "particles": [
       {
@@ -30,7 +31,7 @@
         "shape": "SPHERE",
         "rotation": "TRUE",
         "origin": "CENTER",
-        "count": 10.0,
+        "count": 5.0,
         "min_speed": 1.0,
         "max_speed": 15.0
       }
@@ -40,7 +41,7 @@
     },
 
     "sound": {
-      "id": "entity.ender_pearl.throw"
+      "id": "more_rpg_classes:asal_release"
     }
   },
   "impact": [
@@ -48,13 +49,13 @@
       "action": {
         "type": "DAMAGE",
         "damage": {
-          "spell_power_coefficient": 2.2,
+          "spell_power_coefficient": 2.5,
           "knockback": 2.0
         }
       },
       "particles": [
         {
-          "particle_id": "explosion",
+          "particle_id": "more_rpg_classes:asal_explode",
           "shape": "SPHERE",
           "origin": "CENTER",
           "count": 1.0,
@@ -68,9 +69,9 @@
     }
   ],
   "cost": {
-    "exhaust": 50.0,
+    "exhaust": 80.0,
     "durability": 30,
     "cooldown_haste_affected": "false",
-    "cooldown_duration": 50
+    "cooldown_duration": 60
   }
 }

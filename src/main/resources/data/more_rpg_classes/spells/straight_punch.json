@@ -8,13 +8,11 @@
     "duration": 0
   },
   "release": {
+    "custom_impact": true,
     "target": {
       "type": "CURSOR"
     },
     "animation": "more_rpg_classes:straight_punch",
-    "sound": {
-      "id": "minecraft:entity.player.attack.strong"
-    },
     "particles": [
       {
         "particle_id": "crit",
@@ -46,20 +44,7 @@
         }
       ],
       "sound": {
-        "id": "block.metal.hit"
-      }
-    },
-    {
-      "action": {
-        "type": "STATUS_EFFECT",
-        "status_effect": {
-          "effect_id": "minecraft:slowness",
-          "duration": 10,
-          "apply_mode": "ADD",
-          "amplifier": 0,
-          "show_particles": true
-        },
-        "apply_to_caster": false
+        "id": "more_rpg_classes:knuckle_attack"
       }
     }
   ],

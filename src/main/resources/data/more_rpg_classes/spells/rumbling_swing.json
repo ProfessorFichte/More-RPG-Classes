@@ -1,0 +1,64 @@
+{
+  "range": 3.0,
+  "school": "PHYSICAL_MELEE",
+  "learn": {
+    "tier": 3
+  },
+  "cast": {
+    "duration": 0
+  },
+  "release": {
+    "custom_impact": true,
+    "target": {
+      "type": "CURSOR",
+      "area": {
+        "angle_degrees": 45,
+        "vertical_range_multiplier": 6
+      }
+    },
+    "animation": "more_rpg_classes:rumbling_swing",
+    "sound": {
+      "id": "entity.player.attack.sweep"
+    },
+    "particles": [
+      {
+        "particle_id": "wax_off",
+        "shape": "PIPE",
+        "origin": "CENTER",
+        "count": 15.0,
+        "min_speed": 0.2,
+        "max_speed": 0.6
+      }
+    ]
+  },
+  "impact": [
+    {
+      "action": {
+        "type": "DAMAGE",
+        "damage": {
+          "spell_power_coefficient": 0.95,
+          "knockback": 1.5
+        }
+      },
+      "particles": [
+        {
+          "particle_id": "more_rpg_classes:small_thunder",
+          "shape": "SPHERE",
+          "origin": "CENTER",
+          "count": 1.0,
+          "min_speed": 1.0,
+          "max_speed": 1.0
+        }
+      ],
+      "sound": {
+        "id": "entity.lightning_bolt.impact"
+      }
+    }
+  ],
+  "cost": {
+    "effect_id": "more_rpg_classes:rage",
+    "exhaust": 1.5,
+    "durability": 1,
+    "cooldown_duration": 1
+  }
+}

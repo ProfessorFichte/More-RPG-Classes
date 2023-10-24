@@ -35,7 +35,7 @@
         "max_speed": 0.2
       }
     ],
-    "channel_ticks": 4.0
+    "channel_ticks": 5.0
   },
   "release": {
     "target": {
@@ -76,7 +76,7 @@
         "type": "STATUS_EFFECT",
         "status_effect": {
           "effect_id": "more_rpg_classes:molten_armor",
-          "duration": 15.0,
+          "duration": 12.0,
           "apply_mode": "ADD",
           "amplifier": 0,
           "show_particles": true

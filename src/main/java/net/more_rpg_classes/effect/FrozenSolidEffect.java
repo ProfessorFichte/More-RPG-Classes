@@ -23,7 +23,13 @@ public class FrozenSolidEffect extends StatusEffect {
 
     @Override
     public void onRemoved(LivingEntity entity, AttributeContainer attributes, int amplifier) {
-        entity.damage(entity.getDamageSources().freeze(), 7.0f);
+        if(entity.isOnFire()){
+
+        } else if (entity.isInLava()) {
+
+        } else {
+            entity.damage(entity.getDamageSources().freeze(), 6.0f);
+        }
         super.onRemoved(entity, attributes, amplifier);
     }
 

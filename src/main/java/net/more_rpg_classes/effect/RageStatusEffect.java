@@ -8,7 +8,6 @@ public class RageStatusEffect extends StatusEffect {
     public RageStatusEffect(StatusEffectCategory statusEffectCategory, int color) {
         super(statusEffectCategory, color);
     }
-
 }
 
 

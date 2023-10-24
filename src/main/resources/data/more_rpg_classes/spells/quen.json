@@ -8,12 +8,13 @@
     "duration": 0
   },
   "release": {
+    "custom_impact": true,
     "target": {
       "type": "SELF"
     },
     "animation": "more_rpg_classes:sign_cast_short",
     "sound": {
-      "id": "block.enchantment_table.use"
+      "id": "more_rpg_classes:quen_sign"
     },
     "particles": [
       {
@@ -47,10 +48,10 @@
       "action": {
         "type": "STATUS_EFFECT",
         "status_effect": {
-          "effect_id": "absorption",
-          "duration": 15,
+          "effect_id": "more_rpg_classes:quen_shield",
+          "duration": 20,
           "apply_mode": "SET",
-          "amplifier": 2,
+          "amplifier": 1,
           "show_particles": false
         }
       }
@@ -58,6 +59,6 @@
   ],
   "cost": {
     "exhaust": 1.5,
-    "cooldown_duration": 35
+    "cooldown_duration": 45
   }
 }

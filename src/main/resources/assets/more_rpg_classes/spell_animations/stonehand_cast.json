@@ -32,7 +32,7 @@
                 "easing": "EASEINOUTQUAD",
                 "turn": 0,
                 "torso":{
-                    "pitch":-0.9975693225860596
+                    "pitch":-1.5223326683044434
                 }
             },
             {
@@ -448,7 +448,7 @@
                 "easing": "EASEINOUTQUAD",
                 "turn": 0,
                 "rightLeg":{
-                    "pitch":-1.2163807153701782
+                    "pitch":-1.653903841972351
                 }
             },
             {
@@ -640,7 +640,7 @@
                 "easing": "EASEINOUTQUAD",
                 "turn": 0,
                 "leftLeg":{
-                    "pitch":-0.5598750710487366
+                    "pitch":-1.1391583681106567
                 }
             },
             {

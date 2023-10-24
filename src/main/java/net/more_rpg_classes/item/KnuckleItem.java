@@ -15,16 +15,18 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.util.math.Vec3d;
 import net.spell_engine.api.item.weapon.SpellWeaponItem;
+import net.spell_power.api.MagicSchool;
 import net.spell_power.api.attributes.EntityAttributes_SpellPower;
 
 import static net.more_rpg_classes.item.MRPGCItems.SPELL_HASTE_MODIFIER_ID;
+import static net.more_rpg_classes.item.MRPGCItems.SPELL_POWER_ARCANE_MODIFIER_ID;
 
 public class KnuckleItem extends SpellWeaponItem {
     private final float attackDamage;
     private final Multimap<EntityAttribute, EntityAttributeModifier> attributeModifiers;
 
 
-    public KnuckleItem(ToolMaterial toolMaterial, float attackDamage, float attackSpeed, float haste, Item.Settings settings) {
+    public KnuckleItem(ToolMaterial toolMaterial, float attackDamage, float attackSpeed, float haste, float arcane, Item.Settings settings) {
         super(toolMaterial, settings);
         this.attackDamage = (float) attackDamage + toolMaterial.getAttackDamage();
         ImmutableMultimap.Builder<EntityAttribute, EntityAttributeModifier> builder = ImmutableMultimap.builder();
@@ -34,6 +36,8 @@ public class KnuckleItem extends SpellWeaponItem {
                 "Weapon modifier", (double) attackSpeed, EntityAttributeModifier.Operation.ADDITION));
         builder.put(EntityAttributes_SpellPower.HASTE, new EntityAttributeModifier(SPELL_HASTE_MODIFIER_ID,
                 "Weapon modifier", haste, EntityAttributeModifier.Operation.MULTIPLY_TOTAL));
+        builder.put(EntityAttributes_SpellPower.POWER.get(MagicSchool.ARCANE), new EntityAttributeModifier(SPELL_POWER_ARCANE_MODIFIER_ID,
+                "Weapon modifier", arcane, EntityAttributeModifier.Operation.ADDITION));
         this.attributeModifiers = builder.build();
     }
 
