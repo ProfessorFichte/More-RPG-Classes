@@ -38,5 +38,10 @@
     "sounds": [
       "more_rpg_classes:knuckle_spell_impact"
     ]
+  },
+  "yrden_sign": {
+    "sounds": [
+      "more_rpg_classes:yrden_sign"
+    ]
   }
 }

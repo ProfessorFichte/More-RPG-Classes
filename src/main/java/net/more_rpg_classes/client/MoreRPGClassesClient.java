@@ -23,23 +23,28 @@ public class MoreRPGClassesClient implements ClientModInitializer{
     public void onInitializeClient() {
         CustomModels.registerModelIds(List.of(
                 new Identifier(MRPGCMod.MOD_ID, "projectile/barqesna_projectile"),
-                FrozenSolidRenderer.modelId
+                FrozenSolidRenderer.modelId,
+                RageRenderer.modelIdRage
         ));
         ParticleFactoryRegistry.getInstance().register(MoreParticles.IGNI_SIGN, SoulParticle.Factory::new);
+        ParticleFactoryRegistry.getInstance().register(MoreParticles.YRDEN_SIGN, SoulParticle.Factory::new);
         ParticleFactoryRegistry.getInstance().register(MoreParticles.AARD_SIGN, SoulParticle.Factory::new);
         ParticleFactoryRegistry.getInstance().register(MoreParticles.QUEN_SIGN, SoulParticle.Factory::new);
-        ParticleFactoryRegistry.getInstance().register(MoreParticles.RAGE_PAR, BubblePopParticle.Factory::new);
+        ParticleFactoryRegistry.getInstance().register(MoreParticles.AXII_SIGN, DamageParticle.Factory::new);
+        ParticleFactoryRegistry.getInstance().register(MoreParticles.RAGE_PAR, DamageParticle.Factory::new);
         ParticleFactoryRegistry.getInstance().register(MoreParticles.STUN_PAR, DamageParticle.Factory::new);
         ParticleFactoryRegistry.getInstance().register(MoreParticles.ASAL_EXPLODE, ExplosionLargeParticle.Factory::new);
         ParticleFactoryRegistry.getInstance().register(MoreParticles.SMALL_THUNDER, ExplosionLargeParticle.Factory::new);
         ParticleFactoryRegistry.getInstance().register(MoreParticles.BARQ_ESNA_FLAME, FlameParticle.Factory::new);
         ParticleFactoryRegistry.getInstance().register(MoreParticles.BLOOD_DROP, DamageParticle.Factory::new);
+        ParticleFactoryRegistry.getInstance().register(MoreParticles.YRDEN_IMPACT, DamageParticle.Factory::new);
 
         CustomParticleStatusEffect.register(MRPGCEffects.RAGE, new RageParticles(1));
+        CustomParticleStatusEffect.register(MRPGCEffects.AXII, new AxiiParticles(1));
         CustomParticleStatusEffect.register(MRPGCEffects.STUNNED, new StunnedParticles(3));
         CustomParticleStatusEffect.register(MRPGCEffects.MOLTEN_ARMOR, new MoltenArmorParticles(1));
         CustomParticleStatusEffect.register(MRPGCEffects.BARQ_ESNA, new BarqEsnaParticles(1));
         CustomModelStatusEffect.register(MRPGCEffects.FROZEN_SOLID, new FrozenSolidRenderer());
-
+        CustomModelStatusEffect.register(MRPGCEffects.RAGE, new RageRenderer());
     }
 }

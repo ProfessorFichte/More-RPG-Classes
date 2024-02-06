@@ -1,5 +1,5 @@
 {
-  "range": 3.0,
+  "range": 4.0,
   "school": "PHYSICAL_MELEE",
   "learn": {
     "tier": 3
@@ -10,11 +10,7 @@
   "release": {
     "custom_impact": true,
     "target": {
-      "type": "CURSOR",
-      "area": {
-        "angle_degrees": 45,
-        "vertical_range_multiplier": 6
-      }
+      "type": "CURSOR"
     },
     "animation": "more_rpg_classes:rumbling_swing",
     "sound": {
@@ -22,12 +18,12 @@
     },
     "particles": [
       {
-        "particle_id": "wax_off",
+        "particle_id": "more_rpg_classes:small_thunder",
         "shape": "PIPE",
         "origin": "CENTER",
-        "count": 15.0,
-        "min_speed": 0.2,
-        "max_speed": 0.6
+        "count": 1.0,
+        "min_speed": 0.1,
+        "max_speed": 0.15
       }
     ]
   },
@@ -46,8 +42,8 @@
           "shape": "SPHERE",
           "origin": "CENTER",
           "count": 1.0,
-          "min_speed": 1.0,
-          "max_speed": 1.0
+          "min_speed": 0.1,
+          "max_speed": 0.15
         }
       ],
       "sound": {
@@ -59,6 +55,7 @@
     "effect_id": "more_rpg_classes:rage",
     "exhaust": 1.5,
     "durability": 1,
-    "cooldown_duration": 1
+    "cooldown_duration": 28,
+    "cooldown_haste_affected": "false"
   }
 }

@@ -8,7 +8,7 @@ import java.util.function.Supplier;
 public enum ModToolMaterial implements ToolMaterial {
     RELICT_STEEL(4, 2500, 9.0f, 4.0f, 25, () -> Ingredient.ofItems(MRPGCItems.DARK_STEEL_INGOT)),
     RELICT_SILVER(3, 1500, 9.5f, 3.5f, 30,() -> Ingredient.ofItems(MRPGCItems.METEORITE_SILVER_INGOT)),
-    SILVER(1, 200, 8.0f, 2.0f, 25,() -> Ingredient.ofItems(MRPGCItems.SILVER_INGOT));
+    SILVER(1, 200, 8.0f, 2.5f, 25,() -> Ingredient.ofItems(MRPGCItems.SILVER_INGOT));
 
     private final int miningLevel;
     private final int itemDurability;

@@ -86,6 +86,7 @@
     "effect_id": "more_rpg_classes:rage",
     "cooldown_duration": 25,
     "durability": 5,
-    "cooldown_proportional": true
+    "cooldown_proportional": true,
+    "cooldown_haste_affected": "false"
   }
 }

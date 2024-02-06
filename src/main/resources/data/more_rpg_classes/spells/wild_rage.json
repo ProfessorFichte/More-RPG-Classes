@@ -1,6 +1,6 @@
 {
   "school": "PHYSICAL_MELEE",
-  "range": 0,
+  "range": 5.0,
   "learn": {
     "tier": 1
   },
@@ -8,8 +8,13 @@
     "duration": 0
   },
   "release": {
+    "custom_impact": true,
     "target": {
-      "type": "SELF"
+      "type": "AREA",
+      "area": {
+        "distance_dropoff": "SQUARED",
+        "angle_degrees": 360
+      }
     },
     "animation": "more_rpg_classes:two_handed_roar",
     "sound": {
@@ -39,17 +44,29 @@
       "action": {
         "type": "STATUS_EFFECT",
         "status_effect": {
-          "effect_id": "more_rpg_classes:rage",
-          "duration": 20,
+          "effect_id": "more_rpg_classes:fear",
+          "duration": 6,
           "apply_mode": "SET",
           "amplifier": 0,
-          "show_particles": false
+          "show_particles": true
+        },
+        "apply_to_caster": false
+      },
+      "particles": [
+        {
+          "particle_id": "minecraft:sculk_soul",
+          "shape": "SPHERE",
+          "origin": "CENTER",
+          "count": 3,
+          "min_speed": 0.2,
+          "max_speed": 0.7
         }
-      }
+      ]
     }
   ],
   "cost": {
-    "exhaust": 1.5,
-    "cooldown_duration": 30
+    "exhaust": 2.5,
+    "cooldown_duration": 30,
+    "cooldown_haste_affected": "false"
   }
 }

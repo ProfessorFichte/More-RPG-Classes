@@ -1,3 +1,4 @@
 {
-  "is_proxy": true
+  "is_proxy": false,
+  "spell_ids": [ "more_rpg_classes:straight_punch"]
 }

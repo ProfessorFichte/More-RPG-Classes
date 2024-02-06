@@ -24,7 +24,8 @@ public class ModSounds {
     public static SoundEvent KNUCKLE_SPELL_CAST_EVENT= SoundEvent.of(KNUCKLE_SPELL_CAST_ID);
     public static final Identifier KNUCKLE_SPELL_IMPACT_ID = new Identifier(MRPGCMod.MOD_ID, "knuckle_spell_impact");
     public static SoundEvent KNUCKLE_SPELL_IMPACT_EVENT= SoundEvent.of(KNUCKLE_SPELL_IMPACT_ID);
-
+    public static final Identifier YRDEN_SIGN_ID = new Identifier(MRPGCMod.MOD_ID, "yrden_sign");
+    public static SoundEvent YRDEN_SIGN_EVENT= SoundEvent.of(YRDEN_SIGN_ID);
 
 
     public static void register() {
@@ -36,5 +37,6 @@ public class ModSounds {
         Registry.register(Registries.SOUND_EVENT, STONEHAND_CAST_ID, STONEHAND_CAST_EVENT);
         Registry.register(Registries.SOUND_EVENT, KNUCKLE_SPELL_CAST_ID, KNUCKLE_SPELL_CAST_EVENT);
         Registry.register(Registries.SOUND_EVENT, KNUCKLE_SPELL_IMPACT_ID, KNUCKLE_SPELL_IMPACT_EVENT);
+        Registry.register(Registries.SOUND_EVENT, YRDEN_SIGN_ID, YRDEN_SIGN_EVENT);
     }
 }

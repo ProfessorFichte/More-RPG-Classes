@@ -54,7 +54,7 @@ public class MRPGCLootTableChestModifiers {
                         .conditionally(RandomChanceLootCondition.builder(darK_steel_ingot_chance))
                         .with(ItemEntry.builder(MRPGCItems.DARK_STEEL_INGOT))
                         .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
-                LootPool.Builder poolBuilder4 = LootPool.builder()
+                /*LootPool.Builder poolBuilder4 = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
                         .conditionally(RandomChanceLootCondition.builder(iron_witcher_sword_chance))
                         .with(ItemEntry.builder(MRPGCItems.IRON_WITCHER_SWORD))
@@ -73,14 +73,14 @@ public class MRPGCLootTableChestModifiers {
                         .rolls(ConstantLootNumberProvider.create(1))
                         .conditionally(RandomChanceLootCondition.builder(silver_witcher_sword_chance))
                         .with(ItemEntry.builder(MRPGCItems.SILVER_WITCHER_SWORD))
-                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());*/
                 tableBuilder.pool(poolBuilder.build());
                 tableBuilder.pool(poolBuilder2.build());
                 tableBuilder.pool(poolBuilder3.build());
-                tableBuilder.pool(poolBuilder4.build());
+                /*tableBuilder.pool(poolBuilder4.build());
                 tableBuilder.pool(poolBuilder5.build());
                 tableBuilder.pool(poolBuilder6.build());
-                tableBuilder.pool(poolBuilder7.build());
+                tableBuilder.pool(poolBuilder7.build());*/
             }
             if(TOOL_SMITH_CHEST.equals(id)){
                 LootPool.Builder poolBuilder = LootPool.builder()
@@ -102,7 +102,7 @@ public class MRPGCLootTableChestModifiers {
                 tableBuilder.pool(poolBuilder2.build());
                 tableBuilder.pool(poolBuilder3.build());
             }
-            if(ABANDONED_MINESHAFT.equals(id)){
+            /*if(ABANDONED_MINESHAFT.equals(id)){
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
                         .conditionally(RandomChanceLootCondition.builder(winters_blade_chance))
@@ -133,7 +133,7 @@ public class MRPGCLootTableChestModifiers {
                         .with(ItemEntry.builder(MRPGCItems.ULTIMATUM_WITCHER_SWORD))
                         .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
                 tableBuilder.pool(poolBuilder.build());
-            }
+            }*/
         });
     }
 }

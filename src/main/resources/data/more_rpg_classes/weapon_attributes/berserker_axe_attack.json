@@ -14,6 +14,17 @@
         }
       },
       {
+        "hitbox": "FORWARD_BOX",
+        "conditions": ["DUAL_WIELDING_SAME_CATEGORY","MAIN_HAND_ONLY"],
+        "damage_multiplier": 1.2,
+        "angle": 0,
+        "upswing": 0.6,
+        "animation": "more_rpg_classes:berserker_axe_both",
+        "swing_sound": {
+          "id": "bettercombat:double_axe_swing"
+        }
+      },
+      {
         "hitbox": "HORIZONTAL_PLANE",
         "damage_multiplier": 0.9,
         "angle": 90,

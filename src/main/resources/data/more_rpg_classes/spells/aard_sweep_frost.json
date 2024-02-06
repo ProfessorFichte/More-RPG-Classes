@@ -1,15 +1,14 @@
 {
-  "school": "FROST",
+  "school": "LIGHTNING",
   "range": 4.5,
   "learn": {
-    "tier": 1
+    "tier": 3
   },
   "cast": {
-    "duration": 2.0,
+    "duration": 1.5,
     "animation": "more_rpg_classes:sign_cast_long",
     "sound": {
-      "id": "entity.warden.sonic_charge",
-      "randomness": 1
+      "id": "more_rpg_classes:aard_sign"
     },
     "particles": [
       {
@@ -66,7 +65,7 @@
         "type": "DAMAGE",
         "damage": {
           "spell_power_coefficient": 1.6,
-          "knockback": 2.5
+          "knockback": 0.5
         }
       },
       "particles": [
@@ -111,6 +110,7 @@
   ],
   "cost": {
     "exhaust": 7.5,
-    "cooldown_duration": 40
+    "cooldown_duration": 40,
+    "cooldown_haste_affected": "true"
   }
 }

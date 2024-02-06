@@ -69,7 +69,7 @@
     }
   ],
   "cost": {
-    "exhaust": 80.0,
+    "exhaust": 100.0,
     "durability": 30,
     "cooldown_haste_affected": "false",
     "cooldown_duration": 60

@@ -10,11 +10,7 @@
   "release": {
     "custom_impact": false,
     "target": {
-      "type": "AREA",
-      "area": {
-        "distance_dropoff": "SQUARED",
-        "angle_degrees": 20
-      }
+      "type": "CURSOR"
     },
     "animation": "more_rpg_classes:axe_throw",
     "particles": [
@@ -51,12 +47,25 @@
       "sound": {
         "id": "more_rpg_classes:knuckle_attack"
       }
+    },
+    {
+      "action": {
+        "type": "STATUS_EFFECT",
+        "status_effect": {
+          "effect_id": "slowness",
+          "duration": 8.0,
+          "apply_mode": "SET",
+          "amplifier": 0,
+          "show_particles": false
+        }
+      }
     }
   ],
   "channel_ticks": 20.0,
   "cost": {
     "exhaust": 2.0,
     "durability": 1,
-    "cooldown_duration": 1
+    "cooldown_duration": 20,
+    "cooldown_haste_affected": "false"
   }
 }

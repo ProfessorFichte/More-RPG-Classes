@@ -1,5 +1,5 @@
 {
-  "school": "HEALING",
+  "school": "LIGHTNING",
   "range": 0,
   "learn": {
     "tier": 3
@@ -51,7 +51,7 @@
           "effect_id": "more_rpg_classes:quen_shield",
           "duration": 20,
           "apply_mode": "SET",
-          "amplifier": 1,
+          "amplifier": 0,
           "show_particles": false
         }
       }
@@ -59,6 +59,7 @@
   ],
   "cost": {
     "exhaust": 1.5,
-    "cooldown_duration": 45
+    "cooldown_duration": 45,
+    "cooldown_haste_affected": "true"
   }
 }

@@ -13,7 +13,7 @@ public class BarqEsnaParticles implements CustomParticleStatusEffect.Spawner{
         this.particles = new ParticleBatch(
                 "more_rpg_classes:barq_esna_flame",
                 ParticleBatch.Shape.SPHERE, ParticleBatch.Origin.CENTER,
-                null, particleCount, 0.05F, 0.1F, 0);
+                null, particleCount, 0.1F, 0.3F, 0);
     }
 
     @Override

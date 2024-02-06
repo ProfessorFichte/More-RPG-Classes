@@ -9,10 +9,7 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.more_rpg_classes.MRPGCMod;
 import net.more_rpg_classes.entity.attribute.MRPGCEntityAttributes;
-import net.spell_engine.api.effect.ActionImpairing;
-import net.spell_engine.api.effect.EntityActionsAllowed;
-import net.spell_engine.api.effect.RemoveOnHit;
-import net.spell_engine.api.effect.Synchronized;
+import net.spell_engine.api.effect.*;
 import net.spell_power.api.MagicSchool;
 import net.spell_power.api.SpellPower;
 
@@ -20,14 +17,15 @@ public class MRPGCEffects {
     public static float rage_damage_increase = +0.5f;
     public static float rage_incoming_damage_increase = 0.5f;
     public static float rage_attack_speed_increase = +0.2f;
-
     public static float molten_armor_reduce_factor = -2.0f;
     public static float molten_toughness_reduce_factor = -1.0f;
-
     public static float stone_hand_attack = 1.0f;
-    public static float stone_hand_attack_speed = -0.7f;
-
-    public static float aerondight_attack = 0.1f;
+    public static float stone_hand_attack_speed = -0.5f;
+    public static float aerondight_attack = 0.15f;
+    public static float magical_trap_speed = -0.35f;
+    public static float axii_dmg_inc = 0.25F;
+    public static float fear_speed_inc = 0.25f;
+    public static float fear_dmg_inc = 0.01F;
 
 
     //RAGE
@@ -73,6 +71,20 @@ public class MRPGCEffects {
     //QUEN SHIELD
     public static StatusEffect QUEN_SHIELD= new QuenEffect(StatusEffectCategory.BENEFICIAL, 0x3beeff);
 
+    //YRDEN MAGICAL TRAP
+    public static StatusEffect MAGICAL_TRAP= new MagicalTrapEffect(StatusEffectCategory.HARMFUL, 0xe717fe)
+            .addAttributeModifier(EntityAttributes.GENERIC_MOVEMENT_SPEED, "5e58808d-6042-45c6-bb4d-f5fcd82f485e",
+                    magical_trap_speed, EntityAttributeModifier.Operation.MULTIPLY_BASE);
+
+    //AXII
+    public static StatusEffect AXII= new AxiiEffect(StatusEffectCategory.HARMFUL, 0x008000);
+
+    //FEAR
+    public static StatusEffect FEAR= new FearEffect(StatusEffectCategory.HARMFUL, 0x01d9cf)
+            .addAttributeModifier(EntityAttributes.GENERIC_MOVEMENT_SPEED, "57f28eca-112d-418b-8a0b-f826103d4c35",
+                    fear_speed_inc, EntityAttributeModifier.Operation.MULTIPLY_BASE);
+
+
     public static void register(){
         Synchronized.configure(RAGE,true);
         Synchronized.configure(MOLTEN_ARMOR,true);
@@ -80,12 +92,21 @@ public class MRPGCEffects {
         Synchronized.configure(MOONLIGHT,true);
         Synchronized.configure(STONE_HAND,true);
         Synchronized.configure(STUNNED,true);
+        RemoveOnHit.configure(STUNNED, true);
         ActionImpairing.configure(STUNNED, EntityActionsAllowed.STUN);
         ActionImpairing.configure(FROZEN_SOLID, EntityActionsAllowed.STUN);
         RemoveOnHit.configure(FROZEN_SOLID, true);
         Synchronized.configure(FROZEN_SOLID,true);
         Synchronized.configure(AERONDIGHT_CHARGE,true);
         Synchronized.configure(QUEN_SHIELD,true);
+        Synchronized.configure(MAGICAL_TRAP,true);
+        RemoveOnHit.configure(AXII, true);
+        Synchronized.configure(AXII,true);
+        ActionImpairing.configure(AXII, EntityActionsAllowed.INCAPACITATE);
+        HealthImpacting.configureDamageTaken(AXII, axii_dmg_inc);
+        Synchronized.configure(FEAR,true);
+        HealthImpacting.configureDamageTaken(FEAR, fear_dmg_inc);
+        ActionImpairing.configure(FEAR, EntityActionsAllowed.INCAPACITATE);
 
         int mrpgc_spellid = 900;
         Registry.register(Registries.STATUS_EFFECT, mrpgc_spellid++, new Identifier(MRPGCMod.MOD_ID, "rage").toString(), RAGE);
@@ -97,5 +118,8 @@ public class MRPGCEffects {
         Registry.register(Registries.STATUS_EFFECT, mrpgc_spellid++, new Identifier(MRPGCMod.MOD_ID, "frozen_solid").toString(), FROZEN_SOLID);
         Registry.register(Registries.STATUS_EFFECT, mrpgc_spellid++, new Identifier(MRPGCMod.MOD_ID, "aerondight_charge").toString(), AERONDIGHT_CHARGE);
         Registry.register(Registries.STATUS_EFFECT, mrpgc_spellid++, new Identifier(MRPGCMod.MOD_ID, "quen_shield").toString(), QUEN_SHIELD);
+        Registry.register(Registries.STATUS_EFFECT, mrpgc_spellid++, new Identifier(MRPGCMod.MOD_ID, "magical_trap").toString(), MAGICAL_TRAP);
+        Registry.register(Registries.STATUS_EFFECT, mrpgc_spellid++, new Identifier(MRPGCMod.MOD_ID, "axii").toString(), AXII);
+        Registry.register(Registries.STATUS_EFFECT, mrpgc_spellid++, new Identifier(MRPGCMod.MOD_ID, "fear").toString(), FEAR);
     }
 }

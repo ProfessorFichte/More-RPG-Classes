@@ -31,14 +31,14 @@ public class MRPGCLootTableEntityModifiers {
                         .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
                 tableBuilder.pool(poolBuilder.build());
             }
-            if(WARDEN_ID.equals(id)){
+            /*if(WARDEN_ID.equals(id)){
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
                         .conditionally(RandomChanceLootCondition.builder(aerondight_chance))
                         .with(ItemEntry.builder(MRPGCItems.AERONDIGHT_WITCHER_SWORD))
                         .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
                 tableBuilder.pool(poolBuilder.build());
-            }
+            }*/
 
         });
     }

@@ -12,13 +12,13 @@ public class RageParticles implements CustomParticleStatusEffect.Spawner{
         this.particles = new ParticleBatch(
                 "more_rpg_classes:rage_particle",
                 ParticleBatch.Shape.PIPE, ParticleBatch.Origin.LAUNCH_POINT,
-                null, particleCount, 0.0001F, 0.0002F, 0);
+                null, particleCount, 0.1F, 0.3F, 0);
     }
 
     @Override
     public void spawnParticles(LivingEntity livingEntity, int amplifier) {
         var scaledParticles = new ParticleBatch(particles);
-        scaledParticles.count *= (amplifier + 1);
+        scaledParticles.count = (amplifier + 1);
         ParticleHelper.play(livingEntity.getWorld(), livingEntity, scaledParticles);
     }
 }

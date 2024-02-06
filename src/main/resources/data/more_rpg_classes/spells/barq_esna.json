@@ -1,11 +1,12 @@
+
 {
   "school": "ARCANE",
-  "range": 15,
+  "range": 16,
   "learn": {
-    "tier": 1
+    "tier": 2
   },
   "cast": {
-    "duration": 0.75,
+    "duration": 1,
     "animation": "more_rpg_classes:barq_esna_cast",
     "sound": {
       "id": "spell_engine:generic_arcane_casting",
@@ -26,32 +27,31 @@
     "target": {
       "type": "PROJECTILE",
       "projectile": {
-        "velocity": 0.4,
-        "homing_angle": 1.5,
-        "perks": {
-          "pierce": 0
-        },
-        "client_data": {
-          "travel_particles": [
-            {
-              "particle_id": "spell_engine:arcane_spell",
-              "shape": "CIRCLE",
-              "rotation": "LOOK",
-              "origin": "CENTER",
-              "count": 1.0,
-              "min_speed": 0.05,
-              "max_speed": 0.1
+        "projectile": {
+          "homing_angle": 1.0,
+          "client_data": {
+            "travel_particles": [
+              {
+                "particle_id": "spell_engine:arcane_spell",
+                "shape": "CIRCLE",
+                "rotation": "LOOK",
+                "origin": "CENTER",
+                "count": 1.0,
+                "min_speed": 0.05,
+                "max_speed": 0.1
+              }
+            ],
+            "model": {
+              "model_id": "more_rpg_classes:projectile/barqesna_projectile",
+              "scale": 0.65
             }
-          ],
-          "model_id": "more_rpg_classes:projectile/barqesna_projectile",
-          "render": "DEEP",
-          "scale": 0.65
+          }
         }
       }
     },
-    "animation": "more_rpg_classes:barq_esna_cast",
+    "animation": "more_rpg_classes:barq_esna_release",
     "sound": {
-      "id": "wizards:arcane_missile_release"
+      "id": ""
     }
   },
   "impact": [
@@ -59,8 +59,7 @@
       "action": {
         "type": "DAMAGE",
         "damage": {
-          "knockback": 0.6,
-          "spell_power_coefficient": 0.6
+          "spell_power_coefficient": 0.4
         }
       },
       "particles": [
@@ -68,13 +67,13 @@
           "particle_id": "soul_fire_flame",
           "shape": "SPHERE",
           "origin": "CENTER",
-          "count": 40,
+          "count": 30,
           "min_speed": 0.2,
           "max_speed": 0.7
         }
       ],
       "sound": {
-        "id": "wizards:arcane_missile_impact"
+        "id": ""
       }
     },
     {
@@ -84,7 +83,6 @@
           "effect_id": "more_rpg_classes:barq_esna",
           "duration": 35.0,
           "apply_mode": "ADD",
-          "amplifier": 0,
           "show_particles": true
         }
       }
@@ -92,6 +90,7 @@
   ],
   "cost": {
     "cooldown_duration": 8.0,
-    "cooldown_proportional": true
+    "cooldown_proportional": true,
+    "cooldown_haste_affected": "true"
   }
 }

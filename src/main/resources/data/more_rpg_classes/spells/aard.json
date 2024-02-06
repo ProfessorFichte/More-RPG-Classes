@@ -12,7 +12,7 @@
       "type": "AREA",
       "area": {
         "distance_dropoff": "SQUARED",
-        "angle_degrees": 180
+        "angle_degrees": 90
       }
     },
     "animation": "more_rpg_classes:sign_cast_short",
@@ -69,6 +69,7 @@
   ],
   "cost": {
     "exhaust": 1.2,
-    "cooldown_duration": 18
+    "cooldown_duration": 18,
+    "cooldown_haste_affected": "true"
   }
 }

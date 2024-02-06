@@ -60,6 +60,7 @@
   "cost": {
     "exhaust" : 2.2,
     "cooldown_duration": 25.0,
-    "cooldown_proportional": true
+    "cooldown_proportional": true,
+    "cooldown_haste_affected": "false"
   }
 }

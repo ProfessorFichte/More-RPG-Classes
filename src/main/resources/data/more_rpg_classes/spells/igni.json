@@ -13,7 +13,7 @@
       "type": "AREA",
       "area": {
         "distance_dropoff": "SQUARED",
-        "angle_degrees": 180
+        "angle_degrees": 90
       }
     },
     "animation": "more_rpg_classes:sign_cast_short",
@@ -35,11 +35,12 @@
         "max_speed": 1.0
       },
       {
-        "particle_id": "flame",
-        "shape": "CIRCLE",
-        "origin": "CENTER",
+        "particle_id": "spell_engine:flame",
+        "angle": 180.0,
+        "shape": "SPHERE",
+        "origin": "LAUNCH_POINT",
         "count": 80.0,
-        "min_speed": 0.1,
+        "min_speed": 0.8,
         "max_speed": 1.0
       }
     ]
@@ -80,6 +81,7 @@
   ],
   "cost": {
     "exhaust": 1.5,
-    "cooldown_duration": 20
+    "cooldown_duration": 20,
+    "cooldown_haste_affected": "true"
   }
 }

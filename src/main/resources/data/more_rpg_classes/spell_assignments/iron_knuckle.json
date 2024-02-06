@@ -1,3 +1,5 @@
 {
-  "pool": "more_rpg_classes:forcemaster"
+  "is_proxy": false,
+  "pool": "more_rpg_classes:forcemaster",
+  "max_spell_count": 4
 }
