@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "RUR",
+    "R R",
+    "T T"
+  ],
+  "key": {
+    "R": {
+      "item": "minecraft:leather"
+    },
+    "T": {
+      "item": "minecraft:gold_ingot"
+    },
+    "U": {
+      "item": "minecraft:amethyst_shard"
+    }
+  },
+  "result": {
+    "item": "more_rpg_classes:phasleb_legs",
+    "count": 1
+  }
+}

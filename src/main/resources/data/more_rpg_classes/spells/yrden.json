@@ -1,0 +1,72 @@
+{
+  "school": "SOUL",
+  "learn": {
+    "tier": 2
+  },
+  "cast": {
+    "duration": 0.5,
+    "animation": "more_rpg_classes:sign_cast_ground"
+  },
+  "release": {
+    "target": {
+      "type": "CLOUD",
+      "cloud": {
+        "volume": {
+          "radius": 4.0,
+          "area": {
+            "vertical_range_multiplier": 0.3
+          },
+          "sound": {
+            "id": "more_rpg_classes:yrden_sign"
+          }
+        },
+        "impact_tick_interval": 15,
+        "time_to_live_seconds": 8,
+        "client_data": {
+          "particles": [
+            {
+              "particle_id": "more_rpg_classes:yrden_sign_cast",
+              "shape": "PILLAR",
+              "origin": "FEET",
+              "count": 1.0,
+              "min_speed": 0.0,
+              "max_speed": 0.0
+            }
+          ]
+        }
+      }
+    }
+  },
+  "impact": [
+    {
+      "action": {
+        "type": "STATUS_EFFECT",
+        "status_effect": {
+          "effect_id": "more_rpg_classes:magical_trap",
+          "duration": 1,
+          "apply_mode": "ADD",
+          "apply_limit": {
+            "health_base": 50,
+            "spell_power_multiplier": 5
+          },
+          "show_particles": false
+        }
+      },
+      "particles": [
+        {
+          "particle_id": "",
+          "shape": "SPHERE",
+          "origin": "CENTER",
+          "count": 1.0,
+          "min_speed": 0.0,
+          "max_speed": 0.0
+        }
+      ]
+    }
+  ],
+  "cost": {
+    "exhaust": 0.2,
+    "cooldown_duration": 18,
+    "cooldown_haste_affected": "true"
+  }
+}

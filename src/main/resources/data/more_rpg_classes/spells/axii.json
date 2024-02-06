@@ -1,0 +1,48 @@
+{
+  "school": "SOUL",
+  "range": 10,
+  "learn": {
+    "tier": 1
+  },
+  "cast": {
+    "duration": 0.5,
+    "animation": "more_rpg_classes:sign_cast_short"
+  },
+  "release": {
+    "target": {
+      "type": "CURSOR"
+    },
+    "sound": {
+      "id": ""
+    },
+    "particles": [
+      {
+        "particle_id": "more_rpg_classes:axii_sign_cast",
+        "shape": "PIPE",
+        "origin": "CENTER",
+        "count": 2.0,
+        "min_speed": 0.02,
+        "max_speed": 0.15
+      }
+    ]
+  },
+  "impact": [
+    {
+      "action": {
+        "type": "STATUS_EFFECT",
+        "status_effect": {
+          "effect_id": "more_rpg_classes:axii",
+          "duration": 8,
+          "apply_mode": "SET",
+          "amplifier": 0,
+          "show_particles": true
+        }
+      }
+    }
+  ],
+  "cost": {
+    "exhaust": 1.5,
+    "cooldown_duration": 30,
+    "cooldown_haste_affected": "false"
+  }
+}
