@@ -13,6 +13,7 @@ import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Util;
 import net.more_rpg_classes.client.armor.forcemaster.WildlingArmorRenderer;
+import net.more_rpg_classes.entity.attribute.MRPGCEntityAttributes;
 import net.spell_engine.api.item.armor.Armor;
 import org.jetbrains.annotations.NotNull;
 
@@ -36,7 +37,8 @@ public class WildlingArmor extends ModArmorItem implements GeoItem {
         ImmutableMultimap.Builder<EntityAttribute, EntityAttributeModifier> builder = ImmutableMultimap.builder();
         builder.putAll(attributes);
         UUID uuid = (UUID)MODIFIERS.get(this.type);
-        builder.put(EntityAttributes.GENERIC_ATTACK_SPEED,new EntityAttributeModifier(uuid,"attack_speed",0.1f, EntityAttributeModifier.Operation.ADDITION));
+        builder.put(MRPGCEntityAttributes.RAGE_MODIFIER,new EntityAttributeModifier(uuid,"rage_inc",0.02, EntityAttributeModifier.Operation.MULTIPLY_BASE));
+        builder.put(EntityAttributes.GENERIC_ATTACK_SPEED,new EntityAttributeModifier(uuid,"atk_speed",0.010, EntityAttributeModifier.Operation.MULTIPLY_BASE));
         this.attributes = builder.build();
     }
 

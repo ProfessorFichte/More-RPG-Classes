@@ -1,5 +1,4 @@
 {
-  "is_proxy": false,
-  "pool": "more_rpg_classes:forcemaster",
-  "max_spell_count": 4
+  "is_proxy": true,
+  "spell_ids": [ "more_rpg_classes:barq_esna"]
 }

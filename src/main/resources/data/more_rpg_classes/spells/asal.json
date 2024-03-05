@@ -2,7 +2,7 @@
   "school": "ARCANE",
   "range": 5.0,
   "learn": {
-    "tier": 3
+    "tier": 4
   },
   "cast": {
     "duration": 1.5,
@@ -22,7 +22,7 @@
     ]
   },
   "release": {
-    "custom_impact": true,
+    "custom_impact": false,
     "animation": "more_rpg_classes:asal_release",
     "particles": [
       {
@@ -41,7 +41,8 @@
     },
 
     "sound": {
-      "id": "more_rpg_classes:asal_release"
+      "id": "more_rpg_classes:asal_release",
+      "volume": 0.6
     }
   },
   "impact": [
@@ -49,7 +50,7 @@
       "action": {
         "type": "DAMAGE",
         "damage": {
-          "spell_power_coefficient": 2.5,
+          "spell_power_coefficient": 1.6,
           "knockback": 2.0
         }
       },
@@ -64,14 +65,25 @@
         }
       ],
       "sound": {
-        "id": "entity.dragon_fireball.explode"
+        "id": "entity.dragon_fireball.explode",
+        "volume": 0.6
+      }
+    },
+    {
+      "school": "PHYSICAL_MELEE",
+      "action": {
+        "type": "DAMAGE",
+        "damage": {
+          "spell_power_coefficient": 1.0
+        }
       }
     }
   ],
   "cost": {
+    "effect_id": "more_rpg_classes:arcane_overflow",
     "exhaust": 100.0,
     "durability": 30,
-    "cooldown_haste_affected": "false",
-    "cooldown_duration": 60
+    "cooldown_haste_affected": "true",
+    "cooldown_duration": 80
   }
 }

@@ -4,7 +4,10 @@
   "package": "net.more_rpg_classes.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
-    "LivingEntityMixin"
+    "AttributeMixin",
+    "LivingEntityMixin",
+    "PlayerEntityMixin",
+    "SpellEngineAttributeResolverMixin"
   ],
   "client": [
   ],

@@ -11,9 +11,9 @@ public class MoonLightEffect extends StatusEffect {
 
     @Override
     public void applyUpdateEffect(LivingEntity pLivingEntity, int pAmplifier) {
-        if (!pLivingEntity.getWorld().isClient()) {
+        /*if (!pLivingEntity.getWorld().isClient()) {
             pLivingEntity.damage(pLivingEntity.getDamageSources().magic(), 0.5f);
-        }
+        }*/
         super.applyUpdateEffect(pLivingEntity, pAmplifier);
     }
     @Override

@@ -35,13 +35,13 @@ public class FrozenSolidEffect extends StatusEffect {
             int ice_shard_chance2 = 9;
             int randomrange_freeze = (int) ((Math.random() * (1 + damage_freeze_chance)) + 1);
             if (damage_freeze_chance ==  randomrange_freeze){
-                entity.damage(entity.getDamageSources().freeze(), 20.0f);
+                entity.damage(entity.getDamageSources().freeze(), 8.0f);
             } else if (randomrange_freeze >= ice_shard_chance1 && randomrange_freeze <= ice_shard_chance2){
                 entity.getWorld().addParticle(ParticleTypes.SNOWFLAKE, true,entity.getX(),entity.getY(),entity.getZ(),1,1,1);
                 List<Entity> entities = entity.getWorld().getOtherEntities(entity, entity.getBoundingBox().expand(3.0D), e -> e instanceof LivingEntity);
                 for (Entity e : entities) {
                     if (e instanceof LivingEntity && (e.distanceTo(entity) <= 3.0D)) {
-                        ((LivingEntity) e).damage(entity.getDamageSources().freeze(), 5.0f);
+                        ((LivingEntity) e).damage(entity.getDamageSources().freeze(), 4.0f);
                     }
                 }
             }

@@ -2,7 +2,7 @@
   "school": "FIRE",
   "range": 4.0,
   "learn": {
-    "tier": 2
+    "tier": 4
   },
   "cast": {
     "duration": 5.0,
@@ -35,7 +35,7 @@
         "max_speed": 0.2
       }
     ],
-    "channel_ticks": 5.0
+    "channel_ticks": 4.0
   },
   "release": {
     "target": {
@@ -54,7 +54,7 @@
       "action": {
         "type": "DAMAGE",
         "damage": {
-          "spell_power_coefficient": 0.35
+          "spell_power_coefficient": 0.8
         }
       },
       "particles": [
@@ -76,17 +76,25 @@
         "type": "STATUS_EFFECT",
         "status_effect": {
           "effect_id": "more_rpg_classes:molten_armor",
-          "duration": 12.0,
+          "duration": 5.0,
           "apply_mode": "ADD",
+          "amplifier_power_multiplier": 0.4,
           "amplifier": 0,
-          "show_particles": true
+          "show_particles": false
+        }
+      }
+    },    {
+      "action": {
+        "type": "FIRE",
+        "fire": {
+          "duration": 3
         }
       }
     }
   ],
   "cost": {
-    "exhaust" : 2.2,
-    "cooldown_duration": 20.0,
+    "exhaust" : 10.0,
+    "cooldown_duration": 30.0,
     "cooldown_proportional": true,
     "cooldown_haste_affected": "true"
   }

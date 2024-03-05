@@ -30,7 +30,7 @@
       "action": {
         "type": "DAMAGE",
         "damage": {
-          "spell_power_coefficient": 0.75,
+          "spell_power_coefficient": 0.4,
           "knockback": 1.5
         }
       },
@@ -61,11 +61,11 @@
       }
     }
   ],
-  "channel_ticks": 20.0,
+  "channel_ticks": 40.0,
   "cost": {
     "exhaust": 2.0,
     "durability": 1,
-    "cooldown_duration": 20,
+    "cooldown_duration": 16,
     "cooldown_haste_affected": "false"
   }
 }

@@ -3,8 +3,8 @@
     "author": "Fichte",
     "description": "Barq Esna Cast",
     "emote":{
-        "isLoop": "false",
-        "returnTick": 0,
+        "isLoop": "true",
+        "returnTick": 10,
         "beginTick":2,
         "endTick":10,
         "stopTick":15,

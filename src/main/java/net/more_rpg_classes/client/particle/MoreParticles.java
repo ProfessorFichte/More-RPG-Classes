@@ -20,6 +20,7 @@ public class MoreParticles {
     public static final DefaultParticleType SMALL_THUNDER = FabricParticleTypes.simple();
     public static final DefaultParticleType BLOOD_DROP = FabricParticleTypes.simple();
     public static final DefaultParticleType YRDEN_IMPACT = FabricParticleTypes.simple();
+    public static final DefaultParticleType ICICLE_FLOOR = FabricParticleTypes.simple();
 
 
     public static void register(){
@@ -35,6 +36,7 @@ public class MoreParticles {
         Registry.register(Registries.PARTICLE_TYPE, new Identifier(MRPGCMod.MOD_ID, "small_thunder"), SMALL_THUNDER);
         Registry.register(Registries.PARTICLE_TYPE, new Identifier(MRPGCMod.MOD_ID, "blood_drop"), BLOOD_DROP);
         Registry.register(Registries.PARTICLE_TYPE, new Identifier(MRPGCMod.MOD_ID, "yrden_impact"), YRDEN_IMPACT);
+        Registry.register(Registries.PARTICLE_TYPE, new Identifier(MRPGCMod.MOD_ID, "icicles"), ICICLE_FLOOR);
     }
 
 }

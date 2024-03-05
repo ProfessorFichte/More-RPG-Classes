@@ -6,14 +6,15 @@
   },
   "cast": {
     "duration": 0.5,
-    "animation": "more_rpg_classes:sign_cast_short"
+    "animation": "more_rpg_classes:sign_cast_long"
   },
   "release": {
     "target": {
-      "type": "CURSOR"
+      "type": "CURSOR",
+      "animation": "more_rpg_classes:sign_cast_short"
     },
     "sound": {
-      "id": ""
+      "id": "more_rpg_classes:axii_sign"
     },
     "particles": [
       {
@@ -34,14 +35,18 @@
           "effect_id": "more_rpg_classes:axii",
           "duration": 8,
           "apply_mode": "SET",
+          "apply_limit": {
+            "health_base": 40,
+            "spell_power_multiplier": 2
+          },
           "amplifier": 0,
-          "show_particles": true
+          "show_particles": false
         }
       }
     }
   ],
   "cost": {
-    "exhaust": 1.5,
+    "exhaust": 4.0,
     "cooldown_duration": 30,
     "cooldown_haste_affected": "false"
   }

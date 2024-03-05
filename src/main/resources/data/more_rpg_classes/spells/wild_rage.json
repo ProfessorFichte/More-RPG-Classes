@@ -2,7 +2,7 @@
   "school": "PHYSICAL_MELEE",
   "range": 5.0,
   "learn": {
-    "tier": 1
+    "tier": 2
   },
   "cast": {
     "duration": 0
@@ -48,7 +48,7 @@
           "duration": 6,
           "apply_mode": "SET",
           "amplifier": 0,
-          "show_particles": true
+          "show_particles": false
         },
         "apply_to_caster": false
       },

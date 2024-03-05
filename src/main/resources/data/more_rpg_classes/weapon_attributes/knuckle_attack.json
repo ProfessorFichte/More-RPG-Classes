@@ -1,12 +1,11 @@
 {
   "attributes": {
-    "attack_range": 1.65,
-    "pose": "more_rpg_classes:pose_knuckle",
+    "attack_range": 2.0,
     "category": "knuckle",
     "attacks": [
       {
         "hitbox": "FORWARD_BOX",
-        "damage_multiplier": 0.75,
+        "damage_multiplier": 1.0,
         "angle": 0,
         "upswing": 0.5,
         "animation": "more_rpg_classes:one_handed_knuckle_attack_1",
@@ -18,7 +17,7 @@
       {
         "hitbox": "FORWARD_BOX",
         "conditions": ["NOT_DUAL_WIELDING", "MAIN_HAND_ONLY"],
-        "damage_multiplier": 0.85,
+        "damage_multiplier": 1.0,
         "angle": 0,
         "upswing": 0.3,
         "animation": "more_rpg_classes:one_handed_knuckle_attack_2",
@@ -42,7 +41,7 @@
       {
         "hitbox": "HORIZONTAL_PLANE",
         "conditions": ["NOT_DUAL_WIELDING", "MAIN_HAND_ONLY"],
-        "damage_multiplier": 1.25,
+        "damage_multiplier": 1.2,
         "angle": 150,
         "upswing": 0.1,
         "animation": "more_rpg_classes:one_handed_knuckle_attack_3",

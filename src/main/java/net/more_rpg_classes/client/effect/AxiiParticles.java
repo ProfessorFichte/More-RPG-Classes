@@ -5,8 +5,7 @@ import net.spell_engine.api.effect.CustomParticleStatusEffect;
 import net.spell_engine.api.spell.ParticleBatch;
 import net.spell_engine.particle.ParticleHelper;
 
-public class AxiiParticles implements CustomParticleStatusEffect.Spawner{
-
+public class AxiiParticles implements CustomParticleStatusEffect.Spawner {
     private final ParticleBatch particles;
 
     public AxiiParticles(int particleCount) {
@@ -19,7 +18,7 @@ public class AxiiParticles implements CustomParticleStatusEffect.Spawner{
     @Override
     public void spawnParticles(LivingEntity livingEntity, int amplifier) {
         var scaledParticles = new ParticleBatch(particles);
-        scaledParticles.count *= (amplifier + 1);
+        scaledParticles.count *= (1);
         ParticleHelper.play(livingEntity.getWorld(), livingEntity, scaledParticles);
     }
 }

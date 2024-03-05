@@ -32,8 +32,8 @@
       "action": {
         "type": "DAMAGE",
         "damage": {
-          "spell_power_coefficient": 0.95,
-          "knockback": 1.5
+          "spell_power_coefficient": 0.65,
+          "knockback": 1.0
         }
       },
       "particles": [
@@ -49,11 +49,19 @@
       "sound": {
         "id": "entity.lightning_bolt.impact"
       }
+    },
+    {
+      "school": "LIGHTNING",
+      "action": {
+        "type": "DAMAGE",
+        "damage": {
+          "spell_power_coefficient": 0.8
+        }
+      }
     }
   ],
   "cost": {
-    "effect_id": "more_rpg_classes:rage",
-    "exhaust": 1.5,
+    "exhaust": 6.5,
     "durability": 1,
     "cooldown_duration": 28,
     "cooldown_haste_affected": "false"

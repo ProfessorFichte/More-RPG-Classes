@@ -1,5 +1,5 @@
 {
-  "range": 2.0,
+  "range": 2.5,
   "school": "PHYSICAL_MELEE",
   "learn": {
     "tier": 1
@@ -29,22 +29,32 @@
       "action": {
         "type": "DAMAGE",
         "damage": {
-          "spell_power_coefficient": 0.75,
+          "spell_power_coefficient": 1.0,
           "knockback": 1.5
         }
       },
       "particles": [
         {
-          "particle_id": "",
+          "particle_id": "explosion",
           "shape": "PIPE",
           "origin": "CENTER",
-          "count": 20.0,
-          "min_speed": 0.1,
-          "max_speed": 3.0
+          "count": 1.0
         }
       ],
       "sound": {
         "id": "more_rpg_classes:knuckle_attack"
+      }
+    },
+    {
+      "action": {
+        "type": "STATUS_EFFECT",
+        "status_effect": {
+          "effect_id": "weakness",
+          "duration": 8.0,
+          "apply_mode": "SET",
+          "amplifier": 0,
+          "show_particles": false
+        }
       }
     }
   ],

@@ -209,28 +209,16 @@ public class Armors {
                     ItemConfig.ArmorSet.with(
                             new ItemConfig.ArmorSet.Piece(1)
                                     .addAll(List.of(
-                                            ItemConfig.Attribute.bonus(SpellAttributes.POWER.get(MagicSchool.FIRE), adeptSpellPower),
-                                            ItemConfig.Attribute.bonus(SpellAttributes.POWER.get(MagicSchool.LIGHTNING), adeptSpellPower),
-                                            ItemConfig.Attribute.bonus(SpellAttributes.POWER.get(MagicSchool.ARCANE), adeptSpellPower)
                                     )),
                             new ItemConfig.ArmorSet.Piece(3)
                                     .addAll(List.of(
-                                            ItemConfig.Attribute.bonus(SpellAttributes.POWER.get(MagicSchool.FIRE), adeptSpellPower),
-                                            ItemConfig.Attribute.bonus(SpellAttributes.POWER.get(MagicSchool.LIGHTNING), adeptSpellPower),
-                                            ItemConfig.Attribute.bonus(SpellAttributes.POWER.get(MagicSchool.ARCANE), adeptSpellPower),
                                             ItemConfig.Attribute.multiply(SpellAttributes.CRITICAL_DAMAGE, adeptSuitCritDmg)
                                     )),
                             new ItemConfig.ArmorSet.Piece(2)
                                     .addAll(List.of(
-                                            ItemConfig.Attribute.bonus(SpellAttributes.POWER.get(MagicSchool.FIRE), adeptSpellPower),
-                                            ItemConfig.Attribute.bonus(SpellAttributes.POWER.get(MagicSchool.LIGHTNING), adeptSpellPower),
-                                            ItemConfig.Attribute.bonus(SpellAttributes.POWER.get(MagicSchool.ARCANE), adeptSpellPower)
                                     )),
                             new ItemConfig.ArmorSet.Piece(1)
                                     .addAll(List.of(
-                                            ItemConfig.Attribute.bonus(SpellAttributes.POWER.get(MagicSchool.FIRE), adeptSpellPower),
-                                            ItemConfig.Attribute.bonus(SpellAttributes.POWER.get(MagicSchool.LIGHTNING), adeptSpellPower),
-                                            ItemConfig.Attribute.bonus(SpellAttributes.POWER.get(MagicSchool.ARCANE), adeptSpellPower)
                                     ))
                     ))   .bundle(material -> new Armor.Set<>(MRPGCMod.MOD_ID,
                             new AdeptArmor(material, ArmorItem.Type.HELMET, new Item.Settings()),
@@ -253,28 +241,16 @@ public class Armors {
                     ItemConfig.ArmorSet.with(
                             new ItemConfig.ArmorSet.Piece(2)
                                     .addAll(List.of(
-                                            ItemConfig.Attribute.bonus(SpellAttributes.POWER.get(MagicSchool.FIRE), witcherSpellPower),
-                                            ItemConfig.Attribute.bonus(SpellAttributes.POWER.get(MagicSchool.LIGHTNING), witcherSpellPower),
-                                            ItemConfig.Attribute.bonus(SpellAttributes.POWER.get(MagicSchool.ARCANE), witcherSpellPower)
                                     )),
                             new ItemConfig.ArmorSet.Piece(4)
                                     .addAll(List.of(
-                                            ItemConfig.Attribute.bonus(SpellAttributes.POWER.get(MagicSchool.FIRE), witcherSpellPower),
-                                            ItemConfig.Attribute.bonus(SpellAttributes.POWER.get(MagicSchool.LIGHTNING), witcherSpellPower),
-                                            ItemConfig.Attribute.bonus(SpellAttributes.POWER.get(MagicSchool.ARCANE), witcherSpellPower),
                                             ItemConfig.Attribute.multiply(SpellAttributes.CRITICAL_DAMAGE, witcherSuitCritDmg)
                                     )),
                             new ItemConfig.ArmorSet.Piece(3)
                                     .addAll(List.of(
-                                            ItemConfig.Attribute.bonus(SpellAttributes.POWER.get(MagicSchool.FIRE), witcherSpellPower),
-                                            ItemConfig.Attribute.bonus(SpellAttributes.POWER.get(MagicSchool.LIGHTNING), witcherSpellPower),
-                                            ItemConfig.Attribute.bonus(SpellAttributes.POWER.get(MagicSchool.ARCANE), witcherSpellPower)
                                     )),
                             new ItemConfig.ArmorSet.Piece(2)
                                     .addAll(List.of(
-                                            ItemConfig.Attribute.bonus(SpellAttributes.POWER.get(MagicSchool.FIRE), witcherSpellPower),
-                                            ItemConfig.Attribute.bonus(SpellAttributes.POWER.get(MagicSchool.LIGHTNING), witcherSpellPower),
-                                            ItemConfig.Attribute.bonus(SpellAttributes.POWER.get(MagicSchool.ARCANE), witcherSpellPower)
                                     ))
                     ))   .bundle(material -> new Armor.Set<>(MRPGCMod.MOD_ID,
                             new WitcherArmor(material, ArmorItem.Type.HELMET, new Item.Settings()),

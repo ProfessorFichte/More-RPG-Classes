@@ -2,7 +2,7 @@
   "school": "PHYSICAL_MELEE",
   "range": 0,
   "learn": {
-    "tier": 2
+    "tier": 1
   },
   "cast": {
     "duration": 0
@@ -13,7 +13,8 @@
     },
     "animation": "more_rpg_classes:stonehand_cast",
     "sound": {
-      "id": "more_rpg_classes:stonehand_cast"
+      "id": "more_rpg_classes:stonehand_cast",
+      "volume": 0.6
     },
     "particles": [
       {
@@ -32,7 +33,7 @@
         "type": "STATUS_EFFECT",
         "status_effect": {
           "effect_id": "more_rpg_classes:stone_hand",
-          "duration": 20,
+          "duration": 15,
           "apply_mode": "SET",
           "amplifier": 0,
           "show_particles": false

@@ -5,7 +5,7 @@
     "attacks": [
       {
         "hitbox": "HORIZONTAL_PLANE",
-        "damage_multiplier": 0.9,
+        "damage_multiplier": 1.0,
         "angle": 90,
         "upswing": 0.5,
         "animation": "bettercombat:one_handed_slash_horizontal_right",
@@ -16,7 +16,7 @@
       {
         "hitbox": "FORWARD_BOX",
         "conditions": ["DUAL_WIELDING_SAME_CATEGORY","MAIN_HAND_ONLY"],
-        "damage_multiplier": 1.2,
+        "damage_multiplier": 1.15,
         "angle": 0,
         "upswing": 0.6,
         "animation": "more_rpg_classes:berserker_axe_both",
@@ -26,7 +26,7 @@
       },
       {
         "hitbox": "HORIZONTAL_PLANE",
-        "damage_multiplier": 0.9,
+        "damage_multiplier": 1.0,
         "angle": 90,
         "upswing": 0.5,
         "animation": "bettercombat:one_handed_slash_horizontal_left",
@@ -37,10 +37,10 @@
       {
         "hitbox": "FORWARD_BOX",
         "conditions": ["DUAL_WIELDING_SAME_CATEGORY","MAIN_HAND_ONLY"],
-        "damage_multiplier": 1.2,
-        "angle": 0,
-        "upswing": 0.6,
-        "animation": "more_rpg_classes:berserker_axe_both",
+        "damage_multiplier": 1.1,
+        "angle": 180,
+        "upswing": 1.0,
+        "animation": "more_rpg_classes:berserker_axe_both_front",
         "swing_sound": {
           "id": "bettercombat:double_axe_swing"
         }

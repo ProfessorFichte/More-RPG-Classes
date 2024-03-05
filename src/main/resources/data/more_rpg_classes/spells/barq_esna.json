@@ -1,4 +1,3 @@
-
 {
   "school": "ARCANE",
   "range": 16,
@@ -49,7 +48,7 @@
         }
       }
     },
-    "animation": "more_rpg_classes:barq_esna_release",
+    "animation": "spell_engine:one_handed_projectile_release",
     "sound": {
       "id": ""
     }
@@ -81,15 +80,18 @@
         "type": "STATUS_EFFECT",
         "status_effect": {
           "effect_id": "more_rpg_classes:barq_esna",
-          "duration": 35.0,
+          "amplifier": 0,
+          "amplifier_power_multiplier": 0.3,
+          "duration": 8.0,
           "apply_mode": "ADD",
-          "show_particles": true
+          "show_particles": false
         }
       }
     }
   ],
   "cost": {
-    "cooldown_duration": 8.0,
+    "exhaust": 3.0,
+    "cooldown_duration": 15.0,
     "cooldown_proportional": true,
     "cooldown_haste_affected": "true"
   }

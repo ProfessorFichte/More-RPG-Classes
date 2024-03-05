@@ -24,6 +24,4 @@ public class FrozenSolidRenderer implements CustomModelStatusEffect.Renderer{
         CustomModels.render(RENDER_LAYER, MinecraftClient.getInstance().getItemRenderer(), modelId, matrixStack, vertexConsumers, light, livingEntity.getId());
         matrixStack.pop();
     }
-
-
 }

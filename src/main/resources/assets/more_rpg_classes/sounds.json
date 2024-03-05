@@ -43,5 +43,55 @@
     "sounds": [
       "more_rpg_classes:yrden_sign"
     ]
+  },
+  "axii_sign": {
+    "sounds": [
+      "more_rpg_classes:axii_sign"
+    ]
+  },
+  "aard_frost_sign": {
+    "sounds": [
+      "more_rpg_classes:aard_frost_sign"
+    ]
+  },
+  "quen_sign_break": {
+    "sounds": [
+      "more_rpg_classes:quen_sign_break"
+    ]
+  },
+  "rend_spell": {
+    "sounds": [
+      "more_rpg_classes:rend_spell"
+    ]
+  },
+  "icicle_crash": {
+    "sounds": [
+      "more_rpg_classes:icicle_crash"
+    ]
+  },
+  "whirl": {
+    "sounds": [
+      "more_rpg_classes:whirl"
+    ]
+  },
+  "strong_attack": {
+    "sounds": [
+      "more_rpg_classes:strong_attack"
+    ]
+  },
+  "crippling_strike": {
+    "sounds": [
+      "more_rpg_classes:crippling_strike"
+    ]
+  },
+  "slash_impact": {
+    "sounds": [
+      "more_rpg_classes:slash_impact"
+    ]
+  },
+  "sonic_hand": {
+    "sounds": [
+      "more_rpg_classes:sonic_hand"
+    ]
   }
 }

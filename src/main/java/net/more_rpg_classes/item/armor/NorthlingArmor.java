@@ -13,6 +13,7 @@ import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Util;
 import net.more_rpg_classes.client.armor.forcemaster.NorthlingArmorRenderer;
+import net.more_rpg_classes.entity.attribute.MRPGCEntityAttributes;
 import net.spell_engine.api.item.armor.Armor;
 import org.jetbrains.annotations.NotNull;
 
@@ -26,17 +27,19 @@ public class NorthlingArmor extends ModArmorItem implements GeoItem {
     }
 
     private static final EnumMap MODIFIERS = (EnumMap) Util.make(new EnumMap(Type.class), (uuidMap) -> {
-        uuidMap.put(Type.BOOTS, UUID.fromString("1834090e-2df8-4b36-be51-ce552df4f93b"));
-        uuidMap.put(Type.LEGGINGS, UUID.fromString("cc66063b-a5ad-4008-b948-c3380d5b2be6"));
-        uuidMap.put(Type.CHESTPLATE, UUID.fromString("a5b538b0-f22d-4a3e-8bc6-af3e8cf3f83a"));
-        uuidMap.put(Type.HELMET, UUID.fromString("82bbb149-54e4-42d4-831f-f088090f5eb1"));
+        uuidMap.put(Type.BOOTS, UUID.fromString("2199e856-3554-4e66-bc5d-a794036d1901"));
+        uuidMap.put(Type.LEGGINGS, UUID.fromString("1c6c4b4b-239b-497b-a65b-bde7c0455c60"));
+        uuidMap.put(Type.CHESTPLATE, UUID.fromString("b8ce9a43-75be-4be8-b216-daa59c98b00a"));
+        uuidMap.put(Type.HELMET, UUID.fromString("12ff6ec7-fe28-4ed6-a953-02da932ebd78"));
+        uuidMap.put(Type.HELMET, UUID.fromString("12ff6ec7-fe28-4ed6-a953-02da932ebd78"));
     });
 
     public void setAttributes(Multimap<EntityAttribute, EntityAttributeModifier> attributes) {
         ImmutableMultimap.Builder<EntityAttribute, EntityAttributeModifier> builder = ImmutableMultimap.builder();
         builder.putAll(attributes);
         UUID uuid = (UUID)MODIFIERS.get(this.type);
-        builder.put(EntityAttributes.GENERIC_ATTACK_SPEED,new EntityAttributeModifier(uuid,"attack_speed",0.15f, EntityAttributeModifier.Operation.ADDITION));
+        builder.put(MRPGCEntityAttributes.RAGE_MODIFIER,new EntityAttributeModifier(uuid,"rage_inc",0.05, EntityAttributeModifier.Operation.MULTIPLY_BASE));
+        builder.put(EntityAttributes.GENERIC_ATTACK_SPEED,new EntityAttributeModifier(uuid,"atk_speed",0.020, EntityAttributeModifier.Operation.MULTIPLY_BASE));
         this.attributes = builder.build();
     }
 

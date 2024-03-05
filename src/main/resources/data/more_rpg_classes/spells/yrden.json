@@ -1,7 +1,7 @@
 {
-  "school": "SOUL",
+  "school": "ARCANE",
   "learn": {
-    "tier": 2
+    "tier": 3
   },
   "cast": {
     "duration": 0.5,
@@ -12,12 +12,9 @@
       "type": "CLOUD",
       "cloud": {
         "volume": {
-          "radius": 4.0,
+          "radius": 5.0,
           "area": {
             "vertical_range_multiplier": 0.3
-          },
-          "sound": {
-            "id": "more_rpg_classes:yrden_sign"
           }
         },
         "impact_tick_interval": 15,
@@ -45,9 +42,11 @@
           "effect_id": "more_rpg_classes:magical_trap",
           "duration": 1,
           "apply_mode": "ADD",
+          "amplifier": 0,
+          "amplifier_power_multiplier": 0.3,
           "apply_limit": {
             "health_base": 50,
-            "spell_power_multiplier": 5
+            "spell_power_multiplier": 2
           },
           "show_particles": false
         }
@@ -61,11 +60,14 @@
           "min_speed": 0.0,
           "max_speed": 0.0
         }
-      ]
+      ],
+      "sound": {
+      "id": "more_rpg_classes:yrden_sign"
+    }
     }
   ],
   "cost": {
-    "exhaust": 0.2,
+    "exhaust": 8.0,
     "cooldown_duration": 18,
     "cooldown_haste_affected": "true"
   }

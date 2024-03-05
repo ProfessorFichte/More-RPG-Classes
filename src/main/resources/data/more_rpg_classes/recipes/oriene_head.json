@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "pattern": [
     "RWR",
-    "R R",
+    "Z Z",
     "   "
   ],
   "key": {
@@ -11,6 +11,9 @@
     },
     "R": {
       "item": "minecraft:leather"
+    },
+    "Z": {
+      "item": "minecraft:string"
     }
   },
   "result": {

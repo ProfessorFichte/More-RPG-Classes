@@ -2,11 +2,11 @@
   "school": "PHYSICAL_MELEE",
   "range": 2.5,
   "learn": {
-    "tier": 3
+    "tier": 4
   },
   "cast": {
-    "duration": 6,
-    "animation": "more_rpg_classes:whirl",
+    "duration": 0.5,
+    "animation": "more_rpg_classes:nordic_storm",
     "sound": {
       "id": "spell_engine:generic_frost_impact",
       "randomness": 0
@@ -36,7 +36,7 @@
         "max_speed": 3.0
       }
     ],
-    "channel_ticks": 10
+    "channel_ticks": 5
   },
   "release": {
     "custom_impact": true,
@@ -53,19 +53,10 @@
       "action": {
         "type": "DAMAGE",
         "damage": {
-          "spell_power_coefficient": 0.9,
-          "knockback": 1.0
+          "spell_power_coefficient": 0.6
         }
       },
       "particles": [
-        {
-          "particle_id": "crit",
-          "shape": "PIPE",
-          "origin": "LAUNCH_POINT",
-          "count": 1.0,
-          "min_speed": 0.5,
-          "max_speed": 3.0
-        },
         {
           "particle_id": "spell_engine:frost_hit",
           "shape": "SPHERE",
@@ -79,12 +70,36 @@
         "id": "item.axe.strip",
         "randomness": 2
       }
+    },
+    {
+      "school": "FROST",
+      "action": {
+        "type": "DAMAGE",
+        "damage": {
+          "spell_power_coefficient": 0.8
+        }
+      }
+    },
+    {
+      "action": {
+        "type": "STATUS_EFFECT",
+        "status_effect": {
+          "effect_id": "more_rpg_classes:frosted",
+          "duration": 15.0,
+          "apply_mode": "ADD",
+          "apply_limit": {
+            "health_base": 60,
+            "spell_power_multiplier": 2
+          },
+          "amplifier": 0,
+          "show_particles": false
+        }
+      }
     }
   ],
   "cost": {
-    "exhaust" : 3.5,
-    "effect_id": "more_rpg_classes:rage",
-    "cooldown_duration": 25,
+    "exhaust" : 8.0,
+    "cooldown_duration": 5,
     "durability": 5,
     "cooldown_proportional": true,
     "cooldown_haste_affected": "false"

@@ -1,15 +1,12 @@
 {
-  "school": "LIGHTNING",
-  "range": 4.5,
+  "school": "FROST",
+  "range": 4.0,
   "learn": {
-    "tier": 3
+    "tier": 4
   },
   "cast": {
     "duration": 1.5,
     "animation": "more_rpg_classes:sign_cast_long",
-    "sound": {
-      "id": "more_rpg_classes:aard_sign"
-    },
     "particles": [
       {
         "particle_id": "more_rpg_classes:aard_sign_cast",
@@ -21,7 +18,7 @@
       }
     ],
     "start_sound": {
-      "id": "entity.warden.sonic_boom"
+      "id": "more_rpg_classes:aard_sign"
     }
   },
   "release": {
@@ -56,7 +53,7 @@
       }
     },
     "sound": {
-      "id": "item.axe.strip"
+      "id": "more_rpg_classes:aard_frost_sign"
     }
   },
   "impact": [
@@ -64,8 +61,7 @@
       "action": {
         "type": "DAMAGE",
         "damage": {
-          "spell_power_coefficient": 1.6,
-          "knockback": 0.5
+          "spell_power_coefficient": 1.0
         }
       },
       "particles": [
@@ -87,9 +83,15 @@
           "min_speed": 5.0,
           "max_speed": 10.0
         }
-      ],
-      "sound": {
-        "id": "block.snow.break"
+      ]
+    },
+    {
+      "school": "LIGHTNING",
+      "action": {
+        "type": "DAMAGE",
+        "damage": {
+          "spell_power_coefficient": 0.5
+        }
       }
     },
     {
@@ -99,18 +101,19 @@
           "effect_id": "more_rpg_classes:frozen_solid",
           "duration": 5.0,
           "apply_mode": "SET",
+          "apply_limit": {
+            "health_base": 60,
+            "spell_power_multiplier": 2
+          },
           "amplifier": 0,
-          "show_particles": true
+          "show_particles": false
         }
-      },
-      "sound": {
-        "id": "block.glass.break"
       }
     }
   ],
   "cost": {
-    "exhaust": 7.5,
-    "cooldown_duration": 40,
-    "cooldown_haste_affected": "true"
+    "exhaust": 10.0,
+    "cooldown_duration": 45,
+    "cooldown_haste_affected": "false"
   }
 }

@@ -49,17 +49,18 @@
         "type": "STATUS_EFFECT",
         "status_effect": {
           "effect_id": "more_rpg_classes:quen_shield",
-          "duration": 20,
+          "duration": 10,
           "apply_mode": "SET",
           "amplifier": 0,
+          "amplifier_power_multiplier": 0.5,
           "show_particles": false
         }
       }
     }
   ],
   "cost": {
-    "exhaust": 1.5,
-    "cooldown_duration": 45,
+    "exhaust": 8.0,
+    "cooldown_duration": 36,
     "cooldown_haste_affected": "true"
   }
 }
