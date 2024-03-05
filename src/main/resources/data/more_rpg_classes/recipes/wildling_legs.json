@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "RRR",
+    "R W",
+    "W W"
+  ],
+  "key": {
+    "W": {
+      "item": "minecraft:leather"
+    },
+    "R": {
+      "item": "more_rpg_classes:wolf_fur"
+    }
+  },
+  "result": {
+    "item": "more_rpg_classes:wildling_legs",
+    "count": 1
+  }
+}

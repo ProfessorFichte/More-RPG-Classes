@@ -1,0 +1,85 @@
+{
+  "school": "SOUL",
+  "range": 4.0,
+  "learn": {
+    "tier": 1
+  },
+  "cast": {
+    "duration": 5.0,
+    "animation": "more_rpg_classes:sacrifice",
+    "particles": [
+      {
+        "particle_id": "minecraft:soul",
+        "angle": 360.0,
+        "shape": "CIRCLE",
+        "origin": "CENTER",
+        "count": 5.0,
+        "min_speed": 0.1,
+        "max_speed": 0.3
+      },
+      {
+        "particle_id": "minecraft:soul_fire_flame",
+        "angle": 360.0,
+        "shape": "SPHERE",
+        "origin": "FEET",
+        "count": 4.0,
+        "min_speed": 0.2,
+        "max_speed": 0.5
+      }
+    ],
+    "channel_ticks": 4.0
+  },
+  "release": {
+    "custom_impact": true,
+    "target": {
+      "type": "AREA",
+      "area": {
+        "distance_dropoff": "SQUARED",
+        "angle_degrees": 360.0
+      }
+    }
+  },
+  "impact": [
+    {
+      "action": {
+        "type": "DAMAGE",
+        "damage": {
+          "spell_power_coefficient": 1.3
+        }
+      },
+      "particles": [
+        {
+          "particle_id": "minecraft:sculk_soul",
+          "shape": "SPHERE",
+          "origin": "CENTER",
+          "count": 5.0,
+          "min_speed": 0.5,
+          "max_speed": 2.0
+        }
+      ],
+      "sound": {
+        "id": "particle.soul_escape",
+        "randomness": 1.0,
+        "volume": 1.5
+      }
+    },
+    {
+      "action": {
+        "type": "STATUS_EFFECT",
+        "status_effect": {
+          "effect_id": "more_rpg_classes:soul_devourer",
+          "duration": 15.0,
+          "amplifier": 0,
+          "apply_mode": "SET",
+          "show_particles": false
+        },
+        "apply_to_caster": true
+      }
+    }
+  ],
+  "cost": {
+    "cooldown_duration": 20.0,
+    "cooldown_proportional": true,
+    "cooldown_haste_affected": "false"
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "school": "PHYSICAL_MELEE",
+  "range": 2.5,
+  "learn": {
+    "tier": 4
+  },
+  "cast": {
+    "duration": 4,
+    "animation": "more_rpg_classes:outrage",
+    "sound": {
+      "id": "entity.player.attack.sweep",
+      "volume": 0.1
+    },
+    "particles": [
+      {
+        "particle_id": "crimson_spore",
+        "angle": 360,
+        "shape": "PIPE",
+        "rotation": "TRUE",
+        "origin": "CENTER",
+        "count": 1.0,
+        "min_speed": 0.3,
+        "max_speed": 3.0
+      }
+    ],
+    "channel_ticks": 4
+  },
+  "release": {
+    "custom_impact": true,
+    "target": {
+      "type": "AREA",
+      "area": {
+        "distance_dropoff": "SQUARED",
+        "angle_degrees": 45
+      }
+    }
+  },
+  "impact": [
+    {
+      "action": {
+        "type": "DAMAGE",
+        "damage": {
+          "spell_power_coefficient": 0.75
+        }
+      },
+      "particles": [
+        {
+          "particle_id": "crit",
+          "shape": "PIPE",
+          "origin": "LAUNCH_POINT",
+          "count": 1.0,
+          "min_speed": 0.5,
+          "max_speed": 3.0
+        }
+      ],
+      "sound": {
+        "id": "entity.player.attack.strong",
+        "randomness": 1.6
+      }
+    }
+  ],
+  "cost": {
+    "exhaust" : 8.0,
+    "cooldown_duration": 35,
+    "durability": 5,
+    "cooldown_proportional": true,
+    "cooldown_haste_affected": "false"
+  }
+}

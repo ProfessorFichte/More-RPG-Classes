@@ -1,0 +1,59 @@
+{
+  "school": "PHYSICAL_MELEE",
+  "range": 2.5,
+  "learn": {
+    "tier": 4
+  },
+  "cast": {
+    "duration": 5,
+    "animation": "more_rpg_classes:witcher_whirl",
+    "sound": {
+      "id": "more_rpg_classes:whirl",
+      "randomness": 1.1,
+      "volume": 0.6
+    },
+    "channel_ticks": 4
+  },
+  "release": {
+    "custom_impact": true,
+    "target": {
+      "type": "AREA",
+      "area": {
+        "distance_dropoff": "SQUARED",
+        "angle_degrees": 360
+      }
+    }
+  },
+  "impact": [
+    {
+      "action": {
+        "type": "DAMAGE",
+        "damage": {
+          "spell_power_coefficient": 1.0
+        }
+      },
+      "particles": [
+        {
+          "particle_id": "damage_indicator",
+          "shape": "PIPE",
+          "origin": "LAUNCH_POINT",
+          "count": 1.0,
+          "min_speed": 0.5,
+          "max_speed": 3.0
+        }
+      ],
+      "sound": {
+        "id": "more_rpg_classes:slash_impact",
+        "randomness": 1.5,
+        "volume": 0.1
+      }
+    }
+  ],
+  "cost": {
+    "exhaust" : 8.0,
+    "cooldown_duration": 26,
+    "durability": 5,
+    "cooldown_proportional": true,
+    "cooldown_haste_affected": "false"
+  }
+}

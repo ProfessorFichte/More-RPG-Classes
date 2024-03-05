@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "R R",
+    "WRW",
+    "WZW"
+  ],
+  "key": {
+    "W": {
+      "item": "minecraft:leather"
+    },
+    "R": {
+      "item": "more_rpg_classes:wolf_fur"
+    },
+    "Z": {
+      "item": "minecraft:chain"
+    }
+  },
+  "result": {
+    "item": "more_rpg_classes:wildling_chest",
+    "count": 1
+  }
+}

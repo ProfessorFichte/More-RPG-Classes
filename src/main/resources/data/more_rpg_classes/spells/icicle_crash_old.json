@@ -1,0 +1,96 @@
+{
+  "school": "FROST",
+  "range": 5,
+  "learn": {
+    "tier": 4
+  },
+  "cast": {
+    "duration": 1.0,
+    "animation": "more_rpg_classes:sign_cast_long",
+    "sound": {
+      "id": ""
+    },
+    "particles": [
+      {
+        "particle_id": "",
+        "shape": "PIPE",
+        "origin": "LAUNCH_POINT",
+        "count": 0.3,
+        "min_speed": 0.01,
+        "max_speed": 0.1
+      }
+    ],
+    "start_sound": {
+      "id": ""
+    }
+  },
+  "release": {
+    "custom_impact": true,
+    "animation": "more_rpg_classes:sign_cast_ground",
+    "particles": [
+      {
+        "particle_id": "spell_engine:frost_shard",
+        "angle": 360,
+        "shape": "SPHERE",
+        "rotation": "TRUE",
+        "origin": "FEET",
+        "count": 10.0,
+        "min_speed": 1.0,
+        "max_speed": 2.0
+      }
+    ],
+    "target": {
+      "type": "AREA",
+      "area": {
+        "distance_dropoff": "SQUARED",
+        "angle_degrees": 360
+      }
+    },
+    "sound": {
+      "id": ""
+    }
+  },
+  "impact": [
+    {
+      "action": {
+        "type": "DAMAGE",
+        "damage": {
+          "spell_power_coefficient": 1.6
+        }
+      },
+      "particles": [
+        {
+          "particle_id": "spell_engine:frost_shard",
+          "shape": "SPHERE",
+          "origin": "CENTER",
+          "count": 30.0,
+          "min_speed": 0.2,
+          "max_speed": 1.0
+        }
+      ],
+      "sound": {
+        "id": ""
+      }
+    },
+    {
+      "action": {
+        "type": "STATUS_EFFECT",
+        "status_effect": {
+          "effect_id": "more_rpg_classes:ice_impaled",
+          "duration": 2.5,
+          "apply_mode": "SET",
+          "amplifier": 0,
+          "show_particles": false
+        }
+      },
+      "sound": {
+        "id": "block.glass.break"
+      }
+    }
+  ],
+  "cost": {
+    "exhaust": 7.5,
+    "cooldown_duration": 4,
+    "cooldown_haste_affected": "true"
+  }
+}

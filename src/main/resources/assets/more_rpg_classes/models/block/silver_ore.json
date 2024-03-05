@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "more_rpg_classes:block/silver_ore"
+  }
+}

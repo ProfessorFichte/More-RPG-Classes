@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "RRR",
+    "R W",
+    "W W"
+  ],
+  "key": {
+    "W": {
+      "item": "minecraft:leather"
+    },
+    "R": {
+      "item": "more_rpg_classes:polar_bear_fur"
+    }
+  },
+  "result": {
+    "item": "more_rpg_classes:northling_legs",
+    "count": 1
+  }
+}

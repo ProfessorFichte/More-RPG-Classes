@@ -1,0 +1,71 @@
+{
+  "school": "FROST",
+  "learn": {
+    "tier": 4
+  },
+  "cast": {
+    "duration": 0.5,
+    "animation": "more_rpg_classes:one_hand_groundsmash"
+  },
+  "release": {
+    "custom_impact": false,
+    "target": {
+      "type": "CLOUD",
+      "cloud": {
+        "volume": {
+          "radius": 4.0,
+          "area": {
+            "vertical_range_multiplier": 0.3
+          },
+          "sound": {
+            "id": "more_rpg_classes:icicle_crash",
+            "randomness": 1.6
+          }
+        },
+        "impact_tick_interval": 20,
+        "spawn_on_ground": "true",
+        "time_to_live_seconds": 10,
+        "client_data": {
+          "particles": [
+            {
+              "particle_id": "more_rpg_classes:icicles",
+              "shape": "PILLAR",
+              "origin": "FEET",
+              "count": 5.0,
+              "min_speed": 0.0,
+              "max_speed": 0.0
+            }
+          ]
+        }
+      }
+    }
+  },
+  "impact": [
+    {
+      "action": {
+        "type": "DAMAGE",
+        "damage": {
+          "spell_power_coefficient": 0.65
+        }
+      },
+      "particles": [
+        {
+          "particle_id": "spell_engine:frost_hit",
+          "shape": "SPHERE",
+          "origin": "CENTER",
+          "count": 1.0,
+          "min_speed": 0.0,
+          "max_speed": 0.0
+        }
+      ]
+    }
+  ],
+  "cost": {
+    "effect_id": "more_rpg_classes:rage",
+    "exhaust": 10.0,
+    "durability": 1,
+    "cooldown_duration": 38,
+    "cooldown_proportional": "false",
+    "cooldown_haste_affected": "false"
+  }
+}

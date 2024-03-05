@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "RRR",
+    "RWW",
+    "XX "
+  ],
+  "key": {
+    "W": {
+      "item": "minecraft:netherite_scrap"
+    },
+    "R": {
+      "item": "more_rpg_classes:steel_ingot"
+    },
+    "X": {
+      "item": "more_rpg_classes:dark_iron_ingot"
+    }
+  },
+  "result": {
+    "item": "more_rpg_classes:dark_steel_ingot",
+    "count": 1
+  }
+}

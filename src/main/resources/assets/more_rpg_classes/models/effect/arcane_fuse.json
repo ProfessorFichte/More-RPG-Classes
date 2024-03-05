@@ -1,0 +1,50 @@
+{
+	"credit": "Made with Blockbench",
+	"texture_size": [64, 64],
+	"textures": {
+		"3": "more_rpg_classes:spell_effect/arcane_overdrive",
+		"4": "more_rpg_classes:spell_effect/arcane_overdrive_2",
+		"5": "more_rpg_classes:spell_effect/arcane_overdrive_3"
+	},
+	"elements": [
+		{
+			"name": "base",
+			"from": [-2, 0, -2],
+			"to": [18, 25, 18],
+			"faces": {
+				"north": {"uv": [0, 1.25, 4, 7.75], "texture": "#3"},
+				"east": {"uv": [4, 1.25, 8, 7.75], "texture": "#3"},
+				"south": {"uv": [0, 9.25, 4, 15.5], "texture": "#3"},
+				"west": {"uv": [4, 9.25, 8, 15.5], "texture": "#3"},
+				"up": {"uv": [12, 4, 8, 0], "texture": "#3"},
+				"down": {"uv": [12, 4, 8, 8], "texture": "#3"}
+			}
+		},
+		{
+			"name": "base",
+			"from": [-5, 0, -4],
+			"to": [19, 20, 20],
+			"faces": {
+				"north": {"uv": [0, 2.25, 4, 5.75], "texture": "#4"},
+				"east": {"uv": [4, 2.25, 8, 5.75], "texture": "#4"},
+				"south": {"uv": [0, 10, 4, 13.25], "texture": "#4"},
+				"west": {"uv": [4, 10, 8, 13.25], "texture": "#4"},
+				"up": {"uv": [12, 4, 8, 0], "texture": "#4"},
+				"down": {"uv": [12, 4, 8, 8], "texture": "#4"}
+			}
+		},
+		{
+			"name": "base",
+			"from": [-7, 0, -6],
+			"to": [21, 12, 22],
+			"faces": {
+				"north": {"uv": [0, 4, 4, 5], "texture": "#5"},
+				"east": {"uv": [4, 4, 8, 5], "texture": "#5"},
+				"south": {"uv": [0, 11.5, 4, 12.75], "texture": "#5"},
+				"west": {"uv": [4, 11.5, 8, 12.75], "texture": "#5"},
+				"up": {"uv": [12, 4, 8, 0], "texture": "#5"},
+				"down": {"uv": [12, 4, 8, 8], "texture": "#5"}
+			}
+		}
+	]
+}
