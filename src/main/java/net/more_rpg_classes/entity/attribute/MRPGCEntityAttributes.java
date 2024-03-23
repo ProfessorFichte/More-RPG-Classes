@@ -11,6 +11,7 @@ import java.util.List;
 
 public class MRPGCEntityAttributes{
 
+
     public static final String incoming_damage_name = "incoming_damage_modifier";
     public static final Identifier incoming_damage_id = new Identifier(MRPGCMod.MOD_ID + ":" + incoming_damage_name);
     public static final EntityAttribute INCOMING_DAMAGE_MODIFIER = createAttribute(
@@ -29,6 +30,7 @@ public class MRPGCEntityAttributes{
             "adrenaline_modifier", 100.0, 100.0, 1024.0);
     public static final EntityAttribute INCOMING_DAMAGE_REDUCTION = createAttribute(
             "incoming_damage_reduction", 100.0, 100.0, 1024.0);
+
 
     public static List<EntityAttribute> all;
     static {

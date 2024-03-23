@@ -62,6 +62,8 @@ public abstract class PlayerEntityMixin {
         float damage = (float) instance.getAttributeValue(EntityAttributes.GENERIC_ATTACK_DAMAGE);
         EntityAttributeInstance adrenaline = ((LivingEntity) (Object) this).getAttributeInstance(MRPGCEntityAttributes.ADRENALINE_MODIFIER);
         int value1 = (int) adrenaline.getValue();
+        EntityAttributeInstance lifesteal = ((LivingEntity) (Object) this).getAttributeInstance(MRPGCEntityAttributes.LIFESTEAL_MODIFIER);
+        int value3 = (int) lifesteal.getValue();
             if ((instance instanceof ServerPlayerEntity) && (target instanceof LivingEntity)) {
                 if(instance.hasStatusEffect(MRPGCEffects.RAGE)){
                     int rage_berserker_chance = 10; int rage_duration = 500; int rage_amplifier_max = 4;
@@ -76,6 +78,12 @@ public abstract class PlayerEntityMixin {
                         increaseAmpByChance(instance,MRPGCEffects.ADRENALINE_GAIN,350+duration_multiplier,1,20+adrenaline_chance_inc,10-adrenaline_chance_inc);
                     }
                 }
+                if(value3 != 100){
+                    value3 = value3 -100;
+                    float heal = (damage * ((float) value3 /100));
+                    instance.heal(heal);
+                    return damage;
+                }
             }
         return damage;
     }
@@ -86,9 +94,6 @@ public abstract class PlayerEntityMixin {
         int value1 = (int) ragedmg.getValue();
         EntityAttributeInstance arcanefuse = ((LivingEntity) (Object) this).getAttributeInstance(MRPGCEntityAttributes.ARCANE_FUSE_MODIFIER);
         int value2 = (int) arcanefuse.getValue();
-        EntityAttributeInstance lifesteal = ((LivingEntity) (Object) this).getAttributeInstance(MRPGCEntityAttributes.LIFESTEAL_MODIFIER);
-        int value3 = (int) lifesteal.getValue();
-
         PlayerEntity player = (PlayerEntity) (Object) this;
         if (value1 != 100){
             float actual_health = player.getHealth();
@@ -96,11 +101,6 @@ public abstract class PlayerEntityMixin {
         }
         if(value2 != 100){
             return (float) (damage + (((arcanefuse.getValue()-100)/100) * (float) player.getAttributeValue(SpellAttributes.POWER.get(MagicSchool.ARCANE).attribute)));
-        }if(value3 != 100){
-            value3 = value3 -100;
-            float heal = (damage * ((float) value3 /100));
-            player.heal(heal);
-            return damage;
         }
         return damage;
     }
