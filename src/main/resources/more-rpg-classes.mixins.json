@@ -7,7 +7,7 @@
     "AttributeMixin",
     "LivingEntityMixin",
     "PlayerEntityMixin",
-    "SpellEngineAttributeResolverMixin"
+    "SpellSchoolsMixin"
   ],
   "client": [
   ],

@@ -7,10 +7,7 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.more_rpg_classes.MRPGCMod;
 
-import java.util.List;
-
 public class MRPGCEntityAttributes{
-
 
     public static final String incoming_damage_name = "incoming_damage_modifier";
     public static final Identifier incoming_damage_id = new Identifier(MRPGCMod.MOD_ID + ":" + incoming_damage_name);
@@ -30,14 +27,6 @@ public class MRPGCEntityAttributes{
             "adrenaline_modifier", 100.0, 100.0, 1024.0);
     public static final EntityAttribute INCOMING_DAMAGE_REDUCTION = createAttribute(
             "incoming_damage_reduction", 100.0, 100.0, 1024.0);
-
-
-    public static List<EntityAttribute> all;
-    static {
-        all = List.of(INCOMING_DAMAGE_MODIFIER, DAMAGE_REFLECT_MODIFIER, ARCANE_FUSE_MODIFIER,LIFESTEAL_MODIFIER,
-                SIGN_INTENSITY,RAGE_MODIFIER,ADRENALINE_MODIFIER,INCOMING_DAMAGE_MODIFIER);
-    }
-
 
 
     public static EntityAttribute register(String id, EntityAttribute attribute){

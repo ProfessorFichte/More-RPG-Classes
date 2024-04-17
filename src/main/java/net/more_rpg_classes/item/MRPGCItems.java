@@ -13,13 +13,18 @@ public class MRPGCItems {
     public static Item WOLF_FUR = new Item(new FabricItemSettings().maxCount(64));
     public static Item POLAR_BEAR_FUR = new Item(new FabricItemSettings().maxCount(64));
     public static Item HARDENED_LEATHER = new Item(new FabricItemSettings().maxCount(64));
-
+    public static Item AQUA_STONE = new Item(new FabricItemSettings().maxCount(64));
+    public static Item TERRA_STONE = new Item(new FabricItemSettings().maxCount(64));
+    public static Item STORM_STONE = new Item(new FabricItemSettings().maxCount(64));
 
     public static void registerModItems(){
         //SpellBooks.register(new SpellBookItem(new Identifier(MRPGCMod.MOD_ID,"forcemaster"), new Item.Settings()));
         Registry.register(Registries.ITEM,new Identifier(MRPGCMod.MOD_ID,"wolf_fur"),WOLF_FUR);
         Registry.register(Registries.ITEM,new Identifier(MRPGCMod.MOD_ID,"polar_bear_fur"),POLAR_BEAR_FUR);
         Registry.register(Registries.ITEM,new Identifier(MRPGCMod.MOD_ID,"hardened_leather"),HARDENED_LEATHER);
+        Registry.register(Registries.ITEM,new Identifier(MRPGCMod.MOD_ID,"aqua_stone"),AQUA_STONE);
+        Registry.register(Registries.ITEM,new Identifier(MRPGCMod.MOD_ID,"terra_stone"),TERRA_STONE);
+        Registry.register(Registries.ITEM,new Identifier(MRPGCMod.MOD_ID,"storm_stone"),STORM_STONE);
 
 
         MRPGCMod.LOGGER.info("Registering Mod Items for " + MRPGCMod.MOD_ID);

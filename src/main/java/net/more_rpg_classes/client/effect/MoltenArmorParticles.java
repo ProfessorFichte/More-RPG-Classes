@@ -10,9 +10,9 @@ public class MoltenArmorParticles implements CustomParticleStatusEffect.Spawner{
 
     public MoltenArmorParticles(int particleCount) {
         this.particles = new ParticleBatch(
-                "minecraft:lava",
-                ParticleBatch.Shape.SPHERE, ParticleBatch.Origin.LAUNCH_POINT,
-                null, particleCount, 0.1F, 0.3F, 0);
+                "falling_lava",
+                ParticleBatch.Shape.CIRCLE, ParticleBatch.Origin.CENTER,
+                null, particleCount, 0.05F, 0.08F, 360);
     }
 
     @Override
