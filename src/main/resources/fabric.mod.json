@@ -31,5 +31,12 @@
 		"azurelibarmor": "*",
 		"spell_engine": ">=0.14.0",
 		"spell_power": ">=0.10.0"
+	},
+	"custom": {
+		"modmenu": {
+			"links": {
+				"modmenu.discord": "https://discord.gg/AShKd5XrTu"
+			}
+		}
 	}
 }

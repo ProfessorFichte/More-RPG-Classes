@@ -17,8 +17,6 @@ public class MRPGCEffects {
 
     //MOONLIGHT (FOR TESTING)
     public static StatusEffect MOONLIGHT = new MoonLightEffect(StatusEffectCategory.HARMFUL, 0xbce5fe)
-            .addAttributeModifier(MRPGCEntityAttributes.INCOMING_DAMAGE_MODIFIER, "0bf30a36-798a-450d-bd74-959910e6778e",
-                    1, EntityAttributeModifier.Operation.MULTIPLY_BASE)
             .addAttributeModifier(MRPGCEntityAttributes.LIFESTEAL_MODIFIER, "e5647c1b-ea2d-4275-aa5d-88da8fb2ab93",
                     100, EntityAttributeModifier.Operation.MULTIPLY_BASE);
 
@@ -42,6 +40,9 @@ public class MRPGCEffects {
 
     //FROSTED
     public static StatusEffect FROSTED= new FrostedEffect(StatusEffectCategory.HARMFUL, 0x3beeff);
+
+    //FROSTED
+    public static StatusEffect BLEEDING= new BleedingEffect(StatusEffectCategory.HARMFUL, 0xdd4e00);
 
     public static void register(){
         MOLTEN_ARMOR.addAttributeModifier(
@@ -70,6 +71,7 @@ public class MRPGCEffects {
         Synchronized.configure(COLLECTED_SOUL,true);
         Synchronized.configure(GRIEVOUS_WOUNDS,true);
         Synchronized.configure(FROSTED,true);
+        Synchronized.configure(BLEEDING,true);
 
         RemoveOnHit.configure(STUNNED, true);
         RemoveOnHit.configure(FROZEN_SOLID, true);
@@ -95,5 +97,6 @@ public class MRPGCEffects {
         Registry.register(Registries.STATUS_EFFECT, mrpgc_spellid++, new Identifier(MRPGCMod.MOD_ID, "collected_soul").toString(), COLLECTED_SOUL);
         Registry.register(Registries.STATUS_EFFECT, mrpgc_spellid++, new Identifier(MRPGCMod.MOD_ID, "grievous_wounds").toString(), GRIEVOUS_WOUNDS);
         Registry.register(Registries.STATUS_EFFECT, mrpgc_spellid++, new Identifier(MRPGCMod.MOD_ID, "frosted").toString(), FROSTED);
+        Registry.register(Registries.STATUS_EFFECT, mrpgc_spellid++, new Identifier(MRPGCMod.MOD_ID, "bleeding").toString(), BLEEDING);
     }
 }
