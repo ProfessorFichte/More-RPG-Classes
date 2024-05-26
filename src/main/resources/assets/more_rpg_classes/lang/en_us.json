@@ -36,5 +36,14 @@
   "attribute.name.generic.more_rpg_classes.damage_reflect_modifier": "Damage Reflect",
 
   "advancements.more_rpg_content.root.title": "More RPG Content!",
-  "advancements.more_rpg_content.root.description": "Explore the different paths you can choose!"
+  "advancements.more_rpg_content.root.description": "Explore the different paths you can choose!",
+
+  "enchantment.more_rpg_classes.elemental" : "Elemental Mastery",
+  "enchantment.more_rpg_classes.elemental.desc" : "Increases all kinds of elemental spell damage you deal",
+  "enchantment.more_rpg_classes.air_mastery" : "Air Mastery",
+  "enchantment.more_rpg_classes.air_mastery.desc" : "Increases air spell damage you deal",
+  "enchantment.more_rpg_classes.earth_mastery" : "Earth Mastery",
+  "enchantment.more_rpg_classes.earth_mastery.desc" : "Increases earth spell damage you deal",
+  "enchantment.more_rpg_classes.water_mastery" : "Water Mastery",
+  "enchantment.more_rpg_classes.water_mastery.desc" : "Increases water spell damage you deal"
 }

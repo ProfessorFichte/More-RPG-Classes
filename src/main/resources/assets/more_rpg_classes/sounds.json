@@ -93,5 +93,25 @@
     "sounds": [
       "more_rpg_classes:sonic_hand"
     ]
+  },
+  "water_magic_impact1": {
+    "sounds": [
+      "more_rpg_classes:water_magic_impact1"
+    ]
+  },
+  "earth_magic_cast1": {
+    "sounds": [
+      "more_rpg_classes:earth_magic_cast1"
+    ]
+  },
+  "earth_magic_impact1": {
+    "sounds": [
+      "more_rpg_classes:earth_magic_impact1"
+    ]
+  },
+  "earth_magic_impact2": {
+    "sounds": [
+      "more_rpg_classes:earth_magic_impact2"
+    ]
   }
 }

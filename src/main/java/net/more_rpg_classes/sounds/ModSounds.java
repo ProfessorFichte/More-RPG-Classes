@@ -46,6 +46,15 @@ public class ModSounds {
     public static SoundEvent SLAHS_IMPACT_EVENT= SoundEvent.of(SLAHS_IMPACT_ID);
     public static final Identifier SONIC_HAND_ID = new Identifier(MRPGCMod.MOD_ID, "sonic_hand");
     public static SoundEvent SONIC_HAND_EVENT= SoundEvent.of(SONIC_HAND_ID);
+    public static final Identifier WATER_IMPACT1_ID = new Identifier(MRPGCMod.MOD_ID, "water_magic_impact1");
+    public static SoundEvent WATER_IMPACT1= SoundEvent.of(WATER_IMPACT1_ID);
+    public static final Identifier EARTH_IMPACT1_ID = new Identifier(MRPGCMod.MOD_ID, "earth_magic_impact1");
+    public static SoundEvent EARTH_IMPACT1= SoundEvent.of(EARTH_IMPACT1_ID);
+    public static final Identifier EARTH_IMPACT2_ID = new Identifier(MRPGCMod.MOD_ID, "earth_magic_impact2");
+    public static SoundEvent EARTH_IMPACT2= SoundEvent.of(EARTH_IMPACT2_ID);
+    public static final Identifier EARTH_CAST1_ID = new Identifier(MRPGCMod.MOD_ID, "earth_magic_cast1");
+    public static SoundEvent EARTH_CAST1= SoundEvent.of(EARTH_CAST1_ID);
+
 
 
 
@@ -70,6 +79,10 @@ public class ModSounds {
         Registry.register(Registries.SOUND_EVENT, CRIPPLING_STRIKE_ID, CRIPPLING_STRIKE_EVENT);
         Registry.register(Registries.SOUND_EVENT, SLAHS_IMPACT_ID, SLAHS_IMPACT_EVENT);
         Registry.register(Registries.SOUND_EVENT, SONIC_HAND_ID, SONIC_HAND_EVENT);
+        Registry.register(Registries.SOUND_EVENT, WATER_IMPACT1_ID, WATER_IMPACT1);
+        Registry.register(Registries.SOUND_EVENT, EARTH_IMPACT1_ID, EARTH_IMPACT1);
+        Registry.register(Registries.SOUND_EVENT, EARTH_IMPACT2_ID, EARTH_IMPACT2);
+        Registry.register(Registries.SOUND_EVENT, EARTH_CAST1_ID, EARTH_CAST1);
 
     }
 }

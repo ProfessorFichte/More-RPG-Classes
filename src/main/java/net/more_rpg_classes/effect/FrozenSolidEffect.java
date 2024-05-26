@@ -55,4 +55,9 @@ public class FrozenSolidEffect extends StatusEffect {
     public boolean canApplyUpdateEffect(int duration, int amplifier) {
         return true;
     }
+
+    @Override
+    public void onApplied(LivingEntity entity, AttributeContainer attributes, int amplifier) {
+        entity.setFrozenTicks(entity.getFrozenTicks() + 400);
+    }
 }

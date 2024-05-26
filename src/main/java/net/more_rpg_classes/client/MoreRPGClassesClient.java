@@ -4,17 +4,19 @@ import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
-import net.minecraft.client.particle.DamageParticle;
-import net.minecraft.client.particle.RainSplashParticle;
+import net.minecraft.client.particle.*;
+import net.more_rpg_classes.client.effect.BleedingParticles;
 import net.more_rpg_classes.client.effect.FrostedParticles;
 import net.more_rpg_classes.client.effect.FrozenSolidRenderer;
 import net.more_rpg_classes.client.effect.MoltenArmorParticles;
-import net.more_rpg_classes.client.particle.MoreParticles;
+import net.more_rpg_classes.client.particle.*;
 import net.more_rpg_classes.effect.MRPGCEffects;
 import net.spell_engine.api.effect.CustomModelStatusEffect;
 import net.spell_engine.api.effect.CustomParticleStatusEffect;
 import net.spell_engine.api.render.CustomModels;
 import net.spell_engine.api.render.StunParticleSpawner;
+import net.spell_engine.client.particle.SpellExplosionParticle;
+import net.spell_engine.client.particle.SpellFlameParticle;
 
 import java.util.List;
 
@@ -28,11 +30,26 @@ public class MoreRPGClassesClient implements ClientModInitializer {
 
 
         ParticleFactoryRegistry.getInstance().register(MoreParticles.STUN_PAR, DamageParticle.Factory::new);
-        ParticleFactoryRegistry.getInstance().register(MoreParticles.BLOOD_DROP, DamageParticle.Factory::new);
+        ParticleFactoryRegistry.getInstance().register(MoreParticles.BLOOD_DROP, RainSplashParticle.Factory::new);
         ParticleFactoryRegistry.getInstance().register(MoreParticles.MOLTEN_ARMOR, RainSplashParticle.Factory::new);
+        ParticleFactoryRegistry.getInstance().register(MoreParticles.BUBBLE, FlameParticle.Factory::new);
+        ParticleFactoryRegistry.getInstance().register(MoreParticles.BUBBLE_POP, FlameParticle.Factory::new);
+        ParticleFactoryRegistry.getInstance().register(MoreParticles.WATER_MIST, ExplosionSmokeParticle.Factory::new);
+        ParticleFactoryRegistry.getInstance().register(MoreParticles.SPLASH, FlameParticle.Factory::new);
+        ParticleFactoryRegistry.getInstance().register(MoreParticles.BIG_SPLASH, FlameParticle.Factory::new);
+        ParticleFactoryRegistry.getInstance().register(MoreParticles.WAVE, FishingParticle.Factory::new);
+        ParticleFactoryRegistry.getInstance().register(MoreParticles.DRIPPING_WATER, RainSplashParticle.Factory::new);
+        ParticleFactoryRegistry.getInstance().register(MoreParticles.HOT_SPLASH, FlameParticle.Factory::new);
+        ParticleFactoryRegistry.getInstance().register(MoreParticles.WATER_WHIP, VerticalSlashParticle.DefaultFactory::new);
+        ParticleFactoryRegistry.getInstance().register(MoreParticles.WATER_CIRCLE, CircleGroundParticle.DefaultFactory::new);
+        ParticleFactoryRegistry.getInstance().register(MoreParticles.WATER_HEAL, AbstractParticle.WaterHealingFactory::new);
+        ParticleFactoryRegistry.getInstance().register(MoreParticles.WATER_SPLASH, SpellExplosionParticle.Factory::new);
+        ParticleFactoryRegistry.getInstance().register(MoreParticles.STONE_EXPLOSION, CustomSpellExplosionParticle.Factory::new);
+        ParticleFactoryRegistry.getInstance().register(MoreParticles.STONE_PARTICLE, SpellFlameParticle.HolyFactory::new);
 
         CustomParticleStatusEffect.register(MRPGCEffects.STUNNED, new StunParticleSpawner());
         CustomParticleStatusEffect.register(MRPGCEffects.MOLTEN_ARMOR, new MoltenArmorParticles(1));
+        CustomParticleStatusEffect.register(MRPGCEffects.BLEEDING, new BleedingParticles(1));
         CustomParticleStatusEffect.register(MRPGCEffects.FROSTED, new FrostedParticles(3));
         CustomModelStatusEffect.register(MRPGCEffects.FROZEN_SOLID, new FrozenSolidRenderer());
 

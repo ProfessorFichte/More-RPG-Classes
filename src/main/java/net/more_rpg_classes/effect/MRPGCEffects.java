@@ -73,7 +73,7 @@ public class MRPGCEffects {
         Synchronized.configure(FROSTED,true);
         Synchronized.configure(BLEEDING,true);
 
-        RemoveOnHit.configure(STUNNED, true);
+        //RemoveOnHit.configure(STUNNED, true);
         RemoveOnHit.configure(FROZEN_SOLID, true);
 
         ActionImpairing.configure(STUNNED, EntityActionsAllowed.STUN);

@@ -23,7 +23,6 @@ public abstract class PlayerEntityMixin {
 
     @Inject(method = "createPlayerAttributes()Lnet/minecraft/entity/attribute/DefaultAttributeContainer$Builder;", require = 1, allow = 1, at = @At("RETURN"))
     private static void moreEntityAttributes$addAttributes(final CallbackInfoReturnable<DefaultAttributeContainer.Builder> info) {
-        //info.getReturnValue().add(MRPGCEntityAttributes.INCOMING_DAMAGE_MODIFIER);
         info.getReturnValue().add(MRPGCEntityAttributes.DAMAGE_REFLECT_MODIFIER);
         info.getReturnValue().add(MRPGCEntityAttributes.ARCANE_FUSE_MODIFIER);
         info.getReturnValue().add(MRPGCEntityAttributes.LIFESTEAL_MODIFIER);

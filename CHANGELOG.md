@@ -1,3 +1,11 @@
+1.1.7
+- bleeding don't works on undead monsters
+- added enchantments for the elemental Spell Powers Air, Earth and Water
+- you can craft white wool with wolf and polar bear fur
+- added sounds for water and earth spells
+- added the water and earth particles to this lib
+- added frozen ticks to Frosted and FrozenSolid
+
 1.1.6
 - added russian translation thanks to C'King
 - removed the unused incoming damage modifier and reduction, they caused an issue on o modpack

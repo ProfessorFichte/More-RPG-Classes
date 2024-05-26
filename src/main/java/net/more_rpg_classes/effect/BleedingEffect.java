@@ -1,6 +1,7 @@
 package net.more_rpg_classes.effect;
 
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.attribute.AttributeContainer;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectCategory;
 import net.more_rpg_classes.damage.BleedingDamageSource;
@@ -27,5 +28,11 @@ public class BleedingEffect extends StatusEffect {
             }
         }
         return true;
+    }
+    @Override
+    public void onApplied(LivingEntity entity, AttributeContainer attributes, int amplifier) {
+    if(entity.isUndead()){
+        entity.removeStatusEffect(MRPGCEffects.BLEEDING);
+    }
     }
 }

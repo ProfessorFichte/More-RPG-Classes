@@ -11,7 +11,7 @@ public class FrostedParticles implements CustomParticleStatusEffect.Spawner{
     public FrostedParticles(int particleCount) {
         this.particles = new ParticleBatch(
                 "spell_engine:frost_hit",
-                ParticleBatch.Shape.CIRCLE, ParticleBatch.Origin.CENTER,
+                ParticleBatch.Shape.SPHERE, ParticleBatch.Origin.CENTER,
                 null, particleCount, 0.05F, 0.08F, 360);
     }
 

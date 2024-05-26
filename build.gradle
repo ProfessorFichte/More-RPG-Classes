@@ -38,6 +38,7 @@ repositories {
 	// The Maven with the mods source
 	maven {url 'https://libs.azuredoom.com:4443/mods'}
 
+
 }
 
 loom {
@@ -94,6 +95,8 @@ dependencies {
 	modImplementation("maven.modrinth:spell-engine:${project.spell_engine_version}")
 	modImplementation("mod.azure.azurelibarmor:azurelibarmor-fabric-${project.azure_mc_version}:${project.azure_lib_version}")
 
+
+	//modImplementation("maven.modrinth:rpgattr:${project.rpgattr_version}-fabric")
 	//modImplementation("maven.modrinth:berserker-rpg-class:${project.berserker_version}")
 	//modImplementation("maven.modrinth:forcemaster-rpg-class:${project.forcemaster_version}")
 	//modImplementation("maven.modrinth:witcher-rpg-class:${project.witcher_version}")
