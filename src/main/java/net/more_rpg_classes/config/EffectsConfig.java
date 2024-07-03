@@ -10,4 +10,5 @@ public class EffectsConfig {
     public float collected_soul_soul_power_per_stack = 0.10F;
     public float frozen_solid_increased_damage_taken = 0.5F;
     public float frosted_decreased_movement_speed_per_stack = -0.1F;
+    public int frosted_amplifier_frozen_solid_conversion = 4;
 }

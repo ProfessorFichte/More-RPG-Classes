@@ -1,3 +1,17 @@
+1.1.10
+- added a config option for the elemental mastery enchantment
+
+1.1.9
+- added tags for the elemental runes
+- updated for Spell Power 0.11, because it had API changes about enchantments
+- removed Water- Earth- & Air Mastery Enchantments. Elemental Mastery is now for Armor, because Spell Power now works for Elemental Staves & Wands
+
+1.1.8
+- added a tag for fur items to make compat crafting
+- Fur Compat for EnviromentZ and Frostiful
+- italian translation thanks to Zano1999
+- The Frosted effect now converts to frozen solid, after it reaches a certain amplifier (can be tweaked in config)
+
 1.1.7
 - bleeding don't works on undead monsters
 - added enchantments for the elemental Spell Powers Air, Earth and Water

@@ -1,0 +1,13 @@
+{
+  "values": [
+    "more_rpg_classes:wolf_fur",
+    {
+      "id": "frostiful:wolf_fur_tuft",
+      "required": false
+    },
+    {
+      "id": "environmentz:wolf_pelt",
+      "required": false
+    }
+  ]
+}

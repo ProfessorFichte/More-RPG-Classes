@@ -1,0 +1,13 @@
+{
+  "values": [
+    "more_rpg_classes:polar_bear_fur",
+    {
+      "id": "frostiful:polar_bear_fur_tuft",
+      "required": false
+    },
+    {
+      "id": "environmentz:polar_bear_fur",
+      "required": false
+    }
+  ]
+}
