@@ -28,8 +28,7 @@
 		"fabric-api": "*",
 		"minecraft": "~1.21.1",
 		"java": ">=17",
-		"azurelibarmor": "*",
-		"spell_engine": ">=0.15.0",
+		"spell_engine": ">=1.0.0",
 		"spell_power": ">=0.10.2"
 	},
 	"custom": {

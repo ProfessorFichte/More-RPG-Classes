@@ -1,5 +1,5 @@
 2.0.0
-- 1.21.1 release
+- 1.21.1 Update
 
 1.2.1
 - tweaked some animations and shifted some of them to the Berserker Mod
