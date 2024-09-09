@@ -9,6 +9,7 @@ import net.more_rpg_classes.custom.MoreSpellSchools;
 import net.more_rpg_classes.effect.MRPGCEffects;
 import net.more_rpg_classes.item.MRPGCItems;
 import net.more_rpg_classes.sounds.ModSounds;
+import net.more_rpg_classes.util.loot.MRPGCLootTableEntityModifiers;
 import net.tinyconfig.ConfigManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -36,7 +37,7 @@ public class MRPGCMod implements ModInitializer {
 			effectsConfig.refresh();
 			tweaksConfig.refresh();
 			MRPGCItems.registerModItems();
-			//MRPGCLootTableEntityModifiers.modifyLootEntityTables();
+			MRPGCLootTableEntityModifiers.modifyLootEntityTables();
 			MRPGCEffects.register();
 			CompatDatapackLoader.register();
 			MoreParticles.register();
