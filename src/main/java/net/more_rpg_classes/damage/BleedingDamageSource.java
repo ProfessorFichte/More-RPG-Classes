@@ -13,6 +13,6 @@ public class BleedingDamageSource extends DamageSource {
 
     @Override
     public Text getDeathMessage(LivingEntity killed) {
-        return Text.of(killed.getEntityName() + " has bled out");
+        return Text.of(killed.getName() + " has bled out");
     }
 }

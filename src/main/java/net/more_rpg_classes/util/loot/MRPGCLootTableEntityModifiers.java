@@ -1,7 +1,6 @@
 package net.more_rpg_classes.util.loot;
 
-import net.fabricmc.fabric.api.loot.v2.LootTableEvents;
-import net.more_rpg_classes.item.MRPGCItems;
+import net.fabricmc.fabric.api.loot.v3.LootTableEvents;
 import net.minecraft.loot.LootPool;
 import net.minecraft.loot.condition.RandomChanceLootCondition;
 import net.minecraft.loot.entry.ItemEntry;
@@ -9,14 +8,18 @@ import net.minecraft.loot.function.SetCountLootFunction;
 import net.minecraft.loot.provider.number.ConstantLootNumberProvider;
 import net.minecraft.loot.provider.number.UniformLootNumberProvider;
 import net.minecraft.util.Identifier;
+import net.more_rpg_classes.item.MRPGCItems;
+import net.minecraft.loot.LootTable;
+import net.minecraft.loot.LootPool;
 
 public class MRPGCLootTableEntityModifiers {
+
     private static final Identifier WOLF_ID =
-            new Identifier("minecraft", "entities/wolf");
+            Identifier.of("minecraft", "entities/wolf");
     private static final Identifier POLAR_BEAR_ID =
-            new Identifier("minecraft", "entities/polar_bear");
+            Identifier.of("minecraft", "entities/polar_bear");
     private static final Identifier RAVAGER_ID =
-            new Identifier("minecraft", "entities/ravager");
+            Identifier.of("minecraft", "entities/ravager");
 
 
     private static float wolf_fur_chance = 0.8f;
@@ -53,4 +56,5 @@ public class MRPGCLootTableEntityModifiers {
 
         });
     }
+
 }

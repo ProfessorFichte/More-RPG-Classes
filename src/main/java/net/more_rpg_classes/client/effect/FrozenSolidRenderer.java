@@ -15,7 +15,7 @@ import net.spell_engine.api.render.LightEmission;
 public class FrozenSolidRenderer implements CustomModelStatusEffect.Renderer{
 
     private static final RenderLayer RENDER_LAYER = CustomLayers.spellEffect(LightEmission.RADIATE, true);
-    public static final Identifier modelId = new Identifier(MRPGCMod.MOD_ID, "effect/frozen_solid");
+    public static final Identifier modelId = Identifier.of(MRPGCMod.MOD_ID, "effect/frozen_solid");
 
     @Override
     public void renderEffect(int amplifier, LivingEntity livingEntity, float delta, MatrixStack matrixStack, VertexConsumerProvider vertexConsumers, int light) {

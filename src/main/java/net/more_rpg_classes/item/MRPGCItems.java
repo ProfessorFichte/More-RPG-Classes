@@ -1,32 +1,43 @@
 package net.more_rpg_classes.item;
 
-import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemGroups;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.more_rpg_classes.MRPGCMod;
 
+import static net.more_rpg_classes.MRPGCMod.MOD_ID;
+
 
 public class MRPGCItems {
-    //Custom Loot
-    public static Item WOLF_FUR = new Item(new FabricItemSettings().maxCount(64));
-    public static Item POLAR_BEAR_FUR = new Item(new FabricItemSettings().maxCount(64));
-    public static Item HARDENED_LEATHER = new Item(new FabricItemSettings().maxCount(64));
-    public static Item AQUA_STONE = new Item(new FabricItemSettings().maxCount(64));
-    public static Item TERRA_STONE = new Item(new FabricItemSettings().maxCount(64));
-    public static Item STORM_STONE = new Item(new FabricItemSettings().maxCount(64));
+
+    public static final Item WOLF_FUR = registerItem("wolf_fur", new Item(new Item.Settings()));
+    public static final Item POLAR_BEAR_FUR = registerItem("polar_bear_fur", new Item(new Item.Settings()));
+    public static final Item HARDENED_LEATHER= registerItem("hardened_leather", new Item(new Item.Settings()));
+    public static final Item AQUA_STONE= registerItem("aqua_stone", new Item(new Item.Settings()));
+    public static final Item TERRA_STONE= registerItem("terra_stone", new Item(new Item.Settings()));
+    public static final Item STORM_STONE= registerItem("storm_stone", new Item(new Item.Settings()));
+
+    private static Item registerItem(String name, Item item) {
+        return Registry.register(Registries.ITEM, Identifier.of(MOD_ID, name), item);
+    }
 
     public static void registerModItems(){
-        //SpellBooks.register(new SpellBookItem(new Identifier(MRPGCMod.MOD_ID,"forcemaster"), new Item.Settings()));
-        Registry.register(Registries.ITEM,new Identifier(MRPGCMod.MOD_ID,"wolf_fur"),WOLF_FUR);
-        Registry.register(Registries.ITEM,new Identifier(MRPGCMod.MOD_ID,"polar_bear_fur"),POLAR_BEAR_FUR);
-        Registry.register(Registries.ITEM,new Identifier(MRPGCMod.MOD_ID,"hardened_leather"),HARDENED_LEATHER);
-        Registry.register(Registries.ITEM,new Identifier(MRPGCMod.MOD_ID,"aqua_stone"),AQUA_STONE);
-        Registry.register(Registries.ITEM,new Identifier(MRPGCMod.MOD_ID,"terra_stone"),TERRA_STONE);
-        Registry.register(Registries.ITEM,new Identifier(MRPGCMod.MOD_ID,"storm_stone"),STORM_STONE);
 
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {
+            entries.add(MRPGCItems.WOLF_FUR);
+            entries.add(MRPGCItems.POLAR_BEAR_FUR);
+            entries.add(MRPGCItems.HARDENED_LEATHER);
+        });
 
-        MRPGCMod.LOGGER.info("Registering Mod Items for " + MRPGCMod.MOD_ID);
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(entries -> {
+            entries.add(MRPGCItems.AQUA_STONE);
+            entries.add(MRPGCItems.TERRA_STONE);
+            entries.add(MRPGCItems.STORM_STONE);
+        });
+
+        MRPGCMod.LOGGER.info("Registering Mod Items for " + MOD_ID);
     }
 }

@@ -1,5 +1,5 @@
 plugins {
-	id 'fabric-loom' version '1.5-SNAPSHOT'
+	id 'fabric-loom' version '1.7-SNAPSHOT'
 	id 'maven-publish'
 }
 
@@ -11,9 +11,10 @@ base {
 }
 
 repositories {
-	maven { url = 'https://maven.kosmx.dev/' }
-	maven { url = 'https://maven.shedaniel.me/' }
-	maven { url = 'https://jitpack.io' }
+	maven { url 'https://maven.kosmx.dev/' }
+	maven { url 'https://maven.shedaniel.me/' }
+	maven { url 'https://libs.azuredoom.com:4443/mods' }
+	maven { url 'https://jitpack.io' }
 	maven {
 		name = 'Modrinth'
 		url = 'https://api.modrinth.com/maven'
@@ -22,7 +23,7 @@ repositories {
 		}
 	}
 	maven {
-		url = "https://www.cursemaven.com"
+		url "https://www.cursemaven.com"
 		content {
 			includeGroup "curse.maven"
 		}
@@ -35,10 +36,6 @@ repositories {
 		name = "Ladysnake Libs"
 		url = 'https://maven.ladysnake.org/releases'
 	}
-	// The Maven with the mods source
-	maven {url 'https://libs.azuredoom.com:4443/mods'}
-
-
 }
 
 loom {
@@ -85,9 +82,9 @@ dependencies {
 	implementation include("com.github.ZsoltMolnarrr:TinyConfig:${project.tiny_config_version}")
 
 	modImplementation("dev.kosmx.player-anim:player-animation-lib-fabric:${project.player_anim_version}")
-    modApi("me.shedaniel.cloth:cloth-config-fabric:${project.cloth_config_version}") {
-       exclude(group: "net.fabricmc.fabric-api")
-    }
+	modApi("me.shedaniel.cloth:cloth-config-fabric:${project.cloth_config_version}") {
+		exclude(group: "net.fabricmc.fabric-api")
+	}
 	modImplementation("dev.emi:trinkets:${project.trinkets_version}")
 	modImplementation("maven.modrinth:runes:${project.runes_version}-fabric")
 	modImplementation("maven.modrinth:spell-power:${project.spell_power_version}-fabric")
@@ -112,7 +109,7 @@ processResources {
 }
 
 tasks.withType(JavaCompile).configureEach {
-	it.options.release = 17
+	it.options.release = 21
 }
 
 java {
@@ -121,8 +118,8 @@ java {
 	// If you remove this line, sources will not be generated.
 	withSourcesJar()
 
-	sourceCompatibility = JavaVersion.VERSION_17
-	targetCompatibility = JavaVersion.VERSION_17
+	sourceCompatibility = JavaVersion.VERSION_21
+	targetCompatibility = JavaVersion.VERSION_21
 }
 
 jar {

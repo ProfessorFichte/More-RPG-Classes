@@ -13,6 +13,6 @@ public class MoltenDamageSource extends DamageSource {
 
     @Override
     public Text getDeathMessage(LivingEntity killed) {
-        return Text.of(killed.getEntityName() + " has melted");
+        return Text.of(killed.getName()  + " has melted");
     }
 }

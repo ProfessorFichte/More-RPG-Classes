@@ -4,6 +4,7 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.attribute.AttributeContainer;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectCategory;
+import net.minecraft.registry.entry.RegistryEntry;
 
 public class FrozenSolidEffect extends StatusEffect {
 
@@ -12,14 +13,15 @@ public class FrozenSolidEffect extends StatusEffect {
     }
 
     @Override
-    public void applyUpdateEffect(LivingEntity pLivingEntity, int pAmplifier) {
+    public boolean applyUpdateEffect(LivingEntity pLivingEntity, int pAmplifier) {
         pLivingEntity.setFrozenTicks(pLivingEntity.getFrozenTicks() + 1);
         if(pLivingEntity.isOnFire()){
-            pLivingEntity.removeStatusEffect(MRPGCEffects.FROZEN_SOLID);
+           return pLivingEntity.removeStatusEffect((RegistryEntry<StatusEffect>) MRPGCEffects.FROZEN_SOLID);
         } else if (pLivingEntity.isInLava()) {
-            pLivingEntity.removeStatusEffect(MRPGCEffects.FROZEN_SOLID);
+            return pLivingEntity.removeStatusEffect((RegistryEntry<StatusEffect>) MRPGCEffects.FROZEN_SOLID);
         }
         super.applyUpdateEffect(pLivingEntity, pAmplifier);
+        return false;
     }
 
     @Override
@@ -27,11 +29,11 @@ public class FrozenSolidEffect extends StatusEffect {
         return true;
     }
 
-    @Override
+
     public void onApplied(LivingEntity entity, AttributeContainer attributes, int amplifier) {
         entity.setFrozenTicks(entity.getFrozenTicks() + 40);
     }
-    @Override
+
     public void onRemoved(LivingEntity entity, AttributeContainer attributes, int amplifier) {
         entity.setFrozenTicks(entity.getFrozenTicks() + 200);
     }
