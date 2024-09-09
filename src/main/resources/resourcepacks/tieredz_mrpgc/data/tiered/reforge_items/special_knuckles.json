@@ -1,0 +1,10 @@
+{
+  "items": [
+    "forcemaster_rpg:legendary_golden_knuckle",
+    "forcemaster_rpg:guardian_knuckle",
+    "forcemaster_rpg:bloody_knuckle"
+  ],
+  "base": [
+    "minecraft:netherite_ingot"
+  ]
+}

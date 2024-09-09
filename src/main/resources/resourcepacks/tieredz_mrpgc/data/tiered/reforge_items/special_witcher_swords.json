@@ -1,0 +1,11 @@
+{
+  "items": [
+    "witcher_rpg:aerondight_sword",
+    "witcher_rpg:ultimatum_sword",
+    "witcher_rpg:winters_blade_sword",
+    "witcher_rpg:winters_blade_sword"
+  ],
+  "base": [
+    "minecraft:netherite_ingot"
+  ]
+}
