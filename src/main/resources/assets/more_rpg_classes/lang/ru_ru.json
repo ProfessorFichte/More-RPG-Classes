@@ -23,12 +23,8 @@
   "item.more_rpg_classes.wolf_fur": "Волчий Мех",
   "item.more_rpg_classes.hardened_leather": "Закаленная Кожа",
 
-  "attribute.name.generic.more_rpg_classes.incoming_damage_modifier": "Уязвимость к повреждениям",
-  "attribute.name.generic.more_rpg_classes.incoming_damage_reduction": "Устойчивость к повреждениям",
   "attribute.name.generic.more_rpg_classes.rage_modifier": "Сила Ярости",
   "attribute.name.generic.more_rpg_classes.arcane_fuse_modifier": "Мистический Запал",
-  "attribute.name.generic.more_rpg_classes.adrenaline_modifier": "Адреналин",
-  "attribute.name.generic.more_rpg_classes.sign_intensity": "Интенсивность Знака",
   "attribute.name.generic.more_rpg_classes.lifesteal_modifier": "Вампиризм",
   "attribute.name.generic.more_rpg_classes.damage_reflect_modifier": "Отражение Повреждений",
 

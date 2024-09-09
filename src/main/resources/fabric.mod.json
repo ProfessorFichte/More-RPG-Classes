@@ -29,8 +29,8 @@
 		"minecraft": "~1.20.1",
 		"java": ">=17",
 		"azurelibarmor": "*",
-		"spell_engine": ">=0.14.0",
-		"spell_power": ">=0.10.0"
+		"spell_engine": ">=0.15.0",
+		"spell_power": ">=0.10.2"
 	},
 	"custom": {
 		"modmenu": {

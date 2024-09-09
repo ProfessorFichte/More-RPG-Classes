@@ -21,38 +21,11 @@ public abstract class LivingEntityMixin {
             require = 1, allow = 1, at = @At("RETURN"))
     private static void moreEntityAttributes$addAttributes
             (CallbackInfoReturnable<DefaultAttributeContainer.Builder> info){
-        //info.getReturnValue().add(MRPGCEntityAttributes.INCOMING_DAMAGE_MODIFIER);
         info.getReturnValue().add(MRPGCEntityAttributes.DAMAGE_REFLECT_MODIFIER);
         info.getReturnValue().add(MRPGCEntityAttributes.ARCANE_FUSE_MODIFIER);
         info.getReturnValue().add(MRPGCEntityAttributes.LIFESTEAL_MODIFIER);
-        info.getReturnValue().add(MRPGCEntityAttributes.SIGN_INTENSITY);
         info.getReturnValue().add(MRPGCEntityAttributes.RAGE_MODIFIER);
-        info.getReturnValue().add(MRPGCEntityAttributes.ADRENALINE_MODIFIER);
-        //info.getReturnValue().add(MRPGCEntityAttributes.INCOMING_DAMAGE_REDUCTION);
     }
-
-
-    /*
-    @ModifyVariable(method = "modifyAppliedDamage", at = @At(value ="LOAD", ordinal = 4), argsOnly = true)
-    private float Modify$MobDamage(float damage, DamageSource source){
-        EntityAttributeInstance dmgInc = ((LivingEntity) (Object) this)
-                .getAttributeInstance(MRPGCEntityAttributes.INCOMING_DAMAGE_MODIFIER);
-        int value1 = (int) dmgInc.getValue();
-        EntityAttributeInstance dmgDec = ((LivingEntity) (Object) this)
-                .getAttributeInstance(MRPGCEntityAttributes.INCOMING_DAMAGE_REDUCTION);
-        int value2 = (int) dmgDec.getValue();
-
-        if(value1 != 100){
-            value1 = value1 -100;
-            return damage + (damage * ((float) value1 /100));
-        }
-        if(value2 != 100){
-            value2 = value2 -100;
-            return damage - (damage * ((float) value2 /100));
-        }
-        return damage;
-    }
-    */
 
 
     @Inject(method = "damage", at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/LivingEntity;applyDamage(Lnet/minecraft/entity/damage/DamageSource;F)V"))

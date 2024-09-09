@@ -1,10 +1,22 @@
+1.2.1
+- tweaked some animations and shifted some of them to the Berserker Mod
+
+1.2.0
+- Changed the Status of the Lib Mod from Beta to Release 
+- code clean up
+- shifted all related attributes, particles, sounds, animations of certain class mods to their mods for better management
+- deleted sign intensity and adrenaline attribute, because now its present in the Witcher Mod
+- registering the attributes with the vanilla minecraft attributes
+- added optional compat for tierify, tiered & simply skills (can be disabled in tweaks config)
+- added new particles
+
 1.1.10
 - added a config option for the elemental mastery enchantment
 
 1.1.9
 - added tags for the elemental runes
 - updated for Spell Power 0.11, because it had API changes about enchantments
-- removed Water- Earth- & Air Mastery Enchantments. Elemental Mastery is now for Armor, because Spell Power now works for Elemental Staves & Wands
+- removed Water-, Earth- & Air Mastery Enchantments. Elemental Mastery is now for Armor, because Spell Power now works for Elemental Staves & Wands
 
 1.1.8
 - added a tag for fur items to make compat crafting

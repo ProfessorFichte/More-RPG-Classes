@@ -29,11 +29,12 @@ public class CustomMethods {
         if (roll >= chance)    {
             if (entity.hasStatusEffect(statusEffect)) {
                 int currentAmplifier = entity.getStatusEffect(statusEffect).getAmplifier();
+                int currentDuration= entity.getStatusEffect(statusEffect).getDuration();
                 if (currentAmplifier >= max_amp) {
-                    entity.addStatusEffect(new StatusEffectInstance(statusEffect, duration, currentAmplifier, false, false, false));
+                    entity.addStatusEffect(new StatusEffectInstance(statusEffect, currentDuration, currentAmplifier, false, false, false));
                     return;
                 }
-                entity.addStatusEffect(new StatusEffectInstance(statusEffect, duration, currentAmplifier + amplifier, false, false, false));
+                entity.addStatusEffect(new StatusEffectInstance(statusEffect, currentDuration, currentAmplifier + amplifier, false, false, false));
             }
             entity.addStatusEffect(new StatusEffectInstance(statusEffect, duration, amplifier, false,false, false ));
         }

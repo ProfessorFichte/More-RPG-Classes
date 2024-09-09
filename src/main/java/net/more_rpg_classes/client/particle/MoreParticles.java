@@ -25,6 +25,7 @@ public class MoreParticles {
     public static final DefaultParticleType WATER_SPLASH = FabricParticleTypes.simple();
     public static final DefaultParticleType STONE_EXPLOSION = FabricParticleTypes.simple();
     public static final DefaultParticleType STONE_PARTICLE = FabricParticleTypes.simple();
+    public static final DefaultParticleType WIND_VACUUM = FabricParticleTypes.simple();
 
 
     public static void register(){
@@ -45,6 +46,7 @@ public class MoreParticles {
         Registry.register(Registries.PARTICLE_TYPE, new Identifier(MRPGCMod.MOD_ID, "water_splash"), WATER_SPLASH);
         Registry.register(Registries.PARTICLE_TYPE, new Identifier(MRPGCMod.MOD_ID, "stone_explosion"), STONE_EXPLOSION);
         Registry.register(Registries.PARTICLE_TYPE, new Identifier(MRPGCMod.MOD_ID, "stone_particle"), STONE_PARTICLE);
+        Registry.register(Registries.PARTICLE_TYPE, new Identifier(MRPGCMod.MOD_ID, "wind_vacuum"), WIND_VACUUM);
     }
 
 }

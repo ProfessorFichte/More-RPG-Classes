@@ -26,9 +26,7 @@ public abstract class PlayerEntityMixin {
         info.getReturnValue().add(MRPGCEntityAttributes.DAMAGE_REFLECT_MODIFIER);
         info.getReturnValue().add(MRPGCEntityAttributes.ARCANE_FUSE_MODIFIER);
         info.getReturnValue().add(MRPGCEntityAttributes.LIFESTEAL_MODIFIER);
-        info.getReturnValue().add(MRPGCEntityAttributes.SIGN_INTENSITY);
         info.getReturnValue().add(MRPGCEntityAttributes.RAGE_MODIFIER);
-        info.getReturnValue().add(MRPGCEntityAttributes.ADRENALINE_MODIFIER);
     }
 
     @Redirect(method = "attack", at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/player/PlayerEntity;getAttributeValue(Lnet/minecraft/entity/attribute/EntityAttribute;)D", ordinal = 0))

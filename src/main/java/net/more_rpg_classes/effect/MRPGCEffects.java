@@ -8,40 +8,19 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.more_rpg_classes.MRPGCMod;
-import net.more_rpg_classes.entity.attribute.MRPGCEntityAttributes;
 import net.spell_engine.api.effect.*;
 import net.spell_power.api.SpellSchools;
 
 
 public class MRPGCEffects {
 
-    //MOONLIGHT (FOR TESTING)
-    public static StatusEffect MOONLIGHT = new MoonLightEffect(StatusEffectCategory.HARMFUL, 0xbce5fe)
-            .addAttributeModifier(MRPGCEntityAttributes.LIFESTEAL_MODIFIER, "e5647c1b-ea2d-4275-aa5d-88da8fb2ab93",
-                    100, EntityAttributeModifier.Operation.MULTIPLY_BASE);
-
-    //MOLTEN_ARMOR
     public static final StatusEffect MOLTEN_ARMOR = new MoltenArmorEffect(StatusEffectCategory.HARMFUL,0xdd4e00);
-
-    //STUNNED
     public static StatusEffect STUNNED = new StunEffect(StatusEffectCategory.HARMFUL, 0xfffeca);
-
-    //FROZEN_SOLID
     public static StatusEffect FROZEN_SOLID= new FrozenSolidEffect(StatusEffectCategory.HARMFUL, 0x3beeff);
-
-    //FEAR
     public static StatusEffect FEAR= new FearEffect(StatusEffectCategory.HARMFUL, 0x01d9cf);
-
-    //COLLECTED SOUL
     public static StatusEffect COLLECTED_SOUL = new CollectedSoulEffect(StatusEffectCategory.BENEFICIAL, 0x01d9cf);
-
-    //GRIEVOUS_WOUNDS
     public static StatusEffect GRIEVOUS_WOUNDS = new GrievousWoundsEffect(StatusEffectCategory.HARMFUL, 0x01d9cf);
-
-    //FROSTED
     public static StatusEffect FROSTED= new FrostedEffect(StatusEffectCategory.HARMFUL, 0x3beeff);
-
-    //FROSTED
     public static StatusEffect BLEEDING= new BleedingEffect(StatusEffectCategory.HARMFUL, 0xdd4e00);
 
     public static void register(){
@@ -64,7 +43,6 @@ public class MRPGCEffects {
 
 
         Synchronized.configure(MOLTEN_ARMOR,true);
-        Synchronized.configure(MOONLIGHT,true);
         Synchronized.configure(STUNNED,true);
         Synchronized.configure(FROZEN_SOLID,true);
         Synchronized.configure(FEAR,true);
@@ -73,7 +51,6 @@ public class MRPGCEffects {
         Synchronized.configure(FROSTED,true);
         Synchronized.configure(BLEEDING,true);
 
-        //RemoveOnHit.configure(STUNNED, true);
         RemoveOnHit.configure(FROZEN_SOLID, true);
 
         ActionImpairing.configure(STUNNED, EntityActionsAllowed.STUN);
@@ -88,9 +65,8 @@ public class MRPGCEffects {
 
 
 
-        int mrpgc_spellid = 900;
+        int mrpgc_spellid = 4100;
         Registry.register(Registries.STATUS_EFFECT, mrpgc_spellid++, new Identifier(MRPGCMod.MOD_ID, "molten_armor").toString(), MOLTEN_ARMOR);
-        Registry.register(Registries.STATUS_EFFECT, mrpgc_spellid++, new Identifier(MRPGCMod.MOD_ID, "moonlight").toString(), MOONLIGHT);
         Registry.register(Registries.STATUS_EFFECT, mrpgc_spellid++, new Identifier(MRPGCMod.MOD_ID, "stun").toString(), STUNNED);
         Registry.register(Registries.STATUS_EFFECT, mrpgc_spellid++, new Identifier(MRPGCMod.MOD_ID, "frozen_solid").toString(), FROZEN_SOLID);
         Registry.register(Registries.STATUS_EFFECT, mrpgc_spellid++, new Identifier(MRPGCMod.MOD_ID, "fear").toString(), FEAR);

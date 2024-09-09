@@ -4,12 +4,13 @@ import net.fabricmc.api.ModInitializer;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.more_rpg_classes.client.particle.MoreParticles;
+import net.more_rpg_classes.compat.CompatDatapackLoader;
 import net.more_rpg_classes.config.EffectsConfig;
 import net.more_rpg_classes.config.EnchantingConfig;
+import net.more_rpg_classes.config.TweaksConfig;
 import net.more_rpg_classes.custom.Enchantment_CustomSpellSchool;
 import net.more_rpg_classes.custom.MoreSpellSchools;
 import net.more_rpg_classes.effect.MRPGCEffects;
-import net.more_rpg_classes.entity.attribute.MRPGCEntityAttributes;
 import net.more_rpg_classes.item.MRPGCGroup;
 import net.more_rpg_classes.item.MRPGCItems;
 import net.more_rpg_classes.sounds.ModSounds;
@@ -40,21 +41,27 @@ public class MRPGCMod implements ModInitializer {
 			.sanitize(true)
 			.schemaVersion(4)
 			.build();
+	public static ConfigManager<TweaksConfig> tweaksConfig = new ConfigManager<>
+			("tweaks", new TweaksConfig())
+			.builder()
+			.setDirectory(MOD_ID)
+			.sanitize(true)
+			.build();
 
 
 		@Override
 	public void onInitialize() {
+		effectsConfig.refresh();
+		enchantmentConfig.refresh();
+		tweaksConfig.refresh();
 		MRPGCItems.registerModItems();
 		MRPGCGroup.registerItemGroups();
 		MRPGCLootTableEntityModifiers.modifyLootEntityTables();
-		effectsConfig.refresh();
-		enchantmentConfig.refresh();
 		MRPGCEffects.register();
-		MRPGCEntityAttributes.registerAttributes();
+		CompatDatapackLoader.register();
 		MoreParticles.register();
 		ModSounds.register();
 		MoreSpellSchools.initialize();
-
 
 			for(var entry: Enchantment_CustomSpellSchool.all.entrySet()) {
 				Registry.register(Registries.ENCHANTMENT, entry.getKey(), entry.getValue());

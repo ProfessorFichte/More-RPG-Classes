@@ -8,34 +8,22 @@ import net.minecraft.util.Identifier;
 import net.more_rpg_classes.MRPGCMod;
 
 public class MRPGCEntityAttributes{
-    //public static final EntityAttribute INCOMING_DAMAGE_MODIFIER = createAttribute(
-    //        "incoming_damage_modifier", 100.0, 100.0, 1024.0);
     public static EntityAttribute DAMAGE_REFLECT_MODIFIER = createAttribute(
             "damage_reflect_modifier", 100.0, 100.0, 1024.0);
     public static EntityAttribute ARCANE_FUSE_MODIFIER = createAttribute(
             "arcane_fuse_modifier", 100.0, 100.0, 1024.0);
     public static EntityAttribute LIFESTEAL_MODIFIER = createAttribute(
             "lifesteal_modifier", 100.0, 100.0, 1024.0);
-    public static EntityAttribute SIGN_INTENSITY = createAttribute(
-            "sign_intensity", 0.0, 0.0, 1024.0);
     public static EntityAttribute RAGE_MODIFIER = createAttribute(
             "rage_modifier", 100.0, 100.0, 1024.0);
-    public static EntityAttribute ADRENALINE_MODIFIER = createAttribute(
-            "adrenaline_modifier", 100.0, 100.0, 1024.0);
-    //public static final EntityAttribute INCOMING_DAMAGE_REDUCTION = createAttribute(
-     //       "incoming_damage_reduction", 100.0, 100.0, 1024.0);
 
 
 
     public static void registerAttributes(){
-        //register("incoming_damage_modifier", INCOMING_DAMAGE_MODIFIER);
         register("damage_reflect_modifier", DAMAGE_REFLECT_MODIFIER);
         register("arcane_fuse_modifier", ARCANE_FUSE_MODIFIER);
         register("lifesteal_modifier", LIFESTEAL_MODIFIER);
-        register("sign_intensity", SIGN_INTENSITY);
         register("rage_modifier", RAGE_MODIFIER);
-        register("adrenaline_modifier", ADRENALINE_MODIFIER);
-        //register("incoming_damage_reduction", INCOMING_DAMAGE_REDUCTION);
     }
 
 
