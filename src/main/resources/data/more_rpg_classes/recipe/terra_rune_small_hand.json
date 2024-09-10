@@ -5,11 +5,11 @@
       "tag": "runes:rune_crafting/base/stone"
     },
     {
-      "tag": "more_rpg_classes:rune_crafting/reagent/aqua_small"
+      "tag": "more_rpg_classes:rune_crafting/reagent/terra_small"
     }
   ],
   "result": {
     "count": 2,
-    "item": "more_rpg_classes:aqua_stone"
+    "id": "more_rpg_classes:terra_stone"
   }
 }

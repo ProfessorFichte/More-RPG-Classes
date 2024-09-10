@@ -1,3 +1,7 @@
+2.0.1
+- forgot to change the new data folder structures (recipes -> recipe, items -> item, etc.)
+- forgot to change to 1.21 recipe json structure
+
 2.0.0
 - 1.21.1 Update
 
