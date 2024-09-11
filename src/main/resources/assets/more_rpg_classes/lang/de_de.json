@@ -28,10 +28,10 @@
   "death.attack.mrpgc.bleeding": "%1$s ist verblutet.",
   "death.attack.mrpgc.molten": "%1$s ist durch seine geschmolzene Rüstung verbrannt.",
 
-  "attribute.name.generic.more_rpg_classes.rage_modifier": "Wut Kraft",
-  "attribute.name.generic.more_rpg_classes.arcane_fuse_modifier": "Arkane Faust",
-  "attribute.name.generic.more_rpg_classes.lifesteal_modifier": "Lebensraub",
-  "attribute.name.generic.more_rpg_classes.damage_reflect_modifier": "Schadens Reflektion",
+  "attribute.name.more_rpg_classes.rage_modifier": "Wut Kraft",
+  "attribute.name.more_rpg_classes.arcane_fuse_modifier": "Arkane Faust",
+  "attribute.name.more_rpg_classes.lifesteal_modifier": "Lebensraub",
+  "attribute.name.more_rpg_classes.damage_reflect_modifier": "Schadens Reflektion",
 
   "advancements.more_rpg_content.root.title": "More RPG Content!",
   "advancements.more_rpg_content.root.description": "Erkunde die verschiedenen Pfade und Wege!",

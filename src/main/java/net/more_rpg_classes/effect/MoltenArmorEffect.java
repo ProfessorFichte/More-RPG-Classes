@@ -37,7 +37,7 @@ public class MoltenArmorEffect extends StatusEffect {
         }
         if(!pLivingEntity.getWorld().isClient()){
             if(pLivingEntity.isInsideWaterOrBubbleColumn()){
-                pLivingEntity.removeStatusEffect((RegistryEntry<StatusEffect>) MRPGCEffects.MOLTEN_ARMOR);
+                pLivingEntity.removeStatusEffect(MRPGCEffects.MOLTEN_ARMOR.registryEntry);
             } else if(!pLivingEntity.hasStackEquipped(EquipmentSlot.CHEST)& !pLivingEntity.hasStackEquipped(EquipmentSlot.HEAD)&
                     !pLivingEntity.hasStackEquipped(EquipmentSlot.FEET)& !pLivingEntity.hasStackEquipped(EquipmentSlot.LEGS)){
                 pLivingEntity.removeStatusEffect((RegistryEntry<StatusEffect>) MRPGCEffects.MOLTEN_ARMOR);
@@ -47,15 +47,6 @@ public class MoltenArmorEffect extends StatusEffect {
         return false;
     }
 
-/*
-    public void onRemoved(LivingEntity entity, AttributeContainer attributes, int amplifier) {
-        entity.sendEquipmentBreakStatus(EquipmentSlot.Type.HUMANOID_ARMOR.toString());
-        entity.sendEquipmentBreakStatus(EquipmentSlot.CHEST);
-        entity.sendEquipmentBreakStatus(EquipmentSlot.LEGS);
-        entity.sendEquipmentBreakStatus(EquipmentSlot.FEET);
-        super.onRemoved(entity, attributes, amplifier);
-    }
-*/
 
     @Override
     public boolean canApplyUpdateEffect(int duration, int amplifier) {

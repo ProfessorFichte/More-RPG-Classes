@@ -28,10 +28,10 @@
   "death.attack.mrpgc.bleeding": "%1$s has bled out.",
   "death.attack.mrpgc.molten": "%1$s is burned by his molten armor.",
 
-  "attribute.name.generic.more_rpg_classes.rage_modifier": "Rage Power",
-  "attribute.name.generic.more_rpg_classes.arcane_fuse_modifier": "Arcane Fuse",
-  "attribute.name.generic.more_rpg_classes.lifesteal_modifier": "Lifesteal",
-  "attribute.name.generic.more_rpg_classes.damage_reflect_modifier": "Damage Reflect",
+  "attribute.name.more_rpg_classes.rage_modifier": "Rage Power",
+  "attribute.name.more_rpg_classes.arcane_fuse_modifier": "Arcane Fuse",
+  "attribute.name.more_rpg_classes.lifesteal_modifier": "Lifesteal",
+  "attribute.name.more_rpg_classes.damage_reflect_modifier": "Damage Reflect",
 
   "advancements.more_rpg_content.root.title": "More RPG Content!",
   "advancements.more_rpg_content.root.description": "Explore the different paths you can choose!",

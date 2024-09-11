@@ -1,3 +1,6 @@
+2.0.2
+- translation was not assigned correct to attributes in lang files
+
 2.0.1
 - forgot to change the new data folder structures (recipes -> recipe, items -> item, etc.)
 - forgot to change to 1.21 recipe json structure
