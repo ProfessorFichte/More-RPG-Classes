@@ -4,7 +4,6 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.attribute.AttributeContainer;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectCategory;
-import net.minecraft.registry.entry.RegistryEntry;
 
 public class FrozenSolidEffect extends StatusEffect {
 
@@ -16,12 +15,12 @@ public class FrozenSolidEffect extends StatusEffect {
     public boolean applyUpdateEffect(LivingEntity pLivingEntity, int pAmplifier) {
         pLivingEntity.setFrozenTicks(pLivingEntity.getFrozenTicks() + 1);
         if(pLivingEntity.isOnFire()){
-           return pLivingEntity.removeStatusEffect((RegistryEntry<StatusEffect>) MRPGCEffects.FROZEN_SOLID);
+           return pLivingEntity.removeStatusEffect(MRPGCEffects.FROZEN_SOLID.registryEntry);
         } else if (pLivingEntity.isInLava()) {
-            return pLivingEntity.removeStatusEffect((RegistryEntry<StatusEffect>) MRPGCEffects.FROZEN_SOLID);
+            return pLivingEntity.removeStatusEffect(MRPGCEffects.FROZEN_SOLID.registryEntry);
         }
         super.applyUpdateEffect(pLivingEntity, pAmplifier);
-        return false;
+        return true;
     }
 
     @Override

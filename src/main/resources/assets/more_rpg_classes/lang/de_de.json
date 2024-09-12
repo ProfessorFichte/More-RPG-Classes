@@ -37,11 +37,5 @@
   "advancements.more_rpg_content.root.description": "Erkunde die verschiedenen Pfade und Wege!",
 
   "enchantment.more_rpg_classes.elemental" : "Elementarbeherrschung",
-  "enchantment.more_rpg_classes.elemental.desc" : "Erhöht alle Arten von Elementarzauberschaden, den du verursachst",
-  "enchantment.more_rpg_classes.air_mastery" : "Luftbeherrschung",
-  "enchantment.more_rpg_classes.air_mastery.desc" : "Erhöht den von dir verursachten Luftzauberschaden",
-  "enchantment.more_rpg_classes.earth_mastery" : "Erdbeherrschung",
-  "enchantment.more_rpg_classes.earth_mastery.desc" : "Erhöht den von dir verursachten Erdzauberschaden",
-  "enchantment.more_rpg_classes.water_mastery" : "Wasserbeherrschung",
-  "enchantment.more_rpg_classes.water_mastery.desc" : "Erhöht den von dir verursachten Wasserzauberschaden."
+  "enchantment.more_rpg_classes.elemental.desc" : "Erhöht deinen Luft-, Erde- und Wasserzauberschaden."
 }

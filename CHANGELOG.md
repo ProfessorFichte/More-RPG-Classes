@@ -1,3 +1,10 @@
+2.0.3
+- fixed an error with some status effects
+- fixed issues with some Helper Methods and deleted unused ones
+- made Elemental Mastery translation more clear
+- forgot to change item to id in the advancement section
+- fixed a tag issue with enchantments
+
 2.0.2
 - translation was not assigned correct to attributes in lang files
 

@@ -4,7 +4,6 @@ import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectCategory;
-import net.minecraft.registry.entry.RegistryEntry;
 import net.more_rpg_classes.damage.MoltenDamageSource;
 
 public class MoltenArmorEffect extends StatusEffect {
@@ -14,7 +13,6 @@ public class MoltenArmorEffect extends StatusEffect {
     public MoltenArmorEffect(StatusEffectCategory statusEffectCategory, int color) {
         super(statusEffectCategory, color);
     }
-
 
     public boolean applyUpdateEffect(LivingEntity pLivingEntity, int pAmplifier) {
         if (!pLivingEntity.getWorld().isClient()) {
@@ -40,11 +38,11 @@ public class MoltenArmorEffect extends StatusEffect {
                 pLivingEntity.removeStatusEffect(MRPGCEffects.MOLTEN_ARMOR.registryEntry);
             } else if(!pLivingEntity.hasStackEquipped(EquipmentSlot.CHEST)& !pLivingEntity.hasStackEquipped(EquipmentSlot.HEAD)&
                     !pLivingEntity.hasStackEquipped(EquipmentSlot.FEET)& !pLivingEntity.hasStackEquipped(EquipmentSlot.LEGS)){
-                pLivingEntity.removeStatusEffect((RegistryEntry<StatusEffect>) MRPGCEffects.MOLTEN_ARMOR);
+                pLivingEntity.removeStatusEffect(MRPGCEffects.MOLTEN_ARMOR.registryEntry);
             }
         }
         super.applyUpdateEffect(pLivingEntity, pAmplifier);
-        return false;
+        return true;
     }
 
 
