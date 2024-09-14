@@ -1,8 +1,11 @@
 package net.more_rpg_classes.effect;
 
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectCategory;
+import net.minecraft.registry.tag.EntityTypeTags;
 import net.more_rpg_classes.damage.BleedingDamageSource;
 
 public class BleedingEffect extends StatusEffect {
@@ -12,6 +15,10 @@ public class BleedingEffect extends StatusEffect {
 
     @Override
     public  boolean applyUpdateEffect(LivingEntity entity, int amplifier) {
+        EntityType<?> type = ((Entity) entity).getType();
+        if(type.isIn(EntityTypeTags.UNDEAD)){
+            entity.removeStatusEffect(MRPGCEffects.BLEEDING.registryEntry);
+        }
         if (entity.getHealth() > 1.0F) {
             entity.damage(new BleedingDamageSource(entity.getDamageSources().starve().getTypeRegistryEntry()), 1.0F);
         }

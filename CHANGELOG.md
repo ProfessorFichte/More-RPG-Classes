@@ -1,3 +1,9 @@
+2.0.4
+- bleeding effect now gets removed correctly when the target is in undead tag
+- fixed some wrong animation names
+- fixed an error with enchanting not working
+- damage types for air, earth and water spell school
+
 2.0.3
 - fixed an error with some status effects
 - fixed issues with some Helper Methods and deleted unused ones

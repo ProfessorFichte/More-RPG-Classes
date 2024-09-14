@@ -50,6 +50,6 @@
   "slots": [
     "armor"
   ],
-  "supported_items": "#more_rpg_classes:enchantable/enchant_elemental_mastery",
+  "supported_items": "#more_rpg_classes:enchantable/elemental",
   "weight": 2
 }
