@@ -25,7 +25,7 @@ public class MRPGCMod implements ModInitializer {
 			.sanitize(true)
 			.build();
 	public static ConfigManager<TweaksConfig> tweaksConfig = new ConfigManager<>
-			("tweaks", new TweaksConfig())
+			("tweaks_v1", new TweaksConfig())
 			.builder()
 			.setDirectory(MOD_ID)
 			.sanitize(true)

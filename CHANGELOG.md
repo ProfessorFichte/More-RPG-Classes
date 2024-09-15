@@ -1,3 +1,8 @@
+2.0.5
+- made rage damage calc clearer, configurable & changed it, so rage has more impact the more you have
+- made playerentitymixin code more clean for better visibility
+- added 15% multiplier for the rage attribute in the simply skills compat datapack
+
 2.0.4
 - bleeding effect now gets removed correctly when the target is in undead tag
 - fixed some wrong animation names

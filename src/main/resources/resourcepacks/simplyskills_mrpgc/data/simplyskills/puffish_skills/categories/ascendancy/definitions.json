@@ -3042,6 +3042,14 @@
         "data": {
           "command": "puffish_skills category unlock @s simplyskills:berserker"
         }
+      },
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "more_rpg_classes:rage_modifier",
+          "value": 0.15,
+          "operation": "multiply_base"
+        }
       }
     ]
   },
