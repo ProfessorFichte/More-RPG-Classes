@@ -17,6 +17,8 @@ import org.spongepowered.asm.mixin.injection.ModifyArg;
 import org.spongepowered.asm.mixin.injection.Redirect;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
+import static net.more_rpg_classes.MRPGCMod.tweaksConfig;
+
 @Mixin(PlayerEntity.class)
 public abstract class PlayerEntityMixin {
 
@@ -31,6 +33,7 @@ public abstract class PlayerEntityMixin {
 
     @Redirect(method = "attack", at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/player/PlayerEntity;getAttributeValue(Lnet/minecraft/entity/attribute/EntityAttribute;)D", ordinal = 0))
     public double modifyBaseDamage(PlayerEntity instance, EntityAttribute entityAttribute, Entity target) {
+        //LIFESTEAL
         float damage = (float) instance.getAttributeValue(EntityAttributes.GENERIC_ATTACK_DAMAGE);
         EntityAttributeInstance lifesteal = ((LivingEntity) (Object) this).getAttributeInstance(MRPGCEntityAttributes.LIFESTEAL_MODIFIER);
         int value3 = (int) lifesteal.getValue();
@@ -47,15 +50,20 @@ public abstract class PlayerEntityMixin {
 
     @ModifyArg(method = "attack", at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/Entity;damage(Lnet/minecraft/entity/damage/DamageSource;F)Z"), index = 1)
     private float modifyDamage(float damage) {
+        PlayerEntity player = (PlayerEntity) (Object) this;
+        //RAGE
         EntityAttributeInstance ragedmg = ((LivingEntity) (Object) this).getAttributeInstance(MRPGCEntityAttributes.RAGE_MODIFIER);
-        int value1 = (int) ragedmg.getValue();
+        float value1 = (float) (ragedmg.getValue()-100) / 100;
+        float actual_health = player.getHealth();
+        float max_health = (float) player.getAttributeValue(EntityAttributes.GENERIC_MAX_HEALTH);
+        float missing_health_calc = tweaksConfig.value.rage_dmg_calc_missing_health_multiplication_factor;
+        if (value1 != 0 && actual_health != max_health){
+            //return (float) (damage * (1.0F + (((1.2F + ((ragedmg.getValue()-100)/100)) * ((float) player.getAttributeValue(EntityAttributes.GENERIC_MAX_HEALTH) - actual_health)) / 25)));
+            return (float) (damage * ((value1 + 1.0F) * (((float)max_health-actual_health) * missing_health_calc)));
+        }
+        //ARCANE_FUSE
         EntityAttributeInstance arcanefuse = ((LivingEntity) (Object) this).getAttributeInstance(MRPGCEntityAttributes.ARCANE_FUSE_MODIFIER);
         int value2 = (int) arcanefuse.getValue();
-        PlayerEntity player = (PlayerEntity) (Object) this;
-        if (value1 != 100){
-            float actual_health = player.getHealth();
-            return (float) (damage * (1.0F + (((1.2F + ((ragedmg.getValue()-100)/100)) * ((float) player.getAttributeValue(EntityAttributes.GENERIC_MAX_HEALTH) - actual_health)) / 25)));
-        }
         if(value2 != 100){
             return (float) (damage + (((arcanefuse.getValue()-100)/100) * (float) player.getAttributeValue(SpellSchools.ARCANE.attribute)));
         }

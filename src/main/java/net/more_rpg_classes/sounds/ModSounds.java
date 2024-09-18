@@ -23,6 +23,14 @@ public class ModSounds {
     public static SoundEvent EARTH_IMPACT2= SoundEvent.of(EARTH_IMPACT2_ID);
     public static final Identifier EARTH_CAST1_ID = new Identifier(MRPGCMod.MOD_ID, "earth_magic_cast1");
     public static SoundEvent EARTH_CAST1= SoundEvent.of(EARTH_CAST1_ID);
+    public static final Identifier AIR_CAST1_ID = new Identifier(MRPGCMod.MOD_ID, "air_magic_cast1");
+    public static SoundEvent AIR_CAST1= SoundEvent.of(AIR_CAST1_ID);
+    public static final Identifier AIR_IMPACT1_ID = new Identifier(MRPGCMod.MOD_ID, "air_magic_impact1");
+    public static SoundEvent AIR_IMPACT1= SoundEvent.of(AIR_IMPACT1_ID);
+    public static final Identifier AIR_IMPACT2_ID = new Identifier(MRPGCMod.MOD_ID, "air_magic_impact2");
+    public static SoundEvent AIR_IMPACT2= SoundEvent.of(AIR_IMPACT2_ID);
+    public static final Identifier AIR_IMPACT3_ID = new Identifier(MRPGCMod.MOD_ID, "air_magic_impact3");
+    public static SoundEvent AIR_IMPACT3= SoundEvent.of(AIR_IMPACT3_ID);
 
     public static void register() {
         Registry.register(Registries.SOUND_EVENT, ICICLE_SPELL_ID, ICICLE_SPELL_EVENT);
@@ -33,6 +41,10 @@ public class ModSounds {
         Registry.register(Registries.SOUND_EVENT, EARTH_IMPACT1_ID, EARTH_IMPACT1);
         Registry.register(Registries.SOUND_EVENT, EARTH_IMPACT2_ID, EARTH_IMPACT2);
         Registry.register(Registries.SOUND_EVENT, EARTH_CAST1_ID, EARTH_CAST1);
+        Registry.register(Registries.SOUND_EVENT, AIR_CAST1_ID, AIR_CAST1);
+        Registry.register(Registries.SOUND_EVENT, AIR_IMPACT1_ID, AIR_IMPACT1);
+        Registry.register(Registries.SOUND_EVENT, AIR_IMPACT2_ID, AIR_IMPACT2);
+        Registry.register(Registries.SOUND_EVENT, AIR_IMPACT3_ID, AIR_IMPACT3);
 
     }
 }

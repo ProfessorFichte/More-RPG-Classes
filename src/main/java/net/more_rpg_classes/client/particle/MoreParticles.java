@@ -26,6 +26,8 @@ public class MoreParticles {
     public static final DefaultParticleType STONE_EXPLOSION = FabricParticleTypes.simple();
     public static final DefaultParticleType STONE_PARTICLE = FabricParticleTypes.simple();
     public static final DefaultParticleType WIND_VACUUM = FabricParticleTypes.simple();
+    public static final DefaultParticleType SMALL_GUST = FabricParticleTypes.simple();
+    public static final DefaultParticleType GUST = FabricParticleTypes.simple();
 
 
     public static void register(){
@@ -47,6 +49,8 @@ public class MoreParticles {
         Registry.register(Registries.PARTICLE_TYPE, new Identifier(MRPGCMod.MOD_ID, "stone_explosion"), STONE_EXPLOSION);
         Registry.register(Registries.PARTICLE_TYPE, new Identifier(MRPGCMod.MOD_ID, "stone_particle"), STONE_PARTICLE);
         Registry.register(Registries.PARTICLE_TYPE, new Identifier(MRPGCMod.MOD_ID, "wind_vacuum"), WIND_VACUUM);
+        Registry.register(Registries.PARTICLE_TYPE, new Identifier(MRPGCMod.MOD_ID, "small_gust"), SMALL_GUST);
+        Registry.register(Registries.PARTICLE_TYPE, new Identifier(MRPGCMod.MOD_ID, "gust"), GUST);
     }
 
 }

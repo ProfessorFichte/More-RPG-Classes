@@ -1,5 +1,11 @@
+1.2.2
+- added some the wind/air particles & sounds from minecraft 1.21, for the upcoming Storm Wizard Update on 1.20.1
+
 1.2.1
 - tweaked some animations and shifted some of them to the Berserker Mod
+- - made rage damage calc clearer, configurable & changed it, so rage has more impact the more you have
+- made playerentitymixin code more clean for better visibility
+- added 15% multiplier for the rage attribute in the simply skills compat datapack
 
 1.2.0
 - Changed the Status of the Lib Mod from Beta to Release 
