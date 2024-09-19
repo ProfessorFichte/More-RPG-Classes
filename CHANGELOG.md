@@ -1,3 +1,6 @@
+1.2.3
+- fixed and changed some particles again
+
 1.2.2
 - added some the wind/air particles & sounds from minecraft 1.21, for the upcoming Storm Wizard Update on 1.20.1
 

@@ -21,8 +21,8 @@ public class GroundParticle extends SpriteBillboardParticle {
         this.velocityY = 0;
         this.velocityZ = 0;
         this.spriteProvider = spriteProvider;
-        this.scale = 0.6f;
-        this.maxAge = 50;
+        this.scale = 0.2f;
+        this.maxAge = 40;
     }
 
     public ParticleTextureSheet getType() {

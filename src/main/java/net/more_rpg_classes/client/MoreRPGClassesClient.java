@@ -47,7 +47,7 @@ public class MoreRPGClassesClient implements ClientModInitializer {
         ParticleFactoryRegistry.getInstance().register(MoreParticles.STONE_EXPLOSION, CustomSpellExplosionParticle.Factory::new);
         ParticleFactoryRegistry.getInstance().register(MoreParticles.STONE_PARTICLE, SpellFlameParticle.HolyFactory::new);
         ParticleFactoryRegistry.getInstance().register(MoreParticles.WIND_VACUUM, CustomSpellExplosionParticle.Factory::new);
-        ParticleFactoryRegistry.getInstance().register(MoreParticles.SMALL_GUST, GustParticle.Factory::new);
+        ParticleFactoryRegistry.getInstance().register(MoreParticles.SMALL_GUST,  FlameParticle.Factory::new);
         ParticleFactoryRegistry.getInstance().register(MoreParticles.GUST, GustParticle.Factory::new);
 
         CustomParticleStatusEffect.register(MRPGCEffects.STUNNED, new StunParticleSpawner());
