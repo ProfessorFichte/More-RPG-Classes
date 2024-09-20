@@ -1,3 +1,6 @@
+2.0.6
+- added the wind charge item to the storm rune recipe material
+
 2.0.5
 - made rage damage calc clearer, configurable & changed it, so rage has more impact the more you have
 - made playerentitymixin code more clean for better visibility
