@@ -1,3 +1,6 @@
+2.0.7
+- forgot to include a wind particle from the 1.20.1 version
+
 2.0.6
 - added the wind charge item to the storm rune recipe material
 - added air magic sounds for the Wind Elemental Wizard
