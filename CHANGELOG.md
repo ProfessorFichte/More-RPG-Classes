@@ -1,5 +1,6 @@
 2.0.6
 - added the wind charge item to the storm rune recipe material
+- added air magic sounds for the Wind Elemental Wizard
 
 2.0.5
 - made rage damage calc clearer, configurable & changed it, so rage has more impact the more you have

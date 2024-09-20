@@ -19,7 +19,11 @@ public class ModSounds {
             "water_magic_impact1",
             "earth_magic_impact1",
             "earth_magic_impact2",
-            "earth_magic_cast1"
+            "earth_magic_cast1",
+            "air_magic_cast1",
+            "air_magic_impact1",
+            "air_magic_impact2",
+            "air_magic_impact3"
     );
     public static Map<String, Float> soundDistances = Map.of(
     );
