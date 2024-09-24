@@ -86,6 +86,10 @@ public class MRPGCEffects {
 
         HealthImpacting.configureHealingTaken(GRIEVOUS_WOUNDS.effect,  MRPGCMod.effectsConfig.value.grievous_wounds_healing_taken);
 
+        OnRemoval.configure(FROZEN_SOLID.effect, (context) -> {
+            FrozenSolidEffect.onRemove(context.entity());
+        });
+
         for (var entry: entries) {
             entry.register();
         }

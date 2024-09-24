@@ -1,3 +1,9 @@
+2.0.8
+- Changed Frosted & Frozen Solid Effect a tiny bit
+- changed the model for the Frozen Solid effect
+- added Poison Gas Cloud Particles
+- fixed a calculation mistake with the Rage Attribute
+
 2.0.7
 - forgot to include a wind particle from the 1.20.1 version
 
