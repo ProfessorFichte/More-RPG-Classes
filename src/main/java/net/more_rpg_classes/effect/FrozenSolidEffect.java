@@ -13,7 +13,6 @@ public class FrozenSolidEffect extends StatusEffect {
 
     @Override
     public void applyUpdateEffect(LivingEntity pLivingEntity, int pAmplifier) {
-        pLivingEntity.setFrozenTicks(pLivingEntity.getFrozenTicks() + 1);
         if(pLivingEntity.isOnFire()){
             pLivingEntity.removeStatusEffect(MRPGCEffects.FROZEN_SOLID);
         } else if (pLivingEntity.isInLava()) {
@@ -28,11 +27,7 @@ public class FrozenSolidEffect extends StatusEffect {
     }
 
     @Override
-    public void onApplied(LivingEntity entity, AttributeContainer attributes, int amplifier) {
-        entity.setFrozenTicks(entity.getFrozenTicks() + 40);
-    }
-    @Override
     public void onRemoved(LivingEntity entity, AttributeContainer attributes, int amplifier) {
-        entity.setFrozenTicks(entity.getFrozenTicks() + 200);
+        entity.setFrozenTicks(entity.getFrozenTicks() + 100);
     }
 }

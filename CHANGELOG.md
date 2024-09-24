@@ -1,3 +1,9 @@
+1.2.4
+- Changed Frosted & Frozen Solid Effect a tiny bit
+- changed the model for the Frozen Solid effect
+- added Poison Gas Cloud Particles
+- fixed a calculation mistake with the Rage Attribute
+
 1.2.3
 - fixed and changed some particles again
 

@@ -58,8 +58,9 @@ public abstract class PlayerEntityMixin {
         float max_health = (float) player.getAttributeValue(EntityAttributes.GENERIC_MAX_HEALTH);
         float missing_health_calc = tweaksConfig.value.rage_dmg_calc_missing_health_multiplication_factor;
         if (value1 != 0 && actual_health != max_health){
-            //return (float) (damage * (1.0F + (((1.2F + ((ragedmg.getValue()-100)/100)) * ((float) player.getAttributeValue(EntityAttributes.GENERIC_MAX_HEALTH) - actual_health)) / 25)));
-            return (float) (damage * ((value1 + 1.0F) * (((float)max_health-actual_health) * missing_health_calc)));
+            // OLD CALC return (float) (damage * (1.0F + (((1.2F + ((ragedmg.getValue()-100)/100)) * ((float) player.getAttributeValue(EntityAttributes.GENERIC_MAX_HEALTH) - actual_health)) / 25)));
+            //return (float) (damage * ((value1 + 1.0F) * (((float)max_health-actual_health) * missing_health_calc)));
+            return damage + (damage * ((value1) * (((float)max_health-actual_health) * missing_health_calc)));
         }
         //ARCANE_FUSE
         EntityAttributeInstance arcanefuse = ((LivingEntity) (Object) this).getAttributeInstance(MRPGCEntityAttributes.ARCANE_FUSE_MODIFIER);
