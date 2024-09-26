@@ -1,3 +1,7 @@
+2.0.10
+- fixed a typo in poison smoke particle
+- increased Frosted Particle Count
+
 2.0.9
 - added a Poison Smoke particle
 

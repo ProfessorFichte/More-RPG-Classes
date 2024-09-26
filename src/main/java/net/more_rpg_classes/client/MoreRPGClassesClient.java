@@ -54,7 +54,7 @@ public class MoreRPGClassesClient implements ClientModInitializer {
         CustomParticleStatusEffect.register(MRPGCEffects.STUNNED.effect, new StunParticleSpawner());
         CustomParticleStatusEffect.register(MRPGCEffects.MOLTEN_ARMOR.effect, new MoltenArmorParticles(1));
         CustomParticleStatusEffect.register(MRPGCEffects.BLEEDING.effect, new BleedingParticles(1));
-        CustomParticleStatusEffect.register(MRPGCEffects.FROSTED.effect, new FrostedParticles(3));
+        CustomParticleStatusEffect.register(MRPGCEffects.FROSTED.effect, new FrostedParticles(5));
         CustomModelStatusEffect.register(MRPGCEffects.FROZEN_SOLID.effect, new FrozenSolidRenderer());
 
     }
