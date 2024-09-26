@@ -1,3 +1,6 @@
+1.2.5
+- Poison Smoke Particle was added
+
 1.2.4
 - Changed Frosted & Frozen Solid Effect a tiny bit
 - changed the model for the Frozen Solid effect
