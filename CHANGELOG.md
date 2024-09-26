@@ -1,3 +1,7 @@
+1.2.6
+- increased Frosted Particle Count
+- fixed a typo in the Poison Smoke Particle
+
 1.2.5
 - Poison Smoke Particle was added
 
